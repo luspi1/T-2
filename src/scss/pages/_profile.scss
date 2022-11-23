@@ -70,17 +70,6 @@
         }
       }
     }
-  }
-
-  .additional {
-    margin-bottom: 30px;
-
-    &__inner {
-      background: $white;
-      border-radius: 26px;
-      padding: 20px 10px 77px 42px;
-      position: relative;
-    }
 
     &__passport {
       display: flex;
@@ -165,6 +154,17 @@
 
     }
 
+  }
+
+  .additional {
+    margin-bottom: 30px;
+
+    &__inner {
+      background: $white;
+      border-radius: 26px;
+      padding: 20px 10px 77px 42px;
+      position: relative;
+    }
 
     &__top {
       display: flex;
@@ -219,6 +219,8 @@
   }
 
   .bank {
+    margin-bottom: 30px;
+
     &__inner {
       background: $white;
       border-radius: 26px;
