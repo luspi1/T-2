@@ -17,7 +17,7 @@
     &__data {
       display: flex;
       align-items: flex-start;
-      padding-bottom: 40px;
+       padding-bottom: 40px;
       position: relative;
 
       .line {
@@ -29,11 +29,16 @@
 
     &__data-avatar {
       margin-right: 20px;
+      max-width: 120px;
+      max-height: 120px;
+      min-width: 80px;
+      min-height: 80px;
+      overflow: hidden;
     }
 
     &__data-fullname {
       margin-right: 145px;
-      max-width: 6700px;
+      max-width: 670px;
     }
 
     &__name {
@@ -75,6 +80,7 @@
       display: flex;
       padding-top: 15px;
       padding-left: 20px;
+      flex-wrap: wrap;
 
       .subtitle {
         margin-bottom: 50px;
@@ -112,6 +118,7 @@
     &__passport-photo {
       padding-top: 28px;
       min-width: 200px;
+
       h3 {
         @include montserrat-bold;
         font-size: 20px;
@@ -153,7 +160,6 @@
       }
 
     }
-
   }
 
   .additional {
@@ -164,12 +170,16 @@
       border-radius: 26px;
       padding: 20px 10px 77px 42px;
       position: relative;
+
+      >.additional__row {
+        flex-wrap: wrap;
+        margin-left: 123px;
+      }
     }
 
     &__top {
       display: flex;
       align-items: center;
-      margin-bottom: 24px;
     }
 
     &__image {
@@ -180,7 +190,6 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: #FC611F;
       overflow: hidden;
     }
 
@@ -191,7 +200,8 @@
     &__text {
       display: flex;
       max-width: 660px;
-      margin-left: 123px;
+      margin-right: 45px;
+      margin-top: 24px;
 
       >.subtitle-sm {
         margin-right: 28px;
@@ -199,7 +209,7 @@
     }
 
     &__socials {
-      margin-left: 45px;
+      margin-top: 24px;
 
       .additional__row {
         .subtitle-sm {
@@ -242,26 +252,24 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: #1DAB7F;
       overflow: hidden;
     }
 
     &__list {
-      position: relative;
       display: flex;
-      max-width: 904px;
-      margin: auto;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-left: 123px;
     }
 
     &__card {
       max-width: 287px;
       margin-top: 5px;
+      margin-right: 22px;
       padding: 21px 30px 18px 16px;
       border-radius: 10px;
       border: 1px solid #D2E7EF;
-        &:not(:first-child) {
-          margin-left: 21px;
-        }
+
       &.active {
         border: 1px solid #66ACCC;
       }
@@ -278,10 +286,8 @@
     }
 
     &__card-add {
-      position: absolute;
-      right: -55px;
-      top: 50%;
-      transform: translateY(-50%);
+      margin-top: 10px;
+
     }
 
     &__date {
