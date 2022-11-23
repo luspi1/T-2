@@ -10,13 +10,21 @@
     &__inner {
       background: $white;
       border-radius: 26px;
-      padding: 22px 10px 40px 22px;
+      padding: 22px 20px 40px 22px;
       position: relative;
     }
 
     &__data {
       display: flex;
       align-items: flex-start;
+      padding-bottom: 40px;
+      position: relative;
+
+      .line {
+        bottom: 0;
+        right: 0;
+        max-width: 1018px;
+      }
     }
 
     &__data-avatar {
@@ -25,7 +33,7 @@
 
     &__data-fullname {
       margin-right: 145px;
-      max-width: 560px;
+      max-width: 6700px;
     }
 
     &__name {
@@ -57,7 +65,6 @@
         }
 
 
-
         &:not(:last-child) {
           margin-bottom: 17px;
         }
@@ -74,6 +81,90 @@
       padding: 20px 10px 77px 42px;
       position: relative;
     }
+
+    &__passport {
+      display: flex;
+      padding-top: 15px;
+      padding-left: 20px;
+
+      .subtitle {
+        margin-bottom: 50px;
+      }
+    }
+
+    &__passport-data {
+      padding-top: 23px;
+      margin-right: 48px;
+      max-width: 655px;
+    }
+
+    &__passport-img {
+      min-width: 80px;
+      margin-right: 42px;
+    }
+
+    .passport-list {
+
+      li {
+        display: flex;
+        align-items: flex-start;
+
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+      }
+
+      &__title {
+        min-width: 250px;
+        margin-right: 23px;
+      }
+    }
+
+    &__passport-photo {
+      padding-top: 28px;
+      min-width: 200px;
+      h3 {
+        @include montserrat-bold;
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 45px;
+      }
+
+      #passport-dropzone {
+        display: flex;
+        max-width: 220px;
+        flex-wrap: wrap;
+
+
+        .dz-message {
+          order: 2;
+          height: 93px;
+        }
+
+        .dz-preview {
+          width: 93px;
+          height: 93px;
+          margin: 0 15px 15px 0;
+
+          img {
+            border-radius: 5px;
+          }
+        }
+
+        .dz-remove {
+          color: transparent;
+          position: absolute;
+          top: -5px;
+          right: -5px;
+          background: url("../img/del-photo.png") no-repeat;
+          width: 18px;
+          height: 18px;
+          z-index: 100;
+        }
+      }
+
+    }
+
 
     &__top {
       display: flex;
@@ -195,10 +286,6 @@
       margin-top: 10px;
       color: $blue;
     }
-
   }
-
-
-
 
 }
