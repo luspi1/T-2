@@ -88,3 +88,8 @@ select::-ms-expand {
   line-height: 30px;
   color: $dark;
 }
+
+.subtitle-sm {
+  @include montserrat-semibold;
+  line-height: 17px;
+}
