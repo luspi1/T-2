@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {
+'title': 'ООО АРХ-ПРОЕКТ'
+})
+
+<body class="page__body">
+  <div class="site-container">
+    <div class="header">
+      <div class="container">
+        @include('partials/contact-info.html')
+        @include('partials/main-menu.html')
+
+        <div class="header__inner">
+          <h1 class="header__title">
+            <span>Общество с ограниченной ответственностью</span>
+            «АРХ-ПРОЕКТ»
+          </h1>
+          <p class="header__description">Комплекс архитектурно-строительных работ
+            на объектах культурного наследия от проекта до ввода
+            в эксплуатацию</p>
+          <a href="#" class="header__link">Наши проекты</a>
+        </div>
+      </div>
+    </div>
+
+    <main class="main">
+      <section class="section services">
+        <div class="container">
+          <h2 class="main-subtitle">Наши услуги</h2>
+          <div class="swiper mySwiper swiper-services">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="swiper-image">
+                  <img src="img/slide_1.png" alt="">
+                  <div class="swiper-subtitle">
+                    <h3>Сохранение объектов культурного наследия</h3>
+                  </div>
+                </div>
+                <ul class="services__list">
+                  <li>Проектные работы (консервация, реставрация, воссоздание,
+                    ремонт, приспособление)
+                  </li>
+                  <li>Производственные работы (ремонт, приспособление для
+                    современного использования)
+                  </li>
+                  <li>Научное руководство и авторский надзор</li>
+                  <li>Технический надзор</li>
+                </ul>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-image">
+                  <img src="img/slide_2.png" alt="">
+                  <div class="swiper-subtitle">
+                    <h3>Обеспечение сохранности объектов культурного наследия</h3>
+                  </div>
+                </div>
+                <ul class="services__list">
+                  <li>Разработка:</li>
+                  <li> разделов (проектов) об обеспечении сохранности ОКН</li>
+                  <li>проектов зон охраны, границ территорий, предметов охраны,
+                    информационных надписей и обозначений
+                  </li>
+                </ul>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-image">
+                  <img src="img/slide_3.png" alt="">
+                  <div class="swiper-subtitle">
+                    <h3>Инженерные изыскания</h3>
+                  </div>
+                </div>
+                <ul class="services__list">
+                  <li>Инженерно-геологические</li>
+                  <li>Инженерно-геодезические</li>
+                  <li>Экологические</li>
+                  <li>Археологические</li>
+                </ul>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-image">
+                  <img src="img/slide_4.png" alt="">
+                  <div class="swiper-subtitle">
+                    <h3>Государственная историко-культурная экспертиза</h3>
+                  </div>
+                </div>
+                <ul class="services__list">
+                  <li>В отношении объектов, указанных в ст.30 Федерального закона
+                    от 25.06.2002 № 73-ФЗ «Об объектах
+                    культурного наследия (памятниках истории и культуры) народов
+                    Российской Федерации».
+                  </li>
+                </ul>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-image">
+                  <img src="img/slide_5.png" alt="">
+                  <div class="swiper-subtitle">
+                    <h3>Сохранение объектов культурного наследия</h3>
+                  </div>
+                </div>
+                <ul class="services__list">
+                  <li>Проектные работы (консервация, реставрация, воссоздание,
+                    ремонт, приспособление)
+                  </li>
+                  <li>Производственные работы (ремонт, приспособление для
+                    современного использования)
+                  </li>
+                  <li>Научное руководство и авторский надзор</li>
+                  <li>Технический надзор</li>
+                </ul>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-image">
+                  <img src="img/slide_6.png" alt="">
+                  <div class="swiper-subtitle">
+                    <h3>Сохранение объектов культурного наследия</h3>
+                  </div>
+                </div>
+                <ul class="services__list">
+                  <li>Проектные работы (консервация, реставрация, воссоздание,
+                    ремонт, приспособление)
+                  </li>
+                  <li>Производственные работы (ремонт, приспособление для
+                    современного использования)
+                  </li>
+                  <li>Научное руководство и авторский надзор</li>
+                  <li>Технический надзор</li>
+                </ul>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next">
+              <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M31.4 21.2L40.4 30.5L31.4 39.9" stroke="#A8B6BD" stroke-miterlimit="10" />
+                <path
+                  d="M31 60.7C47.5685 60.7 61 47.2685 61 30.7C61 14.1314 47.5685 0.699951 31 0.699951C14.4315 0.699951 1 14.1314 1 30.7C1 47.2685 14.4315 60.7 31 60.7Z"
+                  stroke="#A8B6BD" stroke-miterlimit="10" />
+                <path d="M23.8 30.6H40.5" stroke="#A8B6BD" stroke-miterlimit="10" />
+              </svg>
+            </div>
+            <div class="swiper-button-prev">
+              <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M32.0485 39.7L23.0244 30.4233L32 20.9999" stroke="#A8B6BD" stroke-miterlimit="10" />
+                <path
+                  d="M31 60.7C47.5685 60.7 61 47.2685 61 30.7C61 14.1314 47.5685 0.699951 31 0.699951C14.4315 0.699951 1 14.1314 1 30.7C1 47.2685 14.4315 60.7 31 60.7Z"
+                  stroke="#A8B6BD" stroke-miterlimit="10" />
+                <path d="M23.8 30.6H40.5" stroke="#A8B6BD" stroke-miterlimit="10" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section maps">
+        <div class="container">
+          <h2 class="main-subtitle">Территория</h2>
+          <p class="maps__description">
+            Мы работаем во всех регионах
+            Центрального, Южного,
+            Приволжского и Уральского
+            федеральных округов.
+          </p>
+        </div>
+      </section>
+      <section class="section features">
+        <div class="container">
+          <div class="swiper mySwiper swiper-features">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="swiper-border">
+                  <p class="swiper-desc">
+                    ООО «Арх-проект» зарекомендовал себя как надежный партнер
+                    по реализации проектов в области археологических изысканий.
+                    Работы выполняются качественно и в срок. Рекомендую эту
+                    компанию как надежного исполнителя с отличной командой
+                    специалистов.
+                  </p>
+                  <p class="swiper-person">Виктор Власов, заслуженный строитель
+                    России, директор ООО
+                    «Тамбовсельхозтехпроект», г. Тамбов</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-border">
+                  <p class="swiper-desc">
+                    ООО «Арх-проект» зарекомендовал себя как надежный партнер
+                    по реализации проектов в области археологических изысканий.
+                    Работы выполняются качественно и в срок. Рекомендую эту
+                    компанию как надежного исполнителя с отличной командой
+                    специалистов.
+                  </p>
+                  <p class="swiper-person">Виктор Власов, заслуженный строитель
+                    России, директор ООО
+                    «Тамбовсельхозтехпроект», г. Тамбов</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-border">
+                  <p class="swiper-desc">
+                    ООО «Арх-проект» зарекомендовал себя как надежный партнер
+                    по реализации проектов в области археологических изысканий.
+                    Работы выполняются качественно и в срок. Рекомендую эту
+                    компанию как надежного исполнителя с отличной командой
+                    специалистов.
+                  </p>
+                  <p class="swiper-person">Виктор Власов, заслуженный строитель
+                    России, директор ООО
+                    «Тамбовсельхозтехпроект», г. Тамбов</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-block">
+              <div class="swiper-button-next">
+                <svg width="47" height="47" viewBox="0 0 47 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M24.2 30.3L23.5 29.7L29.9 23L23.5 16.3L24.2 15.6001L31.3 23L24.2 30.3Z" fill="#A8B6BD" />
+                  <path
+                    d="M23.6 46.1001C10.9 46.1001 0.599976 35.8001 0.599976 23.1001C0.599976 10.4001 10.9 0.100098 23.6 0.100098C36.3 0.100098 46.6 10.4001 46.6 23.1001C46.6 35.8001 36.2 46.1001 23.6 46.1001ZM23.6 1.1001C11.5 1.1001 1.59998 11.0001 1.59998 23.1001C1.59998 35.2001 11.5 45.1001 23.6 45.1001C35.7 45.1001 45.6 35.2001 45.6 23.1001C45.6 11.0001 35.7 1.1001 23.6 1.1001Z"
+                    fill="#A8B6BD" />
+                  <path d="M30.7 22.5H18.2V23.5H30.7V22.5Z" fill="#A8B6BD" />
+                </svg>
+
+              </div>
+              <div class="swiper-button-prev">
+                <svg width="47" height="47" viewBox="0 0 47 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22.4 30.3L15.4 23L22.4 15.6001L23.1 16.3L16.8 23L23.1 29.7L22.4 30.3Z" fill="#A8B6BD" />
+                  <path
+                    d="M23.1 46.1001C10.4 46.1001 0.0999756 35.8001 0.0999756 23.1001C0.0999756 10.4001 10.4 0.100098 23.1 0.100098C35.8 0.100098 46.1 10.4001 46.1 23.1001C46.1 35.8001 35.8 46.1001 23.1 46.1001ZM23.1 1.1001C11 1.1001 1.09998 11.0001 1.09998 23.1001C1.09998 35.2001 11 45.1001 23.1 45.1001C35.2 45.1001 45.1 35.2001 45.1 23.1001C45.1 11.0001 35.2 1.1001 23.1 1.1001Z"
+                    fill="#A8B6BD" />
+                  <path d="M28.5 22.5H16V23.5H28.5V22.5Z" fill="#A8B6BD" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section command">
+        <div class="container">
+          <h3 class="secondarily-subtitle">Наша команда</h3>
+          <div class="swiper mySwiper swiper-command">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="swiper-card">
+                  <div class="swiper-image">
+                    <img src="img/worker.jpg" alt="">
+                  </div>
+                  <p class="swiper-title">Максим Галицын</p>
+                  <p class="swiper-subtitle">Директор ООО «АРХ-ПРОЕКТ»</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-card">
+                  <div class="swiper-image">
+                    <img src="img/worker.jpg" alt="">
+                  </div>
+                  <p class="swiper-title">Наталия Юрина</p>
+                  <p class="swiper-subtitle">Зам. директора ООО «АРХ-ПРОЕКТ»</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-card">
+                  <div class="swiper-image">
+                    <img src="img/worker.jpg" alt="">
+                  </div>
+                  <p class="swiper-title">Ольга Терпугова</p>
+                  <p class="swiper-subtitle">Архитектор</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-card">
+                  <div class="swiper-image">
+                    <img src="img/worker.jpg" alt="">
+                  </div>
+                  <p class="swiper-title">София Семко</p>
+                  <p class="swiper-subtitle">Архитектор</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-card">
+                  <div class="swiper-image">
+                    <img src="img/worker.jpg" alt="">
+                  </div>
+                  <p class="swiper-title">Екатерина Попова</p>
+                  <p class="swiper-subtitle">Архитектор</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-card">
+                  <div class="swiper-image">
+                    <img src="img/worker.jpg" alt="">
+                  </div>
+                  <p class="swiper-title">Сергей Сарычев</p>
+                  <p class="swiper-subtitle">Архитектор</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-card">
+                  <div class="swiper-image">
+                    <img src="img/worker.jpg" alt="">
+                  </div>
+                  <p class="swiper-title">Анастасия Захарова</p>
+                  <p class="swiper-subtitle">Руководитель коммерческого отдела</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-next">
+              <svg width="53" height="53" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M27.2 34.8L26.5 34.1001L33.9 26.3L26.5 18.5L27.2 17.8999L35.3 26.3L27.2 34.8Z"
+                  fill="#A8B6BD" />
+                <path
+                  d="M26.5 53C11.9 53 0 41.1 0 26.5C0 11.9 11.9 0 26.5 0C41.1 0 53 11.9 53 26.5C53 41.1 41.1 53 26.5 53ZM26.5 1C12.4 1 1 12.4 1 26.5C1 40.6 12.4 52 26.5 52C40.6 52 52 40.6 52 26.5C52 12.4 40.6 1 26.5 1Z"
+                  fill="#A8B6BD" />
+                <path d="M34.8 25.8999H20.3V26.8999H34.8V25.8999Z" fill="#A8B6BD" />
+              </svg>
+
+            </div>
+            <div class="swiper-button-prev">
+              <svg width="53" height="53" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M25.8 34.8L17.7 26.3L25.8 17.8999L26.5 18.5L19.1 26.3L26.5 34.1001L25.8 34.8Z"
+                  fill="#A8B6BD" />
+                <path
+                  d="M26.5 53C11.9 53 0 41.1 0 26.5C0 11.9 11.9 0 26.5 0C41.1 0 53 11.9 53 26.5C53 41.1 41.1 53 26.5 53ZM26.5 1C12.4 1 1 12.4 1 26.5C1 40.6 12.4 52 26.5 52C40.6 52 52 40.6 52 26.5C52 12.4 40.6 1 26.5 1Z"
+                  fill="#A8B6BD" />
+                <path d="M32.8 25.8999H18.3V26.8999H32.8V25.8999Z" fill="#A8B6BD" />
+              </svg>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+      <section class="section projects">
+        <div class="container">
+          <h2 class="main-subtitle">Наши проекты</h2>
+          <div class="swiper mySwiper swiper-projects">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="swiper-image">
+                  <img src="img/project_1.jpg" alt="">
+                </div>
+                <h3 class="swiper-title">Городец</h3>
+                <p class="swiper-date">Март 2021-январь 2022</p>
+                <p class="swiper-description">Lorem Ipsum has been the industry's
+                  standard dummy text ever since the
+                  1500s, when an unknown
+                  rinter took a galley of type and scrambled it to make a type
+                  specimen book. It has survived not only
+                  five centuries, but also the leap into...</p>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-image">
+                  <img src="img/project_1.jpg" alt="">
+                </div>
+                <h3 class="swiper-title">Городец</h3>
+                <p class="swiper-date">Март 2021-январь 2022</p>
+                <p class="swiper-description">Lorem Ipsum has been the industry's
+                  standard dummy text ever since the
+                  1500s, when an unknown
+                  rinter took a galley of type and scrambled it to make a type
+                  specimen book. It has survived not only
+                  five centuries, but also the leap into...</p>
+              </div>
+            </div>
+            <div class="swiper-button-next">
+              <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M31.4 21.2L40.4 30.5L31.4 39.9" stroke="#A8B6BD" stroke-miterlimit="10" />
+                <path
+                  d="M31 60.7C47.5685 60.7 61 47.2685 61 30.7C61 14.1314 47.5685 0.699951 31 0.699951C14.4315 0.699951 1 14.1314 1 30.7C1 47.2685 14.4315 60.7 31 60.7Z"
+                  stroke="#A8B6BD" stroke-miterlimit="10" />
+                <path d="M23.8 30.6H40.5" stroke="#A8B6BD" stroke-miterlimit="10" />
+              </svg>
+            </div>
+            <div class="swiper-button-prev">
+              <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M32.0485 39.7L23.0244 30.4233L32 20.9999" stroke="#A8B6BD" stroke-miterlimit="10" />
+                <path
+                  d="M31 60.7C47.5685 60.7 61 47.2685 61 30.7C61 14.1314 47.5685 0.699951 31 0.699951C14.4315 0.699951 1 14.1314 1 30.7C1 47.2685 14.4315 60.7 31 60.7Z"
+                  stroke="#A8B6BD" stroke-miterlimit="10" />
+                <path d="M23.8 30.6H40.5" stroke="#A8B6BD" stroke-miterlimit="10" />
+              </svg>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+      <section class="section clients">
+        <div class="container">
+          <h2 class="clients__title">Наши клиенты</h2>
+          <div class="swiper mySwiper swiper-clients">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="img/slide_client.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="img/slide_client.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="img/slide_client.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="img/slide_client.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="img/slide_client.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="img/slide_client.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="img/slide_client.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="img/slide_client.jpg" alt="">
+              </div>
+            </div>
+            <div class="swiper-button-next">
+              <svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22.1 27.2998L21.4 26.6001L27.2 20.7002L21.4 14.7998L22.1 14.1001L28.6 20.7002L22.1 27.2998Z"
+                  fill="#6F828C" />
+                <path
+                  d="M21.5 41.2998C9.9 41.2998 0.5 32.0998 0.5 20.7998C0.5 9.4998 9.9 0.299805 21.5 0.299805C33.1 0.299805 42.5 9.4998 42.5 20.7998C42.5 32.0998 33.1 41.2998 21.5 41.2998ZM21.5 1.2998C10.5 1.2998 1.5 9.9998 1.5 20.7998C1.5 31.5998 10.5 40.2998 21.5 40.2998C32.5 40.2998 41.5 31.5998 41.5 20.7998C41.5 9.9998 32.5 1.2998 21.5 1.2998Z"
+                  fill="#6F828C" />
+                <path d="M28 20.2002H16.6V21.2002H28V20.2002Z" fill="#6F828C" />
+              </svg>
+            </div>
+            <div class="swiper-button-prev">
+              <svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.9 27.2998L14.4 20.7002L20.9 14.1001L21.6 14.7998L15.8 20.7002L21.6 26.6001L20.9 27.2998Z"
+                  fill="#6F828C" />
+                <path
+                  d="M21.5 41.2998C9.9 41.2998 0.5 32.0998 0.5 20.7998C0.5 9.4998 9.9 0.299805 21.5 0.299805C33.1 0.299805 42.5 9.4998 42.5 20.7998C42.5 32.0998 33.1 41.2998 21.5 41.2998ZM21.5 1.2998C10.5 1.2998 1.5 9.9998 1.5 20.7998C1.5 31.5998 10.5 40.2998 21.5 40.2998C32.5 40.2998 41.5 31.5998 41.5 20.7998C41.5 9.9998 32.5 1.2998 21.5 1.2998Z"
+                  fill="#6F828C" />
+                <path d="M26.4 20.2002H15V21.2002H26.4V20.2002Z" fill="#6F828C" />
+              </svg>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+      <section class="section contact-us">
+        <div class="container">
+          <h2 class="main-subtitle">Контакты</h2>
+          <div class="contact-us__inner">
+            <div class="contact-us__choice">
+              <div class="contact-us__choice-controllers">
+                <button class="contact-us__choice-btn contact-us__choice-btn_active" type="button" data-tab="tambov">
+                  Тамбов
+                </button>
+                <button class="contact-us__choice-btn" type="button" data-tab="novgorod">
+                  Н. Новгород
+                </button>
+              </div>
+              <div class="contact-us__choice-item contact-us__choice-item_active" data-tab="tambov">
+                <div class="contact-us__choice-img">
+                  <img src="img/contact-us-1.jpg" alt="Тамбов">
+                </div>
+                <p class="contact-us__choice-address">
+                  392003, город Тамбов, Бульвар Энтузиастов, дом 2А, 4 этаж <br>
+                  e-mail: post@arh-pro.com <br>
+                  тел.: +7(4752)-55-92-97
+                </p>
+              </div>
+              <div class="contact-us__choice-item" data-tab="novgorod">
+                <div class="contact-us__choice-img">
+                  <img src="img/contact-us-1.jpg" alt="Н. Новгород">
+                </div>
+                <p class="contact-us__choice-address">
+                  603105, Нижний Новгород, улица Ошарская 80, помещение 8, кабинет 2<br>
+                  e-mail: post@arh-pro.com <br>
+                  тел.: +7(4752)-55-92-97
+                </p>
+              </div>
+            </div>
+            <form class="contact-us__form" action="#" method="post">
+              @include('partials/main-input.html', {
+              'type': 'text',
+              'placeholder': 'Имя',
+              'name': 'name',
+              'attr': 'required'
+              })
+
+              @include('partials/main-input.html', {
+              'type': 'text',
+              'placeholder': 'Фамилия',
+              'name': 'secondName',
+              'attr': 'required'
+              })
+
+              @include('partials/main-input.html', {
+              'type': 'text',
+              'placeholder': 'Телефон',
+              'name': 'phone',
+              'add-class-input': 'phone-mask'
+              })
+
+              @include('partials/main-textarea.html', {
+              'name': 'message',
+              'placeholder': 'Ваше сообщение',
+              'attr': 'required'
+              })
+
+              <div class="custom-checkbox">
+                <input type="checkbox" id="contact_consent" name="contactConsent" required>
+                <label for="contact_consent">Нажимая кнопку «Отправить», я даю
+                  свое согласие на обработку моих персональных данных, в
+                  соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О
+                  персональных данных», на условиях и для целей, определенных в
+                  Согласии на обработку персональных данных *</label>
+              </div>
+              <button class="contact-us__form-btn" type="submit">Отправить
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="section license">
+        <div class="container">
+          <h3 class="secondarily-subtitle">Лицензии и СРО</h3>
+          <ul class="license__list">
+            <li class="license__list-item">
+              <h4>ЛИЦЕНЗИЯ № МКРФ 22146</h4>
+              <p>
+                ЛИЦЕНЗИЯ № МКРФ 22146 от 30.03.2022 г.(на осуществление
+                деятельности по сохранению объектов культурного наследия
+                (памятников истории и культуры) народов Российской Федерации)
+              </p>
+            </li>
+            <li class="license__list-item">
+              <h4>СРО-П-161-09092010</h4>
+              <p>
+                Регистрационный номер в государственном реестре саморегулируемых
+                организаций СРО-П-161-09092010 (Ассоциация СРО «МРП»)
+              </p>
+            </li>
+            <li class="license__list-item">
+              <h4>СРО-С-058-03112009</h4>
+              <p>
+                Регистрационный номер в государственном реестре саморегулируемых
+                организаций СРО-С-058-03112009 (Ассоциация СРО «Тамбовские
+                строители»)
+              </p>
+            </li>
+          </ul>
+
+
+        </div>
+      </section>
+    </main>
+
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

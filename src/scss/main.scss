@@ -1,0 +1,17 @@
+@import "vars";
+@import "fonts";
+@import "settings";
+
+//Страницы
+@import "./pages/home";
+
+//Компоненты
+@import "./components/contact-info";
+@import "./components/main-menu";
+@import "./components/main-input";
+@import "./components/main-textarea";
+@import "./components/custom-checkbox";
+@import "./components/footer";
+
+//Медиа запросы
+@import "./media/media-home";

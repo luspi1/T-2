@@ -1,0 +1,28 @@
+$white: #ffffff;
+$black: #000000;
+$gray: #A8B6BD;
+$gray-bg: #F6F6F6;
+$green: #3F888F;
+$dark-green: #1C3643;
+$light-green: #77868E;
+$text-green: #304C5A;
+
+@mixin ptsans-regular {
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 400;
+}
+
+@mixin ptsans-bold {
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 700;
+}
+
+@mixin cormorant-regular {
+  font-family: 'Cormorant', serif;
+  font-weight: 400;
+}
+
+@mixin cormorant-bold {
+  font-family: 'Cormorant', serif;
+  font-weight: 700;
+}
