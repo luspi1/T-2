@@ -112,6 +112,7 @@
     &__passport-photo {
       padding-top: 28px;
       min-width: 200px;
+
       h3 {
         @include montserrat-bold;
         font-size: 20px;
@@ -143,17 +144,28 @@
         .dz-remove {
           color: transparent;
           position: absolute;
-          top: -5px;
-          right: -5px;
-          background: url("../img/del-photo.png") no-repeat;
-          width: 18px;
-          height: 18px;
+          top: -10px;
+          right: -10px;
+          border-radius: 50%;
+          background: url("../img/del-photo.png") no-repeat center;
+          width: 25px;
+          height: 25px;
           z-index: 100;
         }
+
+        .info__add-photo {
+          .add-icon-bg {
+            transition: all .3s;
+          }
+
+          &:hover .add-icon-bg {
+            fill: $link;
+          }
+
+
+        }
       }
-
     }
-
   }
 
   .additional {
@@ -193,7 +205,7 @@
       max-width: 660px;
       margin-left: 123px;
 
-      >.subtitle-sm {
+      > .subtitle-sm {
         margin-right: 28px;
       }
     }
@@ -214,6 +226,16 @@
       a {
         display: inline-block;
         margin-left: 20px;
+
+        .svg-bg {
+          transition: all .3s;
+        }
+
+        &:hover .svg-bg{
+          fill: $green-light;
+        }
+
+
       }
     }
   }
@@ -259,9 +281,12 @@
       padding: 21px 30px 18px 16px;
       border-radius: 10px;
       border: 1px solid #D2E7EF;
-        &:not(:first-child) {
-          margin-left: 21px;
-        }
+      position: relative;
+
+      &:not(:first-child) {
+        margin-left: 21px;
+      }
+
       &.active {
         border: 1px solid #66ACCC;
       }
@@ -275,6 +300,13 @@
         font-weight: 500;
         color: $black;
       }
+
+      .delete-btn {
+        position: absolute;
+        top: -17px;
+        right: -17px;
+      }
+
     }
 
     &__card-add {
@@ -282,6 +314,14 @@
       right: -55px;
       top: 50%;
       transform: translateY(-50%);
+
+      .add-icon-bg {
+        transition: all .3s;
+      }
+
+      &:hover .add-icon-bg {
+        fill: $link;
+      }
     }
 
     &__date {
