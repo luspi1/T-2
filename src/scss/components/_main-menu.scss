@@ -2,18 +2,33 @@
   padding: 16px 0;
   background-color: $dark-light;
 
-
   .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-left: 35px;
     padding-right: 70px;
+
+    @media (max-width: 1024px) {
+      padding-right: 35px;
+    }
+  }
+
+  &__nav {
+    margin-right: 20px;
   }
 
   &__nav-list {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
+
+    @media (max-width: 1024px) {
+      justify-content: space-around;
+    }
+
+    @media (max-width: 500px) {
+      flex-direction: column;
+    }
 
     li:hover {
       text-decoration: underline;
@@ -21,14 +36,17 @@
 
     li:not(:last-child) {
       margin-right: 30px;
+
+      @media (max-width: 1024px) {
+        margin-right: 20px;
+        margin-bottom: 15px;
+      }
     }
 
     a {
       color: $white;
     }
-
   }
-
 
   &__personal {
     display: flex;
@@ -43,6 +61,10 @@
   &__lang-btn {
     display: block;
     position: relative;
+
+    img {
+      pointer-events: none;
+    }
 
     &::before {
       content: '';
@@ -60,7 +82,5 @@
     &.main-menu__lang-btn_active::before {
       display: none;
     }
-
   }
-
 }

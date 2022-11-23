@@ -64,9 +64,41 @@ select::-ms-expand {
   display: none;
 }
 
+.dz-details,
+.dz-progress,
+.dz-error-message,
+.dz-success-mark,
+.dz-error-mark {
+  display: none !important;
+}
+
+.dz-message {
+  button {
+    padding: 0;
+  }
+}
+
+.dz-remove {
+  line-height: 0;
+  font-size: 0;
+}
+
+.dz-preview:not(.dz-preview.dz-processing) {
+  display: none;
+}
+
+
+
 .site-container {
   position: relative;
   overflow: hidden;
+}
+
+.line {
+  position: absolute;
+  height: 1px;
+  background-color: #D2E7EF;
+  width: 100%;
 }
 
 .container {
@@ -87,4 +119,9 @@ select::-ms-expand {
   font-size: 25px;
   line-height: 30px;
   color: $dark;
+}
+
+.subtitle-sm {
+  @include montserrat-semibold;
+  line-height: 17px;
 }
