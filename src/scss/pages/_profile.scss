@@ -70,6 +70,17 @@
         }
       }
     }
+  }
+
+  .additional {
+    margin-bottom: 30px;
+
+    &__inner {
+      background: $white;
+      border-radius: 26px;
+      padding: 20px 10px 77px 42px;
+      position: relative;
+    }
 
     &__passport {
       display: flex;
@@ -152,11 +163,129 @@
         }
       }
 
-
-
-
     }
 
 
+    &__top {
+      display: flex;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+
+    &__image {
+      width: 80px;
+      height: 80px;
+      margin-right: 43px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #FC611F;
+      overflow: hidden;
+    }
+
+    &__row {
+      display: flex;
+    }
+
+    &__text {
+      display: flex;
+      max-width: 660px;
+      margin-left: 123px;
+
+      >.subtitle-sm {
+        margin-right: 28px;
+      }
+    }
+
+    &__socials {
+      margin-left: 45px;
+
+      .additional__row {
+        .subtitle-sm {
+          min-width: 132px;
+        }
+
+        &:first-child {
+          margin-bottom: 12px;
+        }
+      }
+
+      a {
+        display: inline-block;
+        margin-left: 20px;
+      }
+    }
   }
+
+  .bank {
+    &__inner {
+      background: $white;
+      border-radius: 26px;
+      padding: 20px 10px 77px 42px;
+      position: relative;
+    }
+
+    &__top {
+      display: flex;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+
+    &__image {
+      width: 80px;
+      height: 80px;
+      margin-right: 43px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #1DAB7F;
+      overflow: hidden;
+    }
+
+    &__list {
+      position: relative;
+      display: flex;
+      max-width: 904px;
+      margin: auto;
+    }
+
+    &__card {
+      max-width: 287px;
+      margin-top: 5px;
+      padding: 21px 30px 18px 16px;
+      border-radius: 10px;
+      border: 1px solid #D2E7EF;
+        &:not(:first-child) {
+          margin-left: 21px;
+        }
+      &.active {
+        border: 1px solid #66ACCC;
+      }
+
+      .subtitle-sm {
+        margin-bottom: 13px;
+        font-weight: 700;
+      }
+
+      span.subtitle-sm {
+        font-weight: 500;
+        color: $black;
+      }
+    }
+
+    &__card-add {
+      position: absolute;
+      right: -55px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &__date {
+      margin-top: 10px;
+      color: $blue;
+    }
+  }
+
 }
