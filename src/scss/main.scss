@@ -3,15 +3,12 @@
 @import "settings";
 
 //Страницы
-@import "./pages/home";
+@import "./pages/profile";
 
 //Компоненты
-@import "./components/contact-info";
 @import "./components/main-menu";
-@import "./components/main-input";
-@import "./components/main-textarea";
-@import "./components/custom-checkbox";
+@import "./components/edit-btn";
+
 @import "./components/footer";
 
 //Медиа запросы
-@import "./media/media-home";

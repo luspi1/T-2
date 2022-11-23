@@ -1,0 +1,68 @@
+.profile-page {
+
+  .info {
+    margin-bottom: 30px;
+    .page-title {
+      padding: 33px 0 33px 21px;
+    }
+
+    &__inner {
+      background: $white;
+      border-radius: 26px;
+      padding: 22px 10px 40px 22px;
+      position: relative;
+    }
+
+    &__data {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    &__data-avatar {
+      margin-right: 20px;
+    }
+
+    &__data-fullname {
+      margin-right: 145px;
+      max-width: 560px;
+    }
+
+    &__name {
+      @include montserrat-semibold;
+      font-size: 36px;
+      line-height: 44px;
+      color: #000000;
+      margin-bottom: 15px;
+    }
+
+    &__email {
+      color: $link;
+    }
+
+    &__data-list {
+      li {
+        padding-left: 35px;
+        position: relative;
+
+        a {
+          color: $link;
+        }
+
+        svg {
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+
+
+
+        &:not(:last-child) {
+          margin-bottom: 17px;
+        }
+      }
+    }
+
+
+  }
+}

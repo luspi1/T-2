@@ -10,10 +10,11 @@ body {
   margin: 0;
   min-width: 340px;
   overflow-x: hidden;
-  @include ptsans-regular;
-  font-size: 18px;
-  line-height: 26px;
-  color: $light-green;
+  @include montserrat-regular;
+  font-size: 14px;
+  line-height: 20px;
+  background-color: $main-bg;
+  color: $dark-light;
   position: relative;
 }
 
@@ -47,6 +48,13 @@ p {
   margin: 0;
 }
 
+button {
+  border: none;
+  cursor: pointer;
+  background: none;
+  padding: 0;
+}
+
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -62,34 +70,21 @@ select::-ms-expand {
 }
 
 .container {
-  max-width: 1270px;
-  padding: 0 15px;
   margin: 0 auto;
+  max-width: 1230px;
+  padding: 0 15px;
 }
 
-.main-subtitle {
-  @include cormorant-bold;
-  font-size: 68px;
-  line-height: 82px;
+.page-title {
+  @include montserrat-semibold;
+  font-size: 26px;
+  line-height: 32px;
   color: $black;
-
-  @media (max-width: 1024px) {
-    font-size: 45px;
-    line-height: 60px;
-  }
-
 }
 
-.secondarily-subtitle {
-  text-align: center;
-  @include cormorant-bold;
-  font-size: 43px;
-  line-height: 52px;
-  color: #1C3643;
-
-  @media (max-width: 1024px) {
-    font-size: 35px;
-    line-height: 55px;
-  }
-
+.subtitle {
+  @include montserrat-semibold;
+  font-size: 25px;
+  line-height: 30px;
+  color: $dark;
 }

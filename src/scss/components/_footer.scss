@@ -1,9 +1,13 @@
 .footer {
-  padding: 40px 0;
+  .container {
+    padding: 16px 40px;
+    max-width: 1200px;
+    background-color: $second-bg;
+    border-radius: 20px 20px 0px 0px;
+  }
+
   p {
-    font-size: 15px;
-    line-height: 19px;
-    text-align: center;
-    color: $gray;
+    font-size: 12px;
+    line-height: 15px;
   }
 }

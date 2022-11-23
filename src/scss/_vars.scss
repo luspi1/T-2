@@ -1,28 +1,30 @@
 $white: #ffffff;
 $black: #000000;
-$gray: #A8B6BD;
-$gray-bg: #F6F6F6;
-$green: #3F888F;
-$dark-green: #1C3643;
-$light-green: #77868E;
-$text-green: #304C5A;
 
-@mixin ptsans-regular {
-  font-family: 'PT Sans', sans-serif;
+$main-bg: #F2F2F2;
+$second-bg: #D9D9D9;
+
+$dark: #131313;
+$dark-light: #3D3D3D;
+$link: #51828E;
+$blue: #8FC3D8;
+
+
+@mixin montserrat-regular {
+  font-family: 'Montserrat', sans-serif;
   font-weight: 400;
 }
-
-@mixin ptsans-bold {
-  font-family: 'PT Sans', sans-serif;
+@mixin montserrat-medium {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+@mixin montserrat-semibold {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+@mixin montserrat-bold {
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
 }
 
-@mixin cormorant-regular {
-  font-family: 'Cormorant', serif;
-  font-weight: 400;
-}
 
-@mixin cormorant-bold {
-  font-family: 'Cormorant', serif;
-  font-weight: 700;
-}
