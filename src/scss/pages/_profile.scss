@@ -150,15 +150,27 @@
         .dz-remove {
           color: transparent;
           position: absolute;
-          top: -5px;
-          right: -5px;
-          background: url("../img/del-photo.png") no-repeat;
-          width: 18px;
-          height: 18px;
+          top: -10px;
+          right: -10px;
+          border-radius: 50%;
+          background: url("../img/del-photo.png") no-repeat center;
+          width: 25px;
+          height: 25px;
           z-index: 100;
         }
-      }
 
+        .info__add-photo {
+          .add-icon-bg {
+            transition: all .3s;
+          }
+
+          &:hover .add-icon-bg {
+            fill: $link;
+          }
+
+
+        }
+      }
     }
   }
 
@@ -203,7 +215,7 @@
       margin-right: 45px;
       margin-top: 24px;
 
-      >.subtitle-sm {
+      > .subtitle-sm {
         margin-right: 28px;
       }
     }
@@ -224,6 +236,16 @@
       a {
         display: inline-block;
         margin-left: 20px;
+
+        .svg-bg {
+          transition: all .3s;
+        }
+
+        &:hover .svg-bg{
+          fill: $green-light;
+        }
+
+
       }
     }
   }
@@ -269,6 +291,12 @@
       padding: 21px 30px 18px 16px;
       border-radius: 10px;
       border: 1px solid #D2E7EF;
+      position: relative;
+
+      &:not(:first-child) {
+        margin-left: 21px;
+      }
+
 
       &.active {
         border: 1px solid #66ACCC;
@@ -283,11 +311,30 @@
         font-weight: 500;
         color: $black;
       }
+
+      .delete-btn {
+        position: absolute;
+        top: -17px;
+        right: -17px;
+      }
+
     }
 
     &__card-add {
-      margin-top: 10px;
 
+      margin-top: 10px;
+      position: absolute;
+      right: -55px;
+      top: 50%;
+      transform: translateY(-50%);
+
+      .add-icon-bg {
+        transition: all .3s;
+      }
+
+      &:hover .add-icon-bg {
+        fill: $link;
+      }
     }
 
     &__date {

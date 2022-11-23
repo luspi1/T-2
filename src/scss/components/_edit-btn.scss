@@ -1,5 +1,15 @@
 .edit-btn {
   position: absolute;
+  z-index: 30;
   right: 10px;
   top: 10px;
+
+  svg path {
+    transition: all .3s;
+  }
+
+  &:hover svg path {
+    stroke: $link;
+  }
+
 }
