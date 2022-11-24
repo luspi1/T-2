@@ -9,7 +9,9 @@
 
 <div class="site-container">
   <div class="header">
-    @include('partials/main-menu.html')
+    @include('partials/main-menu.html', {
+    'active-profile': '_active'
+    })
   </div>
 
   <main class="main">

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {
+'title': 'Мои услуги'
+})
+
+<body class="page__body services-page">
+
+<div class="site-container">
+  <div class="header">
+    @include('partials/main-menu.html', {
+    'active-services': '_active'
+    })
+  </div>
+
+  <main class="main">
+    <section class="section packages">
+      <div class="container">
+        <h1 class="page-title">Мои услуги</h1>
+      </div>
+    </section>
+  </main>
+  @include('partials/footer.html')
+</div>
+</body>
+
+</html>
