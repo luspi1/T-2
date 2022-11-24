@@ -190,17 +190,6 @@
       align-items: center;
     }
 
-    &__image {
-      width: 80px;
-      height: 80px;
-      margin-right: 43px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
-
     &__row {
       display: flex;
     }
@@ -260,17 +249,6 @@
       display: flex;
       align-items: center;
       margin-bottom: 24px;
-    }
-
-    &__image {
-      width: 80px;
-      height: 80px;
-      margin-right: 43px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
     }
 
     &__list {

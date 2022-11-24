@@ -7,22 +7,159 @@
 
 <body class="page__body services-page">
 
-<div class="site-container">
-  <div class="header">
-    @include('partials/main-menu.html', {
-    'active-services': '_active'
-    })
-  </div>
+  <div class="site-container">
+    <div class="header">
+      @include('partials/main-menu.html', {
+      'active-services': '_active'
+      })
+    </div>
 
-  <main class="main">
-    <section class="section packages">
-      <div class="container">
-        <h1 class="page-title">Мои услуги</h1>
-      </div>
-    </section>
-  </main>
-  @include('partials/footer.html')
-</div>
+    <main class="main">
+      <section class="section packages">
+        <div class="container">
+          <h1 class="page-title">Мои услуги</h1>
+          <div class="section__inner">
+            <div class="section__top">
+              <div class="section-image">
+                <img src="img/services_packages.png" alt="">
+              </div>
+              <h2 class="subtitle">Пакеты услуг</h2>
+            </div>
+            <div class="packages__cards">
+              <div class="packages__card packages__card_active">
+                <p class="subtitle-sm">Стартовый пакет</p>
+                <p class="packages__tariff">Пакет услуг по умолчанию</p>
+                <ul class="packages__list">
+                  <li>Первое условие</li>
+                  <li>Второе условие</li>
+                  <li>Третье условие</li>
+                </ul>
+                <p class="packages__price">Стоимость: <span>бесплатно</span></p>
+                <button class="packages__btn">Пакет подключен</button>
+              </div>
+              <div class="packages__card">
+                <p class="subtitle-sm">Базовый пакет</p>
+                <p class="packages__tariff">Начальный пакет услуг</p>
+                <ul class="packages__list">
+                  <li>Первое условие</li>
+                  <li>Второе условие</li>
+                  <li>Третье условие</li>
+                </ul>
+                <p class="packages__price">Стоимость: <span>1 380</span> <span>&#8381;/мес</span></p>
+                <button class="packages__btn">Подключить пакет</button>
+              </div>
+              <div class="packages__card">
+                <p class="subtitle-sm">Профи</p>
+                <p class="packages__tariff">Расширенный пакет услуг</p>
+                <ul class="packages__list">
+                  <li>Первое условие</li>
+                  <li>Второе условие</li>
+                  <li>Третье условие</li>
+                </ul>
+                <p class="packages__price">Стоимость: <span>2 500</span> <span>&#8381;/мес</span></p>
+                <button class="packages__btn">Подключить пакет</button>
+              </div>
+              <div class="packages__card">
+                <p class="subtitle-sm">Профи Про</p>
+                <p class="packages__tariff">Пакет услуг по умолчанию </p>
+                <ul class="packages__list">
+                  <li>Первое условие</li>
+                  <li>Второе условие</li>
+                  <li>Третье условие</li>
+                </ul>
+                <p class="packages__price">Стоимость: <span>4 500</span> <span>&#8381;/мес</span></p>
+                <button class="packages__btn">Подключить пакет</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section additional">
+        <div class="container">
+          <div class="section__inner">
+            <div class="section__top">
+              <div class="section-image">
+                <img src="img/services_additional.png" alt="">
+              </div>
+              <h2 class="subtitle">Дополнительные услуги</h2>
+            </div>
+            <div class="additional__tile">
+              <div class="additional__row">
+                <h3 class="additional__subtitle">Подключенные</h3>
+                <div class="additional__cards connected">
+                  <div class="additional__card">
+                    <div class="additional__card-wrapper">
+                    <p class="subtitle-sm">СМС+</p>
+                    <p class="additional__info">Все оповещения в СМС</p>
+                    </div>
+                    <div class="additional__card-wrapper">
+                    <p class="additional__price">Стоимость: <span>1 200</span> <span>&#8381;/мес</span></p>
+                    <button class="additional__btn">Отключить</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="additional__row">
+                <button class="additional__btn-available">
+                  <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M10 20.7C15.5228 20.7 20 16.2228 20 10.7C20 5.1771 15.5228 0.699951 10 0.699951C4.47715 0.699951 0 5.1771 0 10.7C0 16.2228 4.47715 20.7 10 20.7Z"
+                      fill="#1DAB7F" />
+                    <path d="M5.59998 10.7H14.4" stroke="white" stroke-width="3" stroke-linecap="round" />
+                    <path d="M10 6.19995V15.1" stroke="white" stroke-width="3" stroke-linecap="round" />
+                  </svg>
+                  <span>Доступные</span>
+                </button>
+                <div class="additional__cards">
+                  <div class="additional__card">
+                    <div class="additional__card-wrapper">
+                    <p class="subtitle-sm">Пространство+</p>
+                    <p class="additional__info">Дисковое пространство до 1 Гб</p>
+                    </div>
+                    <div class="additional__card-wrapper">
+                    <p class="additional__price">Стоимость: <span>120</span> <span>&#8381;/мес</span></p>
+                    <button class="additional__btn">Подключить</button>
+                    </div>
+                  </div>
+                  <div class="additional__card">
+                    <div class="additional__card-wrapper">
+                    <p class="subtitle-sm">Владелец</p>
+                    <p class="additional__info">До 5 организаций</p>
+                    </div>
+                    <div class="additional__card-wrapper">
+                    <p class="additional__price">Стоимость: <span>2 000</span> <span>&#8381;/мес</span></p>
+                    <button class="additional__btn">Подключить</button>
+                    </div>
+                  </div>
+                  <div class="additional__card">
+                    <div class="additional__card-wrapper">
+                    <p class="subtitle-sm">Пространство+</p>
+                    <p class="additional__info">Дисковое пространство до 1 Гб</p>
+                    </div>
+                    <div class="additional__card-wrapper">
+                    <p class="additional__price">Стоимость: <span>120</span> <span>&#8381;/мес</span></p>
+                    <button class="additional__btn">Подключить</button>
+                    </div>
+                  </div>
+                  <div class="additional__card">
+                    <div class="additional__card-wrapper">
+                    <p class="subtitle-sm">Владелец</p>
+                    <p class="additional__info">До 5 организаций</p>
+                    </div>
+                    <div class="additional__card-wrapper">
+                    <p class="additional__price">Стоимость: <span>2 000</span> <span>&#8381;/мес</span></p>
+                    <button class="additional__btn">Подключить</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @include('partials/footer.html')
+  </div>
 </body>
 
 </html>
