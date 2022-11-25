@@ -15,10 +15,12 @@
     </div>
 
     <main class="main">
+      @include('partials/page-title.html', {
+        'page-title': 'Мои услуги'
+        })
       <section class="section packages">
         <div class="container">
-          <h1 class="page-title">Мои услуги</h1>
-          <div class="section__inner">
+           <div class="section__inner">
             <div class="section__top">
               <div class="section-image">
                 <img src="img/services_packages.png" alt="">
