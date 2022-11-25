@@ -15,9 +15,11 @@
   </div>
 
   <main class="main">
+    @include('partials/page-title.html', {
+      'page-title': 'Личный кабинет'
+      })
     <section class="section info">
       <div class="container">
-        <h1 class="page-title">Личный кабинет</h1>
         <div class="info__inner">
           <button class="edit-btn" title="Редактировать раздел">
             <svg width="37" height="37" viewBox="0 0 37 37" fill="none"

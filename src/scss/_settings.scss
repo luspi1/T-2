@@ -105,13 +105,7 @@ select::-ms-expand {
   padding: 0 15px;
 }
 
-.page-title {
-  @include montserrat-semibold;
-  font-size: 26px;
-  line-height: 32px;
-  padding: 33px 0 33px 21px;
-  color: $black;
-}
+
 
 .subtitle {
   @include montserrat-semibold;

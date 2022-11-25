@@ -5,10 +5,14 @@
 //Страницы
 @import "./pages/profile";
 @import "./pages/services";
+@import "./pages/objects";
+
 
 //Компоненты
 @import "./components/main-menu";
 @import "./components/edit-btn";
+@import "./components/page-title";
+@import "./components/customSelect";
 
 @import "./components/footer";
 
@@ -16,3 +20,5 @@
 
 @import "./media/media-profile";
 @import "./media/media-services";
+@import "./media/media-objects";
+
