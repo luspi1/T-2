@@ -34,6 +34,14 @@
       transition: all .3s;
       padding: 6px 10px;
       border-radius: 20px;
+
+      &._active {
+        background-color: $green-blue;
+
+        a {
+          font-weight: 500;
+        }
+      }
     }
 
     li:hover {
