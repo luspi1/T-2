@@ -64,6 +64,10 @@ select::-ms-expand {
   display: none;
 }
 
+textarea {
+  resize: none;
+}
+
 .dz-details,
 .dz-progress,
 .dz-error-message,

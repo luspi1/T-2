@@ -62,6 +62,17 @@
       font-weight: 500;
       border: 1px solid #337390;
       border-radius: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      transition: all .3s;
+
+      &:hover {
+        background-color: $green-blue;
+        color: $white;
+      }
+
     }
 
     &__list {
