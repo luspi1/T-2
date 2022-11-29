@@ -1,0 +1,77 @@
+@media(max-width: 1240px) {
+  .new-object .new-object-form__row {
+    flex-wrap: wrap;
+  }
+}
+
+@media(max-width: 768px) {
+  .new-object .new-object-form {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .new-object .new-object-form__row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .new-object .new-object-form__item-registry .new-object-form__warning {
+    align-self: flex-start;
+  }
+  .new-object .new-object-form__textarea-wrapper,
+  .new-object .new-object-form__textarea:nth-child(n) {
+    width: 100%;
+  }
+  .new-object .new-object-form__input-row > div:nth-child(n) {
+    min-width: 100%;
+  }
+
+  .new-object .new-object-form__item-documents li {
+    max-width: 70px;
+
+  }
+  .new-object .new-object-form__item-documents li:not(:last-child) {
+    margin-right: 40px;
+  }
+  .new-object .new-object-form__item-documents img {
+    margin-bottom: 5px;
+  }
+  .new-object .new-object-form__item-documents span {
+    word-wrap: break-word;
+    font-size: 11px;
+  }
+  .new-object .new-object-form__btn-save {
+    margin-right: 15px;
+  }
+}
+
+@media(max-width: 576px) {
+  .new-object .new-object-form {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .new-object .new-object-form__icon {
+    display: none;
+  }
+  .new-object .new-object-form__buttons {
+    margin-left: 0;
+    flex-direction: column;
+  }
+  .new-object .new-object-form__btn-save {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .new-object .new-object-form__owner .new-object-form__input::placeholder {
+    font-size: 11px;
+  }
+  .new-object .new-object-form__item-registry .new-object-form__input-wrapper {
+    min-width: 100%;
+    margin-right: 0;
+  }
+  .new-object-form__warning p br {
+    display: none;
+  }
+
+  .new-object .new-object-form__item-btn-owner-add {
+    margin-left: 0;
+  }
+  
+}
