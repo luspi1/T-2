@@ -4,3 +4,4 @@ import { cutString } from "../_functions";
 
 const trimNewObjStrings = document.querySelectorAll('.new-object-form span[data-shear]');
 cutString(trimNewObjStrings);
+
