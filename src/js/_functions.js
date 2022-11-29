@@ -1,5 +1,4 @@
 // Обрезка длинного текста на определенную длину
-
 const cutString = (stringArray) => {
   stringArray.forEach(str => {
     const cutLength = +str.dataset.shear
@@ -9,7 +8,6 @@ const cutString = (stringArray) => {
     }
   })
 }
-
 
 export {
   cutString
