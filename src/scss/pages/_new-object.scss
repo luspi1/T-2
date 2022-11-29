@@ -1,7 +1,7 @@
 .new-object {
   margin-bottom: 30px;
 
-  .form {
+  .new-object-form {
     padding: 41px 31px 40px 45px;
     background: $white;
     border-radius: 24px;
@@ -13,7 +13,7 @@
 
       &:nth-child(1),
       &:nth-child(2) {
-        .form__wrapper {
+        .new-object-form__wrapper {
           padding-bottom: 45px;
         }
       }
@@ -127,7 +127,11 @@
       padding: 6px 10px;
       border: 1px solid $green-blue;
       border-radius: 3px;
-      color: #7D8E8E;
+      color: #3D3D3D;
+
+      &::placeholder {
+        color: #7D8E8E;
+      }
 
       &:focus-visible {
         outline: none;
@@ -152,8 +156,15 @@
       padding: 23px 20px 10px;
       background-color: #F4F7FB;
       border-radius: 10px;
+      position: relative;
 
-      .form__input {
+      &:hover {
+        .new-object-form__item-btn-owner-delete {
+          display: block;
+        }
+      }
+
+      .new-object-form__input {
         height: 30px;
         font-size: 14px;
         line-height: 17px;
@@ -210,7 +221,6 @@
     &__owner-type {
       min-width: 200px;
 
-
       .choices__inner {
         height: 30px;
         padding-top: 1px;
@@ -225,18 +235,14 @@
       }
     }
 
-    .btn-owner-add {
-      margin-left: 20px;
-    }
-
     &__item-registry {
       margin-bottom: 15px;
 
-      .form__row-top {
+      .new-object-form__row-top {
         margin-bottom: 32px;
       }
 
-      .form__input-wrapper {
+      .new-object-form__input-wrapper {
         min-width: 330px;
         margin-right: 42px;
         margin-bottom: 7px;
@@ -246,7 +252,7 @@
         }
       }
 
-      .form__warning {
+      .new-object-form__warning {
         align-self: flex-end;
       }
     }
@@ -254,7 +260,7 @@
     &__item-documents {
       margin-bottom: 0;
 
-      .form__wrapper {
+      .new-object-form__wrapper {
         border-bottom: none;
         padding-bottom: 22px;
       }
@@ -265,16 +271,27 @@
 
       li {
         max-width: 121px;
-        overflow-x: hidden;
 
         &:not(:last-child) {
           margin-right: 30px;
+          position: relative;
+
+          .button-delete {
+            right: -14px;
+            top: -21px;
+          }
+
+          &:hover {
+            .button-delete {
+              display: block;
+            }
+          }
         }
 
         &:last-child {
           align-self: center;
           padding-bottom: 14px;
-          }
+        }
       }
 
       img {
@@ -288,6 +305,53 @@
       }
     }
 
+    &__item-btn {
+      &:hover {
+        svg {
+          path {
+            fill: $link;
+            opacity: 1;
+            transition: all .3s;
+          }
+        }
+      }
+    }
+
+    &__item-btn-owner-add {
+      margin-left: 20px;
+      font-weight: 600;
+      border-radius: 50px;
+      display: flex;
+      color: $white;
+      align-items: center;
+      transition: all .3s;
+
+      span {
+        display: none;
+      }
+
+      &:hover {
+        background-color: $green-blue;
+        padding-right: 22px;
+
+        svg {
+          margin-right: 17px;
+        }
+
+        span {
+          display: inline;
+        }
+      }
+    }
+
+    &__item-btn-owner-delete {
+      position: absolute;
+      right: 12px;
+      top: 15px;
+      z-index: 5;
+      display: none;
+    }
+
     &__item-image {
       ul {
         display: flex;
@@ -296,17 +360,29 @@
       li {
         max-width: 121px;
 
-
         &:not(:last-child) {
           margin-right: 30px;
+          position: relative;
+
+          .button-delete {
+            right: -19px;
+            top: -19px;
+          }
+
+          &:hover {
+            .button-delete {
+              display: block;
+            }
+          }
         }
 
         &:last-child {
           align-self: center;
+          padding-bottom: 32px;
         }
       }
-      span {
 
+      span {
         font-weight: 500;
         color: $green-blue;
       }
@@ -315,12 +391,89 @@
     &__image {
       width: 110px;
       height: 110px;
-      margin-bottom: 8px;
+      margin: 0 auto 13px;
       border: 2px solid rgba(143, 195, 216, 0.3);
       border-radius: 6px;
       display: flex;
       justify-content: center;
       align-items: center;
+
+      img {
+        max-height: 108px;
+      }
     }
+
+    &__item-description {
+      .new-object-form__wrapper {
+        padding-bottom: 23px;
+      }
+
+      .new-object-form__row {
+        &:last-child {
+          .new-object-form__textarea {
+            height: 95px;
+          }
+        }
+      }
+    }
+
+    &__textarea-wrapper {
+      display: flex;
+      flex-direction: column;
+      margin-right: 31px;
+      margin-bottom: 18px;
+      width: 485px;
+
+      label {
+        margin-bottom: 5px;
+        font-weight: 500;
+        color: $green-blue;
+      }
+
+      .new-object-form__textarea {
+        width: 100%;
+      }
+    }
+
+    &__buttons {
+      margin-left: 123px;
+      display: flex;
+
+    }
+
+    &__btn {
+      height: 40px;
+      border-radius: 3px;
+      padding: 0 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-transform: uppercase;
+      font-weight: 700;
+      line-height: 17px;
+      transition: all 0.3s;
+    }
+
+    &__btn-save {
+      margin-right: 43px;
+      border: 1px solid $green-blue;
+      color: $green-blue;
+
+      &:hover {
+        color: $white;
+        background-color: $green-blue;
+      }
+    }
+
+    &__btn-publish {
+      border: 1px solid $green-light;
+      color: $green-light;
+
+      &:hover {
+        color: $white;
+        background-color: $green-light;
+      }
+    }
+
   }
 }
