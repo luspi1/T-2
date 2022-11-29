@@ -5,6 +5,7 @@
     &__inner {
       padding: 36px 20px 45px;
       background-color: $white;
+      border-radius: 24px;
     }
 
     &__select-row {
@@ -155,6 +156,11 @@
         &__col-3 {
           width: 19%;
           margin-right: 20px;
+          p {
+            color: $dark-light;
+          }
+
+
         }
 
         &__col-3,
@@ -194,7 +200,9 @@
         &__col-4 {
           width: 39%;
           margin-right: 20px;
-
+          p {
+            color: $dark-light;
+          }
         }
 
         &__info {
@@ -252,9 +260,6 @@
         }
       }
     }
-
-
-
 
 
   }
