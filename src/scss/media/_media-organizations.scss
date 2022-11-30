@@ -1,0 +1,47 @@
+@media (max-width: 1200px) {
+  .organizations-page .organizations__item {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .organizations-page .organizations__row {
+    flex-direction: column;
+  }
+
+  .organizations-page .organizations__inn,
+  .organizations-page .organizations__you {
+    margin-bottom: 10px;
+  }
+
+  .organizations-page .organizations__information,
+  .organizations-page .organizations__statistics {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .organizations-page .organizations__statistics-name span {
+    margin-right: 25px;
+  }
+
+
+
+  //modal
+  .organizations-page .modal-invite__buttons {
+    flex-direction: column;
+  }
+
+  .organizations-page .modal-invite__btn {
+    width: 100%;
+  }
+
+  .organizations-page .modal-invite__btn-refusal {
+    margin-bottom: 20px;
+  }
+
+  .organizations-page .modal-invite__btn-accept {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+}
