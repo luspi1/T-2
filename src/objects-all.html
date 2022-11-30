@@ -9,12 +9,14 @@
 
   <div class="site-container">
     <div class="header">
-      @include('partials/main-menu.html')
+      @include('partials/main-menu.html', {
+      'active-objects': '_active'
+      })
     </div>
 
     <main class="main">
       @include('partials/page-title.html', {
-      'page-title': 'Мои объекты'
+      'page-title': 'Объекты'
       })
       <section class="section objects">
         <div class="container">
