@@ -1,0 +1,87 @@
+@media (max-width: 1280px) {
+  .object-card-page .object-card__inner {
+    padding: 40px 50px 40px 50px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .object-card-page .object-card__info-list li .object-card__info-list-title {
+    min-width: 185px;
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+
+  .object-card-page .object-card__info-list li {
+    flex-direction: column;
+  }
+
+  .object-card-page .object-card__btns .object-card__btns-prompt {
+    max-width: 100%;
+    margin-top: 15px;
+  }
+
+  .object-card-page .object-card__btns {
+    flex-wrap: wrap;
+  }
+
+  .object-card-page .object-card__btns .object-card__edit-btn {
+    margin-right: 0;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .object-card-page .object-card__unique-number {
+    font-size: 16px;
+  }
+
+  .object-card-page .object-card__info-main {
+    flex-direction: column;
+  }
+
+  .object-card-page .object-card__info-main-left {
+    margin-right: 0;
+    margin-bottom: 50px;
+  }
+
+  .object-card-page .object-card__info-list li .object-card__info-progress {
+    width: 112%;
+  }
+
+  .object-card-page .object-card__info-list li .object-card__info-list-content {
+    padding-right: 50px;
+  }
+
+  .object-card-page .object-card__aside {
+    width: 250px;
+    min-width: 250px;
+  }
+
+  .object-card-page .object-card__aside-type {
+    margin-bottom: 20px;
+  }
+
+
+  .object-card-page .object-card__btns {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .object-card-page .object-card__btns .object-card__btns-link {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .object-card-page .object-card__btns .object-card__edit-btn {
+    min-width: 240px;
+    width: 240px;
+    height: 55px;
+  }
+
+  .object-card-page .object-card__btns .object-card__btns-prompt {
+    max-width: 240px;
+    width: 240px;
+  }
+
+
+}

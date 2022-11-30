@@ -91,6 +91,26 @@ textarea {
   display: none;
 }
 
+.swiper-horizontal {
+  overflow: hidden;
+  position: relative;
+
+  button {
+    path {
+      transition: all .3s;
+    }
+
+    &:hover path {
+      stroke: $green-blue;
+    }
+  }
+}
+
+.input_disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
 .site-container {
   position: relative;
   overflow: hidden;
@@ -108,7 +128,6 @@ textarea {
   max-width: 1230px;
   padding: 0 15px;
 }
-
 
 
 .subtitle {
@@ -133,4 +152,25 @@ textarea {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+}
+
+.main-button {
+  @include montserrat-bold;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 3px;
+  padding: 11px 23px;
+  transition: all .3s;
+  color: $green-blue;
+  border: 1px solid $green-blue;
+  display: inline-block;
+  height: 40px;
+  min-width: 240px;
+
+  &:hover {
+    color: $white;
+    background-color: $green-blue;
+  }
 }
