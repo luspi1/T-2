@@ -365,57 +365,62 @@
     }
 
     &__item-image {
-      ul {
+      .dropzone  {
         display: flex;
         flex-wrap: wrap;
       }
-
-      li {
+      .dz-message {
+        padding-bottom: 32px;
+        order: 2;
+        align-self: center;
+      }
+      .dropzone .dz-preview {
         max-width: 121px;
+        width: auto;
+        margin: 0 30px 10px 0;
 
-        &:not(:last-child) {
-          margin-right: 30px;
-          margin-bottom: 10px;
-          position: relative;
-
-          .button-delete {
-            right: -19px;
-            top: -19px;
-          }
-
-          &:hover {
-            .button-delete {
-              display: block;
-            }
-          }
-        }
-
-        &:last-child {
-          align-self: center;
-          padding-bottom: 32px;
-        }
       }
 
-      span {
+      .dz-remove {
+        color: transparent;
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        border-radius: 50%;
+        background: url("../img/del-photo.png") no-repeat center;
+        width: 25px;
+        height: 25px;
+        z-index: 100;
+      }
+      .dz-details {
+        display: block !important;
+        .dz-size {
+          display: none;
+        }
+      }
+      .dz-image {
+        width: 110px;
+        height: 110px;
+        margin: 0 auto 13px;
+        border: 2px solid rgba(143, 195, 216, 0.3);
+        border-radius: 6px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          max-height: 108px;
+        }
+      }
+      .dz-filename {
         font-weight: 500;
         color: $green-blue;
+        white-space: nowrap;
+        overflow-x: hidden;
       }
     }
 
-    &__image {
-      width: 110px;
-      height: 110px;
-      margin: 0 auto 13px;
-      border: 2px solid rgba(143, 195, 216, 0.3);
-      border-radius: 6px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
 
-      img {
-        max-height: 108px;
-      }
-    }
 
     &__item-description {
       .new-object-form__wrapper {
