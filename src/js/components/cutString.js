@@ -10,3 +10,7 @@ cutString(trimNewObjStrings);
 const trimObjCardStrings = document.querySelectorAll('.object-card-page [data-shear]');
 cutString(trimObjCardStrings);
 
+//обрезка длинных строк на странице карточки объекта
+
+const trimAuctionStrings = document.querySelectorAll('.auctions-page [data-shear]');
+cutString(trimAuctionStrings);
