@@ -1,5 +1,5 @@
 import { Dropzone } from "dropzone";
-
+import { cutString } from "../_functions";
 
 
 //Dropzone для фото документов в личном кабинете
@@ -16,7 +16,6 @@ if (passportPhoto) {
     acceptedFiles: '.png, .jpeg, .jpg',
     addRemoveLinks: true,
     clickable: '#passport-add',
-
   });
 }
 
@@ -27,7 +26,7 @@ const newObjectPhoto = document.querySelector('#new-object-dropzone');
 if (newObjectPhoto) {
   let newObjectDropzone = new Dropzone(newObjectPhoto, {
     maxFilesize: 5,
-    url: "/include/ajax/upload_image.php",
+    url: "./data/photo-data.txt",
     maxFiles: 10,
     thumbnailWidth: 93,
     thumbnailHeight: 93,
@@ -35,4 +34,11 @@ if (newObjectPhoto) {
     addRemoveLinks: true,
     clickable: '#photo-object-add',
   });
+
+  newObjectDropzone.on("success", function (file, response) {
+    const photoTitles = newObjectPhoto.querySelectorAll('span[data-dz-name]')
+    cutString(photoTitles, 12)
+  });
+
+
 }
