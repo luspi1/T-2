@@ -26,7 +26,7 @@ const newObjectDoc = document.querySelector('#new-object-doc-dropzone');
 if (newObjectDoc) {
   let newObjectDocDropzone = new Dropzone(newObjectDoc, {
     maxFilesize: 5,
-    url: "/include/ajax/upload_image.php",
+    url: "./data/photo-data.txt",
     maxFiles: 10,
     thumbnailWidth: 93,
     thumbnailHeight: 93,
@@ -35,6 +35,12 @@ if (newObjectDoc) {
     addRemoveLinks: true,
     clickable: '#new-object-doc-add',
   });
+
+  newObjectDocDropzone.on("success", function () {
+    const photoTitles = newObjectDoc.querySelectorAll('span[data-dz-name]')
+    cutString(photoTitles, 12)
+  });
+
 }
 
 
@@ -55,7 +61,7 @@ if (newObjectPhoto) {
     clickable: '#new-object-photo-add',
   });
 
-  newObjectDropzone.on("success", function (file, response) {
+  newObjectPhotoDropzone.on("success", function () {
     const photoTitles = newObjectPhoto.querySelectorAll('span[data-dz-name]')
     cutString(photoTitles, 12)
   });
