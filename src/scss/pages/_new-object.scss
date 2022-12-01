@@ -269,46 +269,49 @@
         border-bottom: none;
         padding-bottom: 22px;
       }
-
-      ul {
+      .dropzone {
         display: flex;
         flex-wrap: wrap;
       }
+      .dz-message {
+        order: 2;
+        align-self: center;
+        padding-bottom: 14px;
+      }
+      .dz-preview {
+        background-image: url('../img/doc-file.png');
+        background-repeat: no-repeat;
+        background-size: auto 132px;
+        width: 121px;
+        height: 172px;
+        display: flex;
+        margin: 0 30px 10px 0;
+        align-items: flex-end;
+      }
+      .dz-details {
+        display: block !important;
+        .dz-size {
+          display: none;
+        }
+      }
 
-      li {
+      .dz-remove {
+        color: transparent;
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        border-radius: 50%;
+        background: url("../img/del-photo.png") no-repeat center;
+        width: 25px;
+        height: 25px;
+        z-index: 100;
+      }
+      .dz-filename {
         max-width: 121px;
-
-        &:not(:last-child) {
-          margin-right: 30px;
-          margin-bottom: 10px;
-          position: relative;
-
-          .button-delete {
-            right: -14px;
-            top: -21px;
-          }
-
-          &:hover {
-            .button-delete {
-              display: block;
-            }
-          }
-        }
-
-        &:last-child {
-          align-self: center;
-          padding-bottom: 14px;
-        }
-      }
-
-      img {
-        display: block;
-        margin-bottom: 20px;
-      }
-
-      span {
         font-weight: 500;
         color: $green-blue;
+        white-space: nowrap;
+        overflow-x: hidden;
       }
     }
 
@@ -374,7 +377,7 @@
         order: 2;
         align-self: center;
       }
-      .dropzone .dz-preview {
+        .dz-preview {
         max-width: 121px;
         width: auto;
         margin: 0 30px 10px 0;

@@ -28,12 +28,10 @@ if (newObjectDoc) {
     maxFilesize: 5,
     url: "./data/photo-data.txt",
     maxFiles: 10,
-    thumbnailWidth: 93,
-    thumbnailHeight: 93,
-   // acceptedFiles: '.txt, .doc, .rtf, .pdf',
-   acceptedFiles: 'application/rtf',
+    acceptedFiles: '.txt, .doc, .rtf, .pdf',
     addRemoveLinks: true,
     clickable: '#new-object-doc-add',
+    createImageThumbnails: false
   });
 
   newObjectDocDropzone.on("success", function () {
@@ -54,11 +52,12 @@ if (newObjectPhoto) {
     maxFilesize: 5,
     url: "./data/photo-data.txt",
     maxFiles: 10,
-    thumbnailWidth: 93,
-    thumbnailHeight: 93,
+    thumbnailWidth: 90,
+    thumbnailHeight: 90,
     acceptedFiles: '.png, .jpeg, .jpg',
     addRemoveLinks: true,
     clickable: '#new-object-photo-add',
+
   });
 
   newObjectPhotoDropzone.on("success", function () {
