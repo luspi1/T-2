@@ -1,0 +1,27 @@
+@media(max-width: 1200px) {
+  .auctions-page .auctions__item {
+    flex-wrap: wrap;
+  }
+  .auctions-page .auctions__top {
+    flex-wrap: wrap;
+    justify-content: start;
+  }
+}
+
+@media(max-width: 768px) {
+  .auctions-page .auctions__top,
+  .auctions-page .auctions__item {
+    flex-direction: column;
+  }
+
+  .auctions-page .auctions__search {
+    width: 100%;
+  }
+  .auctions-page .auctions__top > div {
+    margin-right: 0;
+  }
+  .auctions-page .auctions__col-4 {
+    margin-left: 0;
+  }
+
+}
