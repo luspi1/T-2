@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {
+'title': 'Заявка на проведение аукциона'
+})
+
+<body class="page__body new-auction-page">
+
+  <div class="site-container">
+    <div class="header">
+      @include('partials/main-menu.html', {
+      'active-new-auction': '_active'
+      })
+    </div>
+
+    <main class="main">
+      @include('partials/page-title.html', {
+      'page-title': 'Заявка на проведение аукциона'
+      })
+      <section class="section new-auction">
+        <div class="container">
+          <form class="new-auction__form">
+            <div class="new-auction__row">
+              <h4 class="new-auction__title">Продавец:</h4>
+              <div class="new-auction__seller">
+                <select class="new-auction__seller-select" name="seller" data-select="main-select">
+                  <option value="seller_1">Выбрать продавца</option>
+                  <option value="seller_2">Константинов К. К. как физлицо</option>
+                  <option value="seller_3">ООО «Промстройснабсбыт» как сотрудник</option>
+                  <option value="seller_4">ООО «Пандеротоптис» как сотрудник</option>
+                </select>
+              </div>
+            </div>
+            <div class="new-auction__row">
+              <h4 class="new-auction__title">Аукцион:</h4>
+              <div class="new-auction__row-wrapper">
+              <div class="new-auction__auction">
+                <select class="new-auction__auction-select" name="auction" data-select="main-select">
+                  <option value="auction_1">Выбрать аукцион</option>
+                  <option value="auction_2">604-408 К</option>
+                  <option value="auction_3">207-123-А</option>
+                  <option value="auction_4">604-408 К</option>
+                </select>
+              </div>
+              <div class="new-auction__data">
+                <div class="new-auction__status">Открытый для всех</div>
+                <p class="new-auction__date">
+                  <span>22.04.2023</span> | <span>12:30</span> TASH
+                </p>
+                <p class="new-auction__desc">3-комнатная квартира в ЖК Азамат, 270 кв. м</p>
+                <p class="new-auction__owner" data-shear="50">Давиташвили С.Е., Тимурахметзяншин А.А., ООО
+                  «Кусjipjijijjpjkpoi</p>
+              </div>
+              <div class="new-auction__type">
+                <p class="new-auction__object">Квартира и гараж</p>
+                <p class="new-auction__price">800 000 000 сом</p>
+              </div>
+            </div>
+            </div>
+            <div class="new-auction__row border">
+              <h4 class="new-auction__title">Гарантийный платеж:</h4>
+              <div class="new-auction__row-wrapper">
+              <div class="new-auction__guarantee">
+                <a href="#" class="new-auction__link">внести гарантийный платеж</a>
+                <p>Внесен гарантийный платеж в размере <span>9 100 954</span> (девять миллионов сто тысяч
+                  девятьсот пятьдесят четыре) сом, что составляет 1 % от начальной стоимости
+                  объекта торгов</p>
+              </div>
+              <a href="#" class="new-auction__link">запросить возврат</a>
+              </div>
+            </div>
+            <div class="new-auction__generated-text">
+              <h5>Сгенерированный текст заявки на проведение Аукциона:</h5>
+              <p>Я, Константинов Константин Константинович, представляющий себя как физическое лицо, объявляю аукцион
+                <a href="#" target="_blank">604-408-К</a>. Настоящим подтверждаю то, что ознакомлен с <a href="#"
+                  target="_blank">Правилами Системы</a> и <a href="#" target="_blank">Правилами Аукционов</a> и
+                обязуюсь их соблюдать.
+              </p>
+              <p>Прошу проверить мое право на продажу объекта торгов, удостоверяемое Свидетельством о собственности на
+                объект, а также нотариально удостоверенной доверенностью на право представлять собственников объекта в
+                ходе Аукциона.</p>
+              <p>Мной внесен гарантийный платеж в размере 9 100 954 (девять миллионов сто тысяч девятьсот пятьдесят
+                четыре)
+                сом, что составляет 1% от начальной стоимости объекта торгов.</p>
+            </div>
+            <button class="new-auction__button-submit">подать заявку</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>
