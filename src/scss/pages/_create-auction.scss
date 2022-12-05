@@ -1,0 +1,114 @@
+.create-auction-page {
+
+  &__inner {
+    padding: 35px 40px 43px 40px;
+    background-color: $white;
+    border-radius: 24px;
+    margin-bottom: 34px;
+  }
+
+  &__prompt {
+    display: flex;
+    align-items: center;
+    background: $blue-bg;
+    border-radius: 3px;
+    padding: 7px 10px 10px 8px;
+    @include montserrat-medium;
+    font-size: 12px;
+    line-height: 15px;
+    color: $green-blue;
+
+    svg {
+      min-width: 34px;
+      margin-right: 10px;
+    }
+  }
+
+  &__type-time {
+    @include montserrat-medium;
+    font-size: 14px;
+    line-height: 17px;
+    color: $green-blue;
+    position: relative;
+    padding: 6px 15px 6px 30px;
+    background-color: $blue-bg;
+    border-radius: 20px;
+    min-width: 196px;
+    svg {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 10px;
+    }
+  }
+
+  .auction-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 23px;
+    border-bottom: 1px solid $green-line;
+
+    &__item {
+      @include montserrat-medium;
+      font-size: 20px;
+      line-height: 24px;
+      color: $black;
+      display: flex;
+      align-items: center;
+
+      span {
+        font-weight: 700;
+      }
+
+      svg {
+        margin-right: 13px;
+      }
+    }
+
+    &__prompt {
+      max-width: 284px;
+    }
+
+  }
+
+  .auction-form {
+    margin-top: 45px;
+
+    &__title {
+      @include montserrat-bold;
+      color: $green-blue;
+      min-width: 200px;
+      width: 200px;
+      margin-right: 60px;
+      align-self: flex-end;
+    }
+
+
+    &__item-wrapper {
+      display: flex;
+
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+    }
+
+    &__inputs {
+      display: flex;
+      align-items: flex-end;
+    }
+
+    &__checkbox-input {
+      &:not(:last-child) {
+        margin-right: 47px;
+      }
+    }
+
+    .date-time-input {
+      margin-right: 23px;
+    }
+
+
+  }
+
+}
