@@ -23,7 +23,9 @@ if (textTimeInputs) {
 
   textTimeInputs.forEach(el => {
     new AirDatepicker(el, {
-
+      onlyTimepicker : true,
+      timepicker : true,
     })
+
   })
 }
