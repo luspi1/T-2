@@ -16,11 +16,12 @@
     font-size: 14px;
     line-height: 17px;
     color: $green-blue;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
 
   &__btns {
     display: flex;
+    margin-top: 30px;
 
     button {
       @include montserrat-medium;
@@ -31,16 +32,25 @@
       border-radius: 3px;
       width: 50%;
       padding: 9px 5px;
+      transition: all .3s;
+      &:hover {
+        color: $white;
+        background-color: $green-blue;
+      }
     }
 
     .verification-modal__close-btn {
       color: $red;
       border: 1px solid $red;
       margin-right: 22px;
+
+      &:hover {
+        background-color: $red;
+      }
+
     }
 
   }
-
 
 
 }

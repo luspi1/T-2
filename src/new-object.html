@@ -8,6 +8,7 @@
 <body class="page__body new-object-page">
 
 <div class="site-container">
+  <div class="modal-overlay"></div>
   <div class="header">
     @include('partials/main-menu.html', {
     'active-objects': '_active'
@@ -20,7 +21,7 @@
     })
     <section class="section new-object">
       <div class="container">
-        <form class="new-object-form">
+        <form class="new-object-form" action="#" method="post">
           @include('partials/modals/verification-modal.html')
           <div class="new-object-form__item">
             <div class="new-object-form__icon">
@@ -639,10 +640,12 @@
             </div>
           </div>
           <div class="new-object-form__buttons">
-            <button class="new-object-form__btn new-object-form__btn-save">
+            <button class="new-object-form__btn new-object-form__btn-save"
+                    type="button">
               сохранить черновик
             </button>
-            <button class="new-object-form__btn new-object-form__btn-publish">
+            <button class="new-object-form__btn new-object-form__btn-publish"
+                    type="button" data-open-modal="verification-modal">
               на верификацию
             </button>
           </div>

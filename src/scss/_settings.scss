@@ -198,3 +198,33 @@ textarea {
     visibility: visible;
   }
 }
+
+.modal-overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  visibility: hidden;
+  z-index: -1;
+
+  &._active {
+    z-index: 998;
+    visibility: visible;
+  }
+}
+
+.close-modal-btn {
+  position: absolute;
+  right: 16px;
+  top: 14px;
+
+  svg path {
+    transition: all .3s;
+  }
+
+  &:hover svg path {
+    fill: $green-blue;
+  }
+}
