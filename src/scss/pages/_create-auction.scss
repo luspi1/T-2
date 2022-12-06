@@ -148,7 +148,7 @@
       font-weight: 500;
       line-height: 17px;
 
-      >p {
+      > p {
         max-width: 340px;
         margin-right: 43px;
 
@@ -251,7 +251,6 @@
       background-color: transparent;
       color: $dark-light;
     }
-
 
 
     .choices__item.choices__item--choice.is-selected.choices__item--selectable::before {
@@ -411,7 +410,7 @@
         line-height: 17px;
         outline: none;
 
-        &:placeholder {
+        &::placeholder {
           color: #7D8E8E;
         }
       }
@@ -429,6 +428,61 @@
       max-width: 230px;
       height: max-content;
     }
+
+
+    &__item-wrapper-comment {
+      .auction-form__textarea-wrap {
+        width: 50%;
+
+        textarea {
+          width: 100%;
+        }
+      }
+
+      .create-auction-page__prompt {
+        max-width: 50%;
+        width: 50%;
+      }
+    }
+
+    &__item-btns {
+      display: flex;
+      padding-left: 257px;
+
+      button {
+        @include montserrat-bold;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        border-radius: 3px;
+        padding: 12px 10px;
+        color: $green-blue;
+        border: 1px solid $green-blue;
+        width: 234px;
+        transition: all .3s;
+        &:hover {
+          background-color: $green-blue;
+          color: $white;
+        }
+      }
+
+      .auction-form__save-btn {
+        margin-right: 36px;
+      }
+
+      .auction-form__create-btn {
+        width: 248px;
+        color: $green-light;
+        border: 1px solid $green-light;
+        &:hover {
+          background-color: $green-light;
+        }
+      }
+
+    }
+
+
   }
 
 }
