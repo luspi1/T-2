@@ -1,0 +1,57 @@
+@media(max-width: 1200px) {
+  .organizations-all-page .organizations__filter,
+  .organizations-all-page .organizations__item {
+    flex-wrap: wrap;
+  }
+  .organizations-all-page .organizations__status-type {
+    margin-left: 0;
+  }
+}
+
+@media(max-width: 768px) {
+  .organizations-all-page .organizations__filter,
+  .organizations-all-page .organizations__item {
+    flex-direction: column;
+  }
+
+  .organizations-all-page .organizations__search,
+  .organizations-all-page .organizations__type,
+  .organizations-all-page .organizations__reputation,
+  .organizations-all-page .organizations__reputation .choices[data-type*=select-one] .choices__inner,
+  .organizations-all-page .organizations__reputation .choices__list--single .choices__item {
+    width: 100%;
+  }
+
+  .organizations-all-page .organizations__reputation .choices[data-type*=select-one]::after {
+    right: 26px;
+  }
+  .organizations-all-page .organizations__inn,
+  .organizations-all-page .organizations__city {
+    align-self: flex-start;
+  }
+  .organizations-all-page .organizations__status-type {
+    margin-left: 0;
+    align-self: flex-start;
+  }
+}
+
+@media(max-width: 576px) {
+  .organizations-all-page .organizations__links {
+    flex-direction: column;
+    border-radius: 25px;
+  }
+  .organizations-all-page .organizations__link {
+    border-radius: 25px;
+  }
+  .organizations-all-page .organizations__link._active {
+    margin-bottom: 10px;
+  }
+
+  .organizations-all-page .organizations__name,
+  .organizations-all-page .organizations__item > p:nth-child(n){
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+
