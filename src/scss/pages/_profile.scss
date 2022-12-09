@@ -173,6 +173,10 @@
   .additional {
     margin-bottom: 30px;
 
+    .subtitle-sm {
+      min-width: 55px;
+    }
+
     &__inner {
       background: $white;
       border-radius: 26px;
