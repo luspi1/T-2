@@ -20,6 +20,7 @@
   .organizations-all-page .organizations__reputation .choices[data-type*=select-one] .choices__inner,
   .organizations-all-page .organizations__reputation .choices__list--single .choices__item {
     width: 100%;
+    margin-right: 0;
   }
 
   .organizations-all-page .organizations__reputation .choices[data-type*=select-one]::after {

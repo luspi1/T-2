@@ -28,7 +28,6 @@
       text-transform: uppercase;
       border: 1px solid transparent;
       border-radius: 50px;
-
       &:first-child {
         margin-right: 6px;
       }
@@ -42,6 +41,18 @@
         background-color: $white;
         border-color: $green-blue;
         pointer-events: none;
+      }
+
+      &:hover {
+      transition: all .3s;
+
+        color:  $green-blue;
+        svg {
+         path {
+            transition: all .3s;
+            fill: $green-blue;
+          }
+        }
       }
     }
 
@@ -175,7 +186,7 @@
     }
 
     &__city {
-      max-width: 100px;
+      width: 100px;
       margin-right: 20px;
       align-self: center;
       font-weight: 700;
