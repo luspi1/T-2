@@ -2,36 +2,26 @@
 <html lang="ru" class="page">
 
 @include('partials/head.html', {
-'title': 'Мои Аукционы'
+'title': 'Аукционы'
 })
 
-<body class="page__body auctions-page">
+<body class="page__body auctions-all-page">
 
 <div class="site-container">
   <div class="header">
     @include('partials/main-menu.html', {
-    'active-auctions': '_active'
+    'active-new-auction': '_active'
     })
   </div>
 
   <main class="main">
     @include('partials/page-title.html', {
-    'page-title': 'Мои Аукционы'
+    'page-title': 'Аукционы'
     })
     <section class="section auctions">
       <div class="container">
         <div class="auctions__inner">
           <div class="auctions__top">
-
-            <div class="auctions__type">
-              <select class="auctions__type-select" name="auctions-type" data-select="main-select">
-                <option value="all-type">Тип участия</option>
-                <option value="seller">Продавец</option>
-                <option value="member">Участник</option>
-                <option value="challenger">Претендент</option>
-                <option value="buyer">Покупатель</option>
-              </select>
-            </div>
             <div class="auctions__search-wrapper">
               <input class="auctions__search" type="text" placeholder="Найти аукцион по коду, названию, площади…">
               <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -42,7 +32,7 @@
               </svg>
             </div>
             <div class="auctions__currency  ">
-              <select class="auctions__currency -select" name="auctions-currency " data-select="main-select">
+              <select class="auctions__currency -select" name="auctions-all-currency " data-select="main-select">
                 <option value="currency_1">Валюта</option>
                 <option value="currency_2">Узбекские сомы</option>
                 <option value="currency_3">Рубли РФ</option>
@@ -51,7 +41,7 @@
               </select>
             </div>
             <div class="auctions__status">
-              <select class="auctions__auction-select" name="auctions-status" data-select="main-select">
+              <select class="auctions__auction-select" name="auctions-all-status" data-select="main-select">
                 <option value="status_1">Статус аукциона</option>
                 <option value="status_2">Предстоит</option>
                 <option value="status_3">Идет</option>
@@ -59,23 +49,21 @@
                 <option value="status_5">Отменен</option>
               </select>
             </div>
-            <a href="create-auction.html" class="auctions__btn-create">Создать аукцион</a>
+            <a href="#" class="auctions__link-add-request">Подать заявку на аукцион</a>
           </div>
           <ul class="auctions__list">
             <li class="auctions__item">
               <div class="auctions__col-1">
-                <h4 class="auctions__participation">УЧАСТНИК</h4>
-                <p class="auctions__condition">Аукцион предстоит</p>
-                <a href="#" class="auctions__item-link">Управлять</a>
+                <p class="auctions__code">604-408</p>
               </div>
               <div class="auctions__col-2">
-                <p class="auctions__code">604-408</p>
+                <p class="auctions__condition _now">Активный аукцион</p>
               </div>
               <div class="auctions__col-3">
                 <p class="auctions__date">
                   <span>22.04.2023</span> | <span>12:30</span> TASH
                 </p>
-                <p class="auctions__desc">3-х комнатная квартира в ЖК Азамат, 270 кв. м</p>
+                <p class="auctions__desc">3-комнатная квартира в ЖК Азамат, 270 кв. м</p>
                 <p class="auctions__owner">ООО «А-валид Эстейт»; ИНН: 998990099233</p>
               </div>
               <div class="auctions__col-4">
@@ -84,38 +72,34 @@
             </li>
             <li class="auctions__item">
               <div class="auctions__col-1">
-                <h4 class="auctions__participation">УЧАСТНИК</h4>
-                <p class="auctions__condition">Аукцион предстоит</p>
-                <a href="#" class="auctions__item-link">Управлять</a>
+                <p class="auctions__code">604-407</p>
               </div>
               <div class="auctions__col-2">
-                <p class="auctions__code">604-407</p>
+                <p class="auctions__condition _future">Аукцион предстоит</p>
               </div>
               <div class="auctions__col-3">
                 <p class="auctions__date">
                   <span>17.04.2023</span> | <span>09:30</span> TASH
                 </p>
-                <p class="auctions__desc">3-х комнатная квартира в ЖК Азамат, 270 кв. м</p>
+                <p class="auctions__desc">2-этажный жилой дом на озере</p>
                 <p class="auctions__owner">ООО «А-валид Эстейт»; ИНН: 998990099233</p>
               </div>
               <div class="auctions__col-4">
                 <p class="auctions__price">800 000 000 сом</p>
               </div>
             </li>
-            <li class="auctions__item auctions__item_active-link">
+            <li class="auctions__item">
               <div class="auctions__col-1">
-                <h4 class="auctions__participation">ЗАСТРОЙЩИК</h4>
-                <p class="auctions__condition">Аукцион предстоит</p>
-                <a href="#" class="auctions__item-link">Управлять</a>
+                <p class="auctions__code">604-406</p>
               </div>
               <div class="auctions__col-2">
-                <p class="auctions__code">604-406</p>
+                <p class="auctions__condition _future">Аукцион предстоит</p>
               </div>
               <div class="auctions__col-3">
                 <p class="auctions__date">
                   <span>15.04.2023</span> | <span>11:30</span> TASH
                 </p>
-                <p class="auctions__desc">3-х комнатная квартира в ЖК Азамат, 270 кв. м</p>
+                <p class="auctions__desc">Склад-рефрижератор на Центральном рынке</p>
                 <p class="auctions__owner">ООО «А-валид Эстейт»; ИНН: 998990099233</p>
               </div>
               <div class="auctions__col-4">
@@ -124,18 +108,17 @@
             </li>
             <li class="auctions__item">
               <div class="auctions__col-1">
-                <h4 class="auctions__participation">УЧАСТНИК</h4>
-                <p class="auctions__condition">Аукцион предстоит</p>
-                <a href="#" class="auctions__item-link">Управлять</a>
+                <p class="auctions__code">604-405</p>
               </div>
               <div class="auctions__col-2">
-                <p class="auctions__code">604-405</p>
+                <p class="auctions__condition _complete">Аукцион завершен</p>
+
               </div>
               <div class="auctions__col-3">
                 <p class="auctions__date">
                   <span>22.03.2023</span> | <span>12:30</span> TASH
                 </p>
-                <p class="auctions__desc">3-х комнатная квартира в ЖК Азамат, 270 кв. м</p>
+                <p class="auctions__desc">Офисное помещение в ЖК Азамат</p>
                 <p class="auctions__owner">ООО «А-валид Эстейт»; ИНН: 998990099233</p>
               </div>
               <div class="auctions__col-4">
@@ -144,18 +127,16 @@
             </li>
             <li class="auctions__item">
               <div class="auctions__col-1">
-                <h4 class="auctions__participation">УЧАСТНИК</h4>
-                <p class="auctions__condition">Аукцион предстоит</p>
-                <a href="#" class="auctions__item-link">Управлять</a>
+                <p class="auctions__code">604-405</p>
               </div>
               <div class="auctions__col-2">
-                <p class="auctions__code">604-405</p>
+                <p class="auctions__condition _cancel">Аукцион отменен</p>
               </div>
               <div class="auctions__col-3">
                 <p class="auctions__date">
                   <span>22.04.2023</span> | <span>12:30</span> TASH
                 </p>
-                <p class="auctions__desc">3-х комнатная квартира в ЖК Азамат, 270 кв. м</p>
+                <p class="auctions__desc">Офисное помещение в ЖК Азамат</p>
                 <p class="auctions__owner">ООО «А-валид Эстейт»; ИНН: 998990099233</p>
               </div>
               <div class="auctions__col-4">
