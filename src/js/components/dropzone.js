@@ -102,7 +102,7 @@ if (newObjectScanDoc) {
     } else {
       newObjectScanBtn.classList.add('hidden')
       const photoTitles = newObjectScanDoc.querySelectorAll('span[data-dz-name]')
-      cutString(photoTitles, 12)
+      cutString(photoTitles, 15)
       file._removeLink.setAttribute('data-id', id_person_doc)
     }
   });
