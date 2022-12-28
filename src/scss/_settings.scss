@@ -68,6 +68,10 @@ textarea {
   resize: none;
 }
 
+.hidden {
+  display: none !important;
+}
+
 .dz-details,
 .dz-progress,
 .dz-error-message,
