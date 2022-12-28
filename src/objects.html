@@ -9,7 +9,9 @@
 
   <div class="site-container">
     <div class="header">
-      @include('partials/main-menu.html')
+      @include('partials/main-menu.html', {
+      'active-objects': '_active'
+      })
     </div>
 
     <main class="main">
@@ -42,21 +44,19 @@
               </div>
               <div class="objects__work">
                 <select class="objects__work-select" name="objects-work" data-select="main-select">
-                  <option selected value="">В работе</option>
-                  <option value="work_1">В работе 1</option>
-                  <option value="work_2">В работе 2</option>
-                  <option value="work_3">В работе 3</option>
-                  <option value="work_4">В работе 4</option>
+                  <option selected value="work_all">Все статусы</option>
+                  <option value="work_1">Черновик</option>
+                  <option value="work_2">Ожидает</option>
+                  <option value="work_3">В работе</option>
+                  <option value="work_4">Продан</option>
                 </select>
               </div>
               <div class="objects__auction">
                 <select class="objects__auction-select" name="objects-auction" data-select="main-select">
-                  <option selected value="">На аукционе</option>
-                  <option value="auction_1">На аукционе 1</option>
-                  <option value="auction_2">На аукционе 2</option>
-                  <option value="auction_3">На аукционе 3</option>
-                  <option value="auction_4">На аукционе 4</option>
-                </select>
+                  <option selected value="auction_all">Все объекты</option>
+                  <option value="auction_1">На аукционе</option>
+                  <option value="auction_2">Без аукциона</option>
+               </select>
               </div>
               <a href="new-object.html" class="objects__btn-add">Добавить объект</a>
             </div>
@@ -81,9 +81,9 @@
                 </div>
               </a>
               <a href="object-card.html" class="objects__item item">
-                <div class="item__col-1 item__storage"></div>
+                <div class="item__col-1 item__apartment"></div>
                 <div class="item__col-2">
-                  <p class="item__type">склад</p>
+                  <p class="item__type">Квартира</p>
                   <p class="item__type-status item__type-status_green">Объект в работе</p>
                 </div>
                 <div class="item__col-3">
@@ -100,9 +100,9 @@
                 </div>
               </a>
               <a href="object-card.html" class="objects__item item">
-                <div class="item__col-1 item__house"></div>
+                <div class="item__col-1 item__apartment"></div>
                 <div class="item__col-2">
-                  <p class="item__type">ЖИЛОЙ ДОМ</p>
+                  <p class="item__type">Квартира</p>
                   <p class="item__type-status item__type-status_orange">Ожидает</p>
                 </div>
                 <div class="item__col-3">
@@ -118,44 +118,7 @@
                   <p><span>Не выставлен</span></p>
                 </div>
               </a>
-              <a href="object-card.html" class="objects__item item">
-                <div class="item__col-1 item__storage"></div>
-                <div class="item__col-2">
-                  <p class="item__type">склад</p>
-                  <p class="item__type-status item__type-status_grey">Продан</p>
-                </div>
-                <div class="item__col-3">
-                  <p class="item__number">219540-566-К</p>
-                  <p class="item__size">612,00 кв. м</p>
-                  <p class="item__price">85 000 000 000 сом</p>
-                </div>
-                <div class="item__col-4">
-                  <p class="item__info">Склад-рефрижератор на Центральном рынке</p>
-                  <p class="item__address">Ташкент, ул. Безупречного понимания, д. 122</p>
-                </div>
-                <div class="item__status item__status_grey">
-                  <p>Аукцион <span>А-640-403</span></p>
-                </div>
-              </a>
-              <a href="object-card.html" class="objects__item item">
-                <div class="item__col-1 item__apartment"></div>
-                <div class="item__col-2">
-                  <p class="item__type">Квартира</p>
-                  <p class="item__type-status item__type-status_blue">Черновик</p>
-                </div>
-                <div class="item__col-3">
-                  <p class="item__number">912045-763-Ж</p>
-                  <p class="item__size">160,00 кв. м</p>
-                  <p class="item__price">30 000 000 000 сом</p>
-                </div>
-                <div class="item__col-4">
-                  <p class="item__info">3-комнатная квартира в ЖК Азамат</p>
-                  <p class="item__address">Ташкент, ул. Безупречного понимания, д. 122, кв. 176</p>
-                </div>
-                <div class="item__status item__status_blue">
-                  <p><span>Не выставлен</span></p>
-                </div>
-              </a>
+
             </div>
           </div>
         </div>

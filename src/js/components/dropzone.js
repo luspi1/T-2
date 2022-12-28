@@ -41,30 +41,25 @@ if (newObjectDoc) {
 
 }
 
+//Dropzone для скана документа объектов недвижимости на странице Создать объект
 
+const newObjectScanDoc = document.querySelector('#new-object-scan-doc-dropzone');
 
-//Dropzone для фото объектов недвижимости в личном кабинете
-
-const newObjectPhoto = document.querySelector('#new-object-photo-dropzone');
-
-if (newObjectPhoto) {
-  let newObjectPhotoDropzone = new Dropzone(newObjectPhoto, {
+if (newObjectScanDoc) {
+  let newObjectScanDocDropzone = new Dropzone(newObjectScanDoc, {
     maxFilesize: 5,
     url: "./data/photo-data.txt",
-    maxFiles: 10,
-    thumbnailWidth: 90,
-    thumbnailHeight: 90,
-    acceptedFiles: '.png, .jpeg, .jpg',
+    maxFiles: 1,
+    acceptedFiles: '..png, .jpeg, .jpg, .pdf',
     addRemoveLinks: true,
-    clickable: '#new-object-photo-add',
-
+    clickable: '#new-object-scan-doc-add',
+    createImageThumbnails: false
   });
 
-  newObjectPhotoDropzone.on("success", function () {
-    const photoTitles = newObjectPhoto.querySelectorAll('span[data-dz-name]')
+  newObjectScanDocDropzone.on("success", function () {
+    const photoTitles = newObjectScanDocDropzone.querySelectorAll('span[data-dz-name]')
     cutString(photoTitles, 12)
   });
-
 
 }
 

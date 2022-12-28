@@ -1,4 +1,4 @@
-.objects-page {
+.objects-all-page {
   .objects {
     margin-bottom: 30px;
 
@@ -29,7 +29,7 @@
     }
 
     &__search {
-      width: 395px;
+      width: 586px;
       height: 35px;
       padding: 0 8px 0 28px;
       border: 1px solid #D8D8D8;
@@ -39,11 +39,6 @@
         outline: none;
         border-color: #337390;
       }
-    }
-
-    &__type {
-      min-width: 167px;
-      margin-right: 10px;
     }
 
     &__work {
@@ -67,7 +62,6 @@
       display: flex;
       align-items: center;
       justify-content: center;
-
       transition: all .3s;
 
       &:hover {
@@ -89,37 +83,11 @@
         background: #F4F7FB;
         border-radius: 10px;
 
-        &__col-1 {
-          margin-right: 22px;
-          background-repeat: no-repeat;
-          background-size: contain;
-          background-position: center;
-        }
-
-        &__apartment {
-          width: 31px;
-          height: 36px;
-          background-image: url('../img/objects_apartment.png');
-        }
-
-        &__storage {
-          width: 30px;
-          height: 30px;
-          background-image: url('../img/objects_storage.png');
-        }
-
-        &__house {
-          width: 40px;
-          height: 30px;
-          margin-right: 12px;
-          background-image: url('../img/objects_house.png');
-        }
-
-
         &__col-2 {
           width: 13.5%;
           margin-right: 20px;
-          padding-top: 10px;
+          display: flex;
+          align-items: center;
         }
 
         &__type {
@@ -153,9 +121,10 @@
           }
         }
 
-        &__col-3 {
+        &__col-1 {
           width: 19%;
           margin-right: 20px;
+
           p {
             color: $dark-light;
           }
@@ -163,8 +132,8 @@
 
         }
 
-        &__col-3,
-        &__col-4 {
+        &__col-1,
+        &__col-3 {
           p {
             display: flex;
             align-items: center;
@@ -197,9 +166,10 @@
           }
         }
 
-        &__col-4 {
+        &__col-3 {
           width: 39%;
           margin-right: 20px;
+
           p {
             color: $dark-light;
           }
