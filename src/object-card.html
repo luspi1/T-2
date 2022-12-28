@@ -10,7 +10,7 @@
 <div class="site-container">
   <div class="header">
     @include('partials/main-menu.html', {
-    'active-objects': '_active'
+    'active-objects-all': '_active'
     })
   </div>
 
@@ -68,18 +68,10 @@
               <ul class="object-card__info-list">
                 <li>
                   <p class="object-card__info-list-title">
-                    Кадастровый номер:
+                    Начальная стоимость:
                   </p>
                   <p class="object-card__info-list-content">
-                    999-000-000-А-999
-                  </p>
-                </li>
-                <li>
-                  <p class="object-card__info-list-title">
-                    Стоимость:
-                  </p>
-                  <p class="object-card__info-list-content">
-                    <span>350 000 000</span> сом
+                    350 000 000 сом (триста пятьдесят миллионов сом)
                   </p>
                 </li>
                 <li>
@@ -93,59 +85,77 @@
                 </li>
                 <li>
                   <p class="object-card__info-list-title">
-                    Площадь Объекта:
+                    Застройщик Объекта:
                   </p>
                   <p class="object-card__info-list-content">
-                    115,00 кв. м
-                  </p>
-                </li>
-                <li>
-                  <p class="object-card__info-list-title">
-                    1 Собственник Объекта:
-                  </p>
-                  <p class="object-card__info-list-content">
-                    Частное лицо ИНН: 998990099233
-                    Тузмухаммедов Раис Абдулхак Угли
-                    <span class="object-card__info-progress">
-                      94 <span>%</span>
-                    </span>
-                  </p>
-                </li>
-                <li>
-                  <p class="object-card__info-list-title">
-                    2 Собственник Объекта:
-                  </p>
-                  <p class="object-card__info-list-content">
-                    Частное лицо ИНН: 998990099233
-                    Файмарданов Абдурахман Абусалимович
-                    <span class="object-card__info-progress">
-                      6 <span>%</span>
-                    </span>
+                    ООО «А-валид Эстейт»; ИНН: 998990099233
                   </p>
                 </li>
                 <li>
                   <p class="object-card__info-list-title">
                     Объект добавлен в базу:
                   </p>
+                  <div class="object-card__info-list-content">
+                    <p>Менеджером ООО «А-валид Эстейт» Валиевым И.Н.</p>
+                    <p>01 ноября 2022 года</p>
+                  </div>
+                </li>
+                <li>
+                  <p class="object-card__info-list-title">
+                    Объект в Системе:
+                  </p>
                   <p class="object-card__info-list-content">
-                    Менеджером ООО «А-валид Эстейт»
-                    Валиевым И.Н. 01 ноября 2022 года
+                    Объект 219540-567-К ранее не выставлялся на торги в Системе
                   </p>
                 </li>
                 <li>
                   <p class="object-card__info-list-title">
-                    Объект в системе:
+                    Основание застройки:
                   </p>
-                  <p class="object-card__info-list-content">
-                    Объект недвижимости 2194К ранее не
-                    выставлялся на торги в Системе
-                  </p>
+                  <div>
+                    <p class="object-card__info-list-content">
+                      Приказ № 22 349 от 04.09.2022 года
+                      Администрация Ташкентского района
+                    </p>
+                    <a href="#" class="object-card__info-list-download" download>
+                      <svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M17.5599 23.0586H4.2723C3.48683 23.0586 2.84863 22.4204 2.84863 21.6349V4.63277C2.84863 3.8473 3.48683 3.20911 4.2723 3.20911H14.9907L18.9999 7.28374V21.6186C18.9835 22.4204 18.3453 23.0586 17.5599 23.0586Z"
+                          fill="white" stroke="#337390" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path
+                          d="M15.7112 20.8331H2.42367C1.6382 20.8331 1 20.1949 1 19.4095V2.42367C1 1.6382 1.6382 1 2.42367 1H13.1421L17.1512 5.07463V19.4095C17.1349 20.1949 16.4967 20.8331 15.7112 20.8331Z"
+                          fill="white"/>
+                        <path
+                          d="M6.30273 5.15643C7.20275 5.15643 8.10277 5.15643 9.00279 5.15643C9.39553 5.15643 9.5919 5.30371 9.5919 5.61462C9.60826 5.92554 9.39553 6.10554 9.00279 6.10554C7.20275 6.10554 5.40272 6.10554 3.60268 6.10554C3.20994 6.10554 3.01357 5.95827 3.01357 5.64735C2.99721 5.33644 3.20994 5.15643 3.60268 5.15643C4.48633 5.15643 5.38635 5.15643 6.30273 5.15643Z"
+                          fill="#3692BC"/>
+                        <path
+                          d="M5.35251 3.2746C5.94161 3.2746 6.54708 3.2746 7.13618 3.2746C7.49619 3.2746 7.69255 3.43823 7.69255 3.73279C7.69255 4.0437 7.49619 4.20734 7.13618 4.20734C5.94161 4.20734 4.74704 4.20734 3.55247 4.20734C3.19246 4.20734 2.99609 4.0437 2.99609 3.74915C2.99609 3.43823 3.19246 3.2746 3.55247 3.2746C4.15794 3.2746 4.7634 3.2746 5.35251 3.2746Z"
+                          fill="#3692BC"/>
+                        <path
+                          d="M4.87917 8.44563C4.43734 8.44563 3.97915 8.44563 3.53732 8.44563C3.21004 8.44563 3.01367 8.26563 3.01367 7.98744C3.01367 7.69289 3.21004 7.51288 3.52096 7.51288C4.43734 7.51288 5.33736 7.51288 6.25374 7.51288C6.58102 7.51288 6.77739 7.69288 6.77739 7.97107C6.77739 8.26562 6.58102 8.44563 6.27011 8.44563C5.79555 8.46199 5.33736 8.44563 4.87917 8.44563Z"
+                          fill="#3692BC"/>
+                        <path
+                          d="M3.93006 10.3275C3.76642 10.3275 3.60278 10.3438 3.43914 10.3275C3.17731 10.3111 3.01367 10.1147 3.01367 9.86927C3.01367 9.62381 3.17731 9.41108 3.43914 9.39472C3.78278 9.37836 4.12643 9.37836 4.47007 9.39472C4.73189 9.41108 4.89553 9.60745 4.89553 9.85291C4.89553 10.0984 4.73189 10.2947 4.47007 10.3275C4.45371 10.3275 4.43734 10.3275 4.40461 10.3275C4.24097 10.3275 4.07733 10.3275 3.93006 10.3275Z"
+                          fill="#3692BC"/>
+                        <path
+                          d="M15.2363 5.04187V20.8331H15.7109C16.4964 20.8331 17.1345 20.1949 17.1345 19.4094V5.05823H15.2363V5.04187Z"
+                          fill="#E9E9E9"/>
+                        <path
+                          d="M14.3369 3.20917V4.81284C14.3369 5.28739 14.7296 5.68012 15.2042 5.68012H16.7752L14.3369 3.20917Z"
+                          fill="#E9E9E9"/>
+                        <path d="M13.125 1V3.6346C13.125 4.42007 13.7632 5.05826 14.5487 5.05826H17.1178L13.125 1Z"
+                              fill="#A7CFD4"/>
+                        <path
+                          d="M15.7112 20.8331H2.42367C1.6382 20.8331 1 20.1949 1 19.4095V2.42367C1 1.6382 1.6382 1 2.42367 1H13.1421L17.1512 5.07463V19.4095C17.1349 20.1949 16.4967 20.8331 15.7112 20.8331Z"
+                          stroke="#337390"/>
+                      </svg>
+                      <span> скачать документ</span></a>
+                  </div>
                 </li>
               </ul>
             </div>
             <aside class="object-card__aside">
-              <p class="object-card__aside-type">Тип объекта:
-                <span>квартира</span></p>
+              <p class="object-card__aside-type">ИНВЕСТИЦИОННЫЙ ДОГОВОР</p>
               <p class="object-card__aside-status">
                 <svg width="17" height="12" viewBox="0 0 17 12" fill="none"
                      xmlns="http://www.w3.org/2000/svg">
@@ -167,14 +177,14 @@
                       <span>27.03.2023 | 10:30 <span>TASH</span> </span></p>
                   </li>
                   <li>
-                    <p>Для юридических и физических лиц</p>
+                    <p>Для физических лиц</p>
                   </li>
                 </ul>
               </div>
 
-              <p class="object-card__aside-page">
+              <a href="#" class="object-card__aside-link">
                 Страница Аукциона <span>А-644-408</span>
-              </p>
+              </a>
             </aside>
           </div>
         </section>
@@ -205,42 +215,34 @@
                 fill="#51828E"/>
             </svg>
             <h2 class="object-card__subtitle">
-              Сканы документов: 5
+              Всего сканов документов: 5
             </h2>
           </div>
           <div class="object-doc-swiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide ">
-                <div class="object-doc-swiper__img">
-                  <img src="img/doc_download.png"
+                <div class="object-pic-swiper__img">
+                  <img src="img/pic-slide.jpg"
                        alt="slide">
                 </div>
                 <a class="object-doc-swiper__link swiper-no-swiping" href="#"
                    data-shear="13" download>Свидетельство еще какой-то текст</a>
               </div>
               <div class="swiper-slide">
-                <div class="object-doc-swiper__img">
-                  <img src="img/doc_download.png"
+                <div class="object-pic-swiper__img">
+                  <img src="img/pic-slide.jpg"
                        alt="slide">
                 </div>
                 <a class="object-doc-swiper__link swiper-no-swiping" href="#"
                    download data-shear="13">Акт сдачи-приемки работ</a>
               </div>
               <div class="swiper-slide ">
-                <div class="object-doc-swiper__img">
-                  <img src="img/doc_download.png"
+                <div class="object-pic-swiper__img">
+                  <img src="img/pic-slide.jpg"
                        alt="slide">
                 </div>
                 <a class="object-doc-swiper__link swiper-no-swiping" href="#"
                    download data-shear="14">Заключение государственного</a>
-              </div>
-              <div class="swiper-slide ">
-                <div class="object-doc-swiper__img">
-                  <img src="img/doc_download.png"
-                       alt="slide">
-                </div>
-                <a class="object-doc-swiper__link swiper-no-swiping" href="#"
-                   download data-shear="14">Заключение государственного.</a>
               </div>
             </div>
             <button class="object-doc-swiper__swiper-button-prev" type="button">
@@ -289,7 +291,7 @@
                 fill="white"/>
             </svg>
             <h2 class="object-card__subtitle">
-              Изображения Объекта: 12
+              Всего изображений: 12
             </h2>
           </div>
           <div class="object-pic-swiper">
@@ -331,10 +333,7 @@
 
         </section>
         <section class="object-card__btns">
-          <a href="objects.html" class="main-button object-card__btns-link">
-            к списку объектов
-          </a>
-          <button class="main-button object-card__edit-btn input_disabled"
+         <button class="main-button object-card__edit-btn input_disabled"
                   disabled type="button">
             редактировать объект
             <svg width="11" height="15" viewBox="0 0 11 15" fill="none"

@@ -83,31 +83,29 @@
             font-weight: 700;
           }
 
-          max-width: 345px;
+          max-width: 382px;
         }
 
-        .object-card__info-progress {
-          position: absolute;
+        .object-card__info-list-download {
           display: flex;
+          max-width: max-content;
           align-items: center;
-          justify-content: flex-end;
-          padding: 5px 10px;
-          left: -5px;
-          top: 50%;
-          transform: translateY(-50%);
-          width: 127%;
-          height: 110%;
-          background-color: $blue-bg;
-          @include montserrat-bold;
-          font-size: 20px;
-          line-height: 24px;
+          margin-top: 5px;
+          font-weight: 500;
           color: $green-blue;
-          z-index: -1;
 
           span {
-            @include montserrat-regular;
-            font-size: 14px;
-            line-height: 17px;
+            border-bottom: 1px solid transparent;
+          }
+
+          &:hover {
+            span {
+              border-color: $green-blue;
+            }
+          }
+
+          svg {
+            margin-right: 9px;
           }
         }
       }
@@ -117,17 +115,16 @@
     &__aside {
       width: 270px;
       min-width: 270px;
+      padding-top: 15px;
     }
 
     &__aside-type {
       margin-bottom: 40px;
-
-      span {
-        @include montserrat-bold;
-        letter-spacing: 0.05em;
-        color: $green-blue;
-        text-transform: uppercase;
-      }
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 15px;
+      text-transform: uppercase;
+      color: $green-blue;
     }
 
     &__aside-status {
@@ -190,14 +187,21 @@
 
     }
 
-    &__aside-page {
+    &__aside-link {
+      display: block;
       border: 1px solid $green-blue;
       border-radius: 3px;
       color: $green-blue;
       padding: 11px 18px;
+      transition: all .3s;
 
       span {
         font-weight: 700;
+      }
+
+      &:hover {
+        background-color: $green-blue;
+        color: $white;
       }
     }
 
@@ -355,15 +359,12 @@
         align-items: center;
         background-color: $blue-bg;
         max-width: 330px;
+
         svg {
           min-width: 34px;
           margin-right: 10px;
         }
       }
-
-
     }
-
-
   }
 }
