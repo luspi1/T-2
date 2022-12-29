@@ -1,0 +1,71 @@
+@media (max-width: 1200px) {
+  .auction-one-page .auction__list:nth-child(2) {
+    width: 57%;
+  }
+  .auction-one-page .auction__list:nth-child(3) {
+    width: 99%;
+  }
+}
+
+@media (max-width: 992px) {
+  .auction-one-page .auction__list:nth-child(n) {
+    width: 100%;
+    margin-right: 0;
+  }
+  .auction-one-page .auction__information li {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .auction-one-page .auction__list:nth-child(2) li,
+  .auction-one-page .auction__list:nth-child(3) li {
+    flex-direction: column;
+  }
+  .auction-one-page .auction__list:nth-child(2) li b,
+  .auction-one-page .auction__list:nth-child(3) li h5:first-of-type {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .auction-one-page .auction__information-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .auction-one-page .auction__information {
+    padding-right: 0;
+    padding-left: 10px;
+  }
+  .auction-one-page .auction__link-edit {
+    margin-left: 0;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .auction-one-page .auction__big-price {
+    font-size: 28px;
+  }
+  .auction-one-page .auction__list:nth-child(1) li:nth-child(2),
+  .auction-one-page .auction__list:nth-child(1) li:nth-child(3) {
+    margin-bottom: 10px;
+  }
+
+  .auction-one-page .auction__list:nth-child(3) li:not(:last-child){
+    margin-bottom: 20px;
+  }
+  .auction-one-page .auction__list {
+    padding-left: 45px;
+  }
+  .auction-one-page .auction__inner {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .auction-one-page .auction__information li > b {
+    margin-bottom: 5px;
+  }
+  .auction-one-page .auction__top span,
+  .auction-one-page .auction__information br{
+    display: block;
+  }
+}
