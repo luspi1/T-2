@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {
+'title': 'Создание учетной записи'
+})
+
+<body class="page__body create-account-organization-page">
+
+<div class="site-container">
+  <div class="modal-overlay"></div>
+  <div class="header">
+    @include('partials/main-menu.html')
+  </div>
+
+  <main class="main">
+    @include('partials/page-title.html', {
+    'page-title': 'Создание учетной записи юридического лица'
+    })
+    <section class="section create-account">
+      <div class="container">
+        <form class="create-account-form" action="#" method="post">
+          <div class="create-account-form__item">
+            <div class="create-account-form__row">
+
+              <p class="create-account-form__subtitle">
+                Изображения организации (логотип и прочие)
+              </p>
+
+              <div class="create-account-form__logo-item general-dropzone-wrapper">
+
+                <div class="create-account-form__input-wrapper logo-loading">
+                  <input class="create-account-form__input" type="url"
+                         name="createAccountLogoLink"
+                         placeholder="Скопируйте сюда ссылку на изображение в сети">
+                  <p class="create-account-form__input-title">
+                    Или загрузите изображение с Вашего ПК</p>
+
+                  <button class="create-account-form__org-logo-btn general-dropzone__add-btn"
+                          id="account-logo-add"
+                          type="button">Загрузить изображение
+                  </button>
+                </div>
+
+                <div class="general-dropzone dropzone create-account-form__general-dropzone"
+                     id="create-account-dropzone">
+
+                  <div class="general-dropzone__message-wrapper create-account-form__message-wrapper">
+                    <div class="dz-message">
+                    </div>
+                    <div class="dz-message">
+                    </div>
+                    <div class="dz-message">
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="new-object-form__buttons">
+            <button class="new-object-form__btn new-object-form__btn-save"
+                    type="button">
+              сохранить черновик
+            </button>
+            <button class="new-object-form__btn new-object-form__btn-publish"
+                    type="button" data-open-modal="verification-modal">
+              опубликовать объект
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+  @include('partials/footer.html')
+</div>
+
+</body>
+</html>
