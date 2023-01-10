@@ -108,3 +108,19 @@ if (newObjectScanDoc) {
   });
 }
 
+//Dropzone для логотипа в создании учетной записи юридического лица
+
+const createAccountLogo = document.querySelector('#create-account-dropzone');
+
+if (createAccountLogo) {
+  let logoDropzone = new Dropzone(createAccountLogo, {
+    maxFilesize: 5,
+    url: "/include/ajax/upload_image.php",
+    maxFiles: 3,
+    thumbnailWidth: 110,
+    thumbnailHeight: 110,
+    acceptedFiles: '.png, .jpeg, .jpg',
+    addRemoveLinks: true,
+    clickable: '#account-logo-add',
+  });
+}

@@ -1,0 +1,145 @@
+.create-account-organization-page {
+  .create-account {
+    margin-bottom: 30px;
+
+    .create-account-form {
+      padding: 35px 31px 40px 37px;
+      background: $white;
+      border-radius: 24px;
+
+
+      &__item {
+        display: flex;
+        margin-bottom: 30px;
+        padding-bottom: 45px;
+
+        border-bottom: 1px solid #D2E7EF;
+      }
+
+      &__logo-item {
+        display: flex;
+      }
+
+      &__row {
+        display: flex;
+      }
+
+      &__subtitle {
+        width: 240px;
+        margin-right: 20px;
+        padding-top: 10px;
+        font-weight: 600;
+        line-height: 17px;
+      }
+
+      &__input-wrapper {
+        &.logo-loading {
+          width: 387px;
+          margin-right: 43px;
+          text-align: center;
+
+          .create-account-form__input {
+            margin-bottom: 16px;
+          }
+
+          .create-account-form__input-title {
+            margin-bottom: 5px;
+          }
+        }
+      }
+
+      &__input {
+        width: 100%;
+        height: 35px;
+        padding: 8px 15px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        border: 0.5px solid $green-blue;
+        border-radius: 3px;
+
+        &::placeholder {
+          color: #7D8E8E;
+        }
+      }
+
+      &__org-logo-btn {
+        width: 100%;
+        padding: 8px 20px;
+        font-weight: 500;
+        line-height: 17px;
+        color: $green-blue;
+        border: 1px solid $green-blue;
+        border-radius: 3px;
+        transition: all .3s;
+
+        &:hover {
+          background-color: $green-blue;
+          color: $white;
+        }
+      }
+
+      #create-account-dropzone {
+        display: flex;
+        align-self: flex-start;
+        padding-bottom: 2px;
+
+        .dz-preview.dz-file-preview.dz-processing.dz-success.dz-complete {
+          width: 100%;
+          margin: 0;
+          display: flex;
+          align-items: center;
+        }
+
+        .dz-preview {
+          margin-top: 0;
+        }
+
+        .dz-image {
+          width: 110px;
+          height: 110px;
+          margin-bottom: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: 2px solid #51828E;
+          border-radius: 6px;
+          overflow: hidden;
+
+        }
+
+        .dz-remove {
+          width: 25px;
+          height: 25px;
+          color: transparent;
+          position: absolute;
+          top: -10px;
+          right: -10px;
+          border-radius: 50%;
+          background: url("../img/del-photo.png") no-repeat center;
+          z-index: 100;
+        }
+
+        .dz-details {
+          display: block !important;
+
+          .dz-size {
+            display: none;
+          }
+
+          .dz-filename {
+            max-width: 105px;
+            font-weight: 500;
+            color: $green-blue;
+            white-space: nowrap;
+            overflow-x: hidden;
+
+          }
+        }
+      }
+
+
+    }
+  }
+}
+
