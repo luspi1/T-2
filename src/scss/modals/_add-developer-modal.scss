@@ -1,7 +1,8 @@
-.verification-modal {
+.add-developer-modal {
 
   @media (max-width: 768px) {
     width: 98%;
+    height: 530px;
   }
 
   h1 {
@@ -13,60 +14,44 @@
     text-transform: uppercase;
     color: $green-blue;
     margin-bottom: 20px;
+
+    @media (max-width: 768px) {
+      margin-bottom: 15px;
+    }
+
   }
 
   p {
     @include montserrat-medium;
     font-size: 14px;
     line-height: 17px;
-    color: $green-blue;
-    margin-bottom: 18px;
-  }
-
-  &__btns {
-    display: flex;
-    margin-top: 30px;
+    margin-bottom: 17px;
 
     @media (max-width: 768px) {
-      flex-direction: column;
-      align-items: center;
+      margin-bottom: 10px;
     }
 
+    a {
+      color: $green-blue;
+    }
 
-    button {
+  }
+
+    &__sign-btn {
       @include montserrat-medium;
       font-size: 14px;
       line-height: 17px;
       color: $green-blue;
       border: 1px solid $green-blue;
       border-radius: 3px;
-      width: 50%;
+      width: 82%;
       padding: 9px 5px;
       transition: all .3s;
-
+      margin-top: 13px;
       &:hover {
         color: $white;
         background-color: $green-blue;
       }
     }
-
-    .verification-modal__close-btn {
-      color: $red;
-      border: 1px solid $red;
-      margin-right: 22px;
-
-      &:hover {
-        background-color: $red;
-      }
-
-      @media (max-width: 768px) {
-        margin-right: 0;
-        margin-bottom: 20px;
-      }
-
-    }
-
-  }
-
 
 }
