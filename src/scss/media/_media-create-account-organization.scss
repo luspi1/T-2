@@ -1,0 +1,96 @@
+@media (max-width: 1200px) {
+  .create-account-organization-page .create-account .create-account-form__item-bank .create-account-form__row:nth-of-type(4) {
+    flex-direction: column;
+  }
+  .create-account-organization-page .create-account .create-account-form__item-info .create-account-form__row:nth-of-type(n + 3) .create-account-form__input-wrapper,
+  .create-account-organization-page .create-account .create-account-form__item-bank .create-account-form__row:nth-of-type(n) .create-account-form__input-wrapper,
+  .create-account-organization-page .create-account .create-account-form__item-bank .create-account-form__row:nth-of-type(4) .create-account-form__row-wrapper:nth-child(1) .create-account-form__input-wrapper {
+    width: 100%;
+    margin-right: 0;
+
+  }
+  .create-account-organization-page .create-account .create-account-form__item-bank .create-account-form__row-wrapper:nth-child(1) {
+    margin-bottom: 12px;
+  }
+  .create-account-organization-page .create-account .create-account-form__item-bank .create-account-form__row-wrapper:nth-child(2) .create-account-form__subtitle {
+    min-width: 240px;
+    width: 240px;
+    margin-right: 20px;
+  }
+  .create-account-organization-page .create-account .create-account-form__item-info .create-account-form__row-wrapper,
+  .create-account-organization-page .create-account .create-account-form__item-contacts .create-account-form__row-wrapper,
+  .create-account-organization-page .create-account .create-account-form__item-director .create-account-form__row {
+    flex-wrap: wrap;
+  }
+  .create-account-organization-page .create-account .create-account-form__item-contacts span {
+    width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .create-account-organization-page .create-account .create-account-form__item:first-child .create-account-form__row {
+    flex-direction: column;
+  }
+  .create-account-organization-page .create-account .create-account-form__item-contacts textarea {
+    min-width: 100%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .create-account-organization-page .create-account .create-account-form__logo-item,
+  .create-account-organization-page .create-account .create-account-form__row,
+  .create-account-organization-page .create-account .create-account-form__buttons{
+    flex-direction: column;
+  }
+
+  .create-account-organization-page .create-account .create-account-form__item-activity .create-account-form__input-wrapper,
+  .create-account-organization-page .create-account .create-account-form__industry{
+    width: 100%;
+  }
+
+  .create-account-organization-page .create-account .create-account-form__item-info .create-account-form__row-wrapper:nth-child(2) .create-account-form__subtitle {
+    min-width: 240px;
+    width: 240px;
+    margin-right: 20px;
+  }
+    .create-account-organization-page .create-account .create-account-form__input-wrapper.logo-loading {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  .create-account-organization-page .create-account .create-account-form__item-info .create-account-form__row:nth-of-type(2) .create-account-form__input-wrapper:nth-of-type(1),
+  .create-account-organization-page .create-account .create-account-form__type,
+  .create-account-organization-page .create-account .create-account-form__position,
+  .create-account-organization-page .create-account .create-account-form__item-director .create-account-form__input-wrapper,
+  .create-account-organization-page .create-account .create-account-form__btn-save{
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .create-account-organization-page .create-account .create-account-form {
+    padding: 20px 10px;
+  }
+  .create-account-organization-page .create-account .create-account-form__input {
+    padding-left: 5px;
+  }
+  .create-account-organization-page .create-account .create-account-form__subtitle,
+  .create-account-organization-page .create-account .create-account-form__item-contacts .create-account-form__input-wrapper:not(:last-child){
+    margin-right: 0;
+  }
+  .create-account-organization-page .create-account .create-account-form__input-wrapper.logo-loading,
+  .create-account-organization-page .create-account .create-account-form__input-wrapper{
+    width: 100%;
+  }
+  .create-account-organization-page .create-account .create-account-form__input-wrapper.logo-loading .create-account-form__input-title {
+    font-size: 12px;
+  }
+  .create-account-organization-page .create-account .create-account-form__title {
+    font-size: 15px;
+  }
+  .create-account-organization-page .create-account .create-account-form__item-bank .create-account-form__row-wrapper:nth-child(n +1 ) {
+    flex-direction: column;
+  }
+
+}

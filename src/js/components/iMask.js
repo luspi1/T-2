@@ -20,7 +20,26 @@ const initMasks = () => {
 
 initMasks()
 
+
+const initPhoneMasks = () => {
+  const inputsPhoneMask = document.querySelectorAll('.phone-mask');
+
+  inputsPhoneMask.forEach(element => {
+    const currencyMask = IMask(
+      element,
+     {
+            mask: '+{7}(000)000-00-00'
+      })
+  })
+}
+
+initMasks()
+initPhoneMasks()
+
+
+
 export {
-  initMasks
+  initMasks,
+  initPhoneMasks
 }
 
