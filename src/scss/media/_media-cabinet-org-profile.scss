@@ -1,0 +1,70 @@
+@media (max-width: 1024px) {
+  .cabinet-org-profile__row-wrapper {
+    flex-direction: column;
+
+    .cabinet-org-profile__row-icon:not(:last-child) {
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+  }
+
+  .cabinet-org-profile__bank-wrapper {
+    flex-direction: column;
+  }
+
+  .cabinet-org-profile__bank-wrapper .cabinet-org-profile__bank-list:first-child {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  .cabinet-org-profile__inner {
+    padding-bottom: 50px;
+  }
+
+  .cabinet-org-profile__contacts-inner,
+  .cabinet-org-profile__basic-inner {
+    padding-bottom: 40px;
+  }
+
+
+  .cabinet-org-profile__section {
+    padding-left: 0;
+    flex-direction: column;
+  }
+
+  .cabinet-org-profile__section h2 {
+    margin-bottom: 35px;
+  }
+
+  .cabinet-org-profile__section-logo {
+    margin-right: 43px;
+    height: 60px;
+    width: 60px;
+    min-width: 60px;
+  }
+
+}
+
+
+@media (max-width: 500px) {
+  .cabinet-org-profile__section {
+    padding-left: 0;
+    flex-direction: column;
+  }
+
+  .cabinet-org-profile__row {
+    flex-direction: column;
+  }
+
+  .cabinet-org-profile__row .title-desc {
+    min-width: 143px;
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+}
+
+
