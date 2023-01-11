@@ -20,26 +20,31 @@
     <section class="section create-account">
       <div class="container">
         <form class="create-account-form" action="#" method="post">
+          @include('partials/modals/add-developer-modal.html')
           <div class="create-account-form__item">
             <div class="create-account-form__row">
               <p class="create-account-form__subtitle">
                 Изображения организации (логотип и прочие)
               </p>
-              <div class="create-account-form__logo-item general-dropzone-wrapper">
+              <div
+                class="create-account-form__logo-item general-dropzone-wrapper">
                 <div class="create-account-form__input-wrapper logo-loading">
                   <input class="create-account-form__input" type="url"
                          name="createAccountLogoLink"
                          placeholder="Скопируйте сюда ссылку на изображение в сети">
                   <p class="create-account-form__input-title">
                     Или загрузите изображение с Вашего ПК</p>
-                  <button class="create-account-form__org-logo-btn general-dropzone__add-btn"
-                          id="account-logo-add"
-                          type="button">Загрузить изображение
+                  <button
+                    class="create-account-form__org-logo-btn general-dropzone__add-btn"
+                    id="account-logo-add"
+                    type="button">Загрузить изображение
                   </button>
                 </div>
-                <div class="general-dropzone dropzone create-account-form__general-dropzone"
-                     id="create-account-dropzone">
-                  <div class="general-dropzone__message-wrapper create-account-form__message-wrapper">
+                <div
+                  class="general-dropzone dropzone create-account-form__general-dropzone"
+                  id="create-account-dropzone">
+                  <div
+                    class="general-dropzone__message-wrapper create-account-form__message-wrapper">
                     <div class="dz-message">
                     </div>
                     <div class="dz-message">
@@ -52,11 +57,13 @@
             </div>
           </div>
           <div class="create-account-form__item create-account-form__item-info">
-            <h2 class="create-account-form__title">ОСНОВНЫЕ СВЕДЕНИЯ ОБ ОРГАНИЗАЦИИ*</h2>
+            <h2 class="create-account-form__title">ОСНОВНЫЕ СВЕДЕНИЯ ОБ
+              ОРГАНИЗАЦИИ*</h2>
             <div class="create-account-form__row">
               <p class="create-account-form__subtitle">ИНН организации</p>
               <div class="create-account-form__input-wrapper">
-                <input class="create-account-form__input" type="text" name="account-org-inn"
+                <input class="create-account-form__input" type="text"
+                       name="account-org-inn"
                        placeholder="Введите ИНН организации" required>
               </div>
             </div>
@@ -64,34 +71,43 @@
               <p class="create-account-form__subtitle">Краткое название</p>
               <div class="create-account-form__row-wrapper">
                 <div class="create-account-form__input-wrapper">
-                  <input class="create-account-form__input" type="text" name="account-org-name-uz"
+                  <input class="create-account-form__input" type="text"
+                         name="account-org-name-uz"
                          placeholder="Краткое название на Узбекском" required>
                 </div>
                 <div class="create-account-form__input-wrapper">
-                  <input class="create-account-form__input" type="text" name="account-org-name-ru"
+                  <input class="create-account-form__input" type="text"
+                         name="account-org-name-ru"
                          placeholder="Краткое название на Русском" required>
                 </div>
               </div>
             </div>
             <div class="create-account-form__row">
-              <p class="create-account-form__subtitle">Полное название на Узбекском</p>
+              <p class="create-account-form__subtitle">Полное название на
+                Узбекском</p>
               <div class="create-account-form__input-wrapper">
-                <input class="create-account-form__input" type="text" name="account-org-full-name-uz"
-                       placeholder="Общество с ограниченной ответственностью «Полное название организации»" required>
+                <input class="create-account-form__input" type="text"
+                       name="account-org-full-name-uz"
+                       placeholder="Общество с ограниченной ответственностью «Полное название организации»"
+                       required>
               </div>
             </div>
             <div class="create-account-form__row">
-              <p class="create-account-form__subtitle">Полное название на Русском</p>
+              <p class="create-account-form__subtitle">Полное название на
+                Русском</p>
               <div class="create-account-form__input-wrapper">
-                <input class="create-account-form__input" type="text" name="account-org-full-name-ru"
-                       placeholder="Общество с ограниченной ответственностью «Полное название организации»" required>
+                <input class="create-account-form__input" type="text"
+                       name="account-org-full-name-ru"
+                       placeholder="Общество с ограниченной ответственностью «Полное название организации»"
+                       required>
               </div>
             </div>
             <div class="create-account-form__row">
               <div class="create-account-form__row-wrapper">
                 <p class="create-account-form__subtitle">Тип организации</p>
                 <div class="create-account-form__type">
-                  <select class="create-account-form__type-select" name="account-org-type" data-select="main-select"
+                  <select class="create-account-form__type-select"
+                          name="account-org-type" data-select="main-select"
                           required>
                     <option value="">Тип не выбран</option>
                     <option value="type_1">Коммерческая</option>
@@ -103,9 +119,11 @@
                 </div>
               </div>
               <div class="create-account-form__row-wrapper">
-                <p class="create-account-form__subtitle">Организационная форма</p>
+                <p class="create-account-form__subtitle">Организационная
+                  форма</p>
                 <div class="create-account-form__olf">
-                  <select class="create-account-form__olf-select" name="account-org-olf" data-select="main-select"
+                  <select class="create-account-form__olf-select"
+                          name="account-org-olf" data-select="main-select"
                           required>
                     <option value="">Форма не выбрана</option>
                     <option value="olf_1">ООО</option>
@@ -115,12 +133,16 @@
               </div>
             </div>
           </div>
-          <div class="create-account-form__item create-account-form__item-director">
-            <h2 class="create-account-form__title">СВЕДЕНИЯ О РУКОВОДИТЕЛЕ ОРГАНИЗАЦИИ*</h2>
+          <div
+            class="create-account-form__item create-account-form__item-director">
+            <h2 class="create-account-form__title">СВЕДЕНИЯ О РУКОВОДИТЕЛЕ
+              ОРГАНИЗАЦИИ*</h2>
             <div class="create-account-form__row">
-              <p class="create-account-form__subtitle">Руководитель организации</p>
+              <p class="create-account-form__subtitle">Руководитель
+                организации</p>
               <div class="create-account-form__position">
-                <select class="create-account-form__position-select" name="account-org-position"
+                <select class="create-account-form__position-select"
+                        name="account-org-position"
                         data-select="main-select" required>
                   <option value="">Должность не указана</option>
                   <option value="position_1">Генеральный директор</option>
@@ -128,9 +150,12 @@
                 </select>
               </div>
               <div class="create-account-form__input-wrapper">
-                <input class="create-account-form__input" type="text" name="account-org-director-name-uz"
-                       placeholder="Фамилия, Имя, Отчество на узбекском" required>
-                <input class="create-account-form__input" type="text" name="account-org-director-name-ru"
+                <input class="create-account-form__input" type="text"
+                       name="account-org-director-name-uz"
+                       placeholder="Фамилия, Имя, Отчество на узбекском"
+                       required>
+                <input class="create-account-form__input" type="text"
+                       name="account-org-director-name-ru"
                        placeholder="Фамилия, Имя, Отчество на русском" required>
               </div>
               <label>
@@ -139,19 +164,25 @@
               </label>
             </div>
           </div>
-          <div class="create-account-form__item create-account-form__item-activity">
-            <h2 class="create-account-form__title">СВЕДЕНИЯ О ВИДАХ ДЕЯТЕЛЬНОСТИ ОРГАНИЗАЦИИ*</h2>
+          <div
+            class="create-account-form__item create-account-form__item-activity">
+            <h2 class="create-account-form__title">СВЕДЕНИЯ О ВИДАХ ДЕЯТЕЛЬНОСТИ
+              ОРГАНИЗАЦИИ*</h2>
             <div class="create-account-form__row">
               <p class="create-account-form__subtitle">Описание деятельности</p>
               <div class="create-account-form__input-wrapper">
-                <input class="create-account-form__input" type="text" name="account-org-activity-desc"
-                       placeholder="Опишите деятельность Вашей организации в нескольких словах" required>
+                <input class="create-account-form__input" type="text"
+                       name="account-org-activity-desc"
+                       placeholder="Опишите деятельность Вашей организации в нескольких словах"
+                       required>
               </div>
             </div>
             <div class="create-account-form__row">
-              <p class="create-account-form__subtitle">Отраслевая принадлежность</p>
+              <p class="create-account-form__subtitle">Отраслевая
+                принадлежность</p>
               <div class="create-account-form__industry">
-                <select class="create-account-form__industry-select" name="account-org-industry"
+                <select class="create-account-form__industry-select"
+                        name="account-org-industry"
                         data-select="main-select" required>
                   <option value="">Отрасль не выбрана</option>
                   <option value="industry_1">Образование</option>
@@ -160,21 +191,26 @@
               </div>
             </div>
           </div>
-          <div class="create-account-form__item create-account-form__item-contacts">
+          <div
+            class="create-account-form__item create-account-form__item-contacts">
             <h2 class="create-account-form__title">КОНТАКТНЫЕ ДАННЫЕ*</h2>
             <div class="create-account-form__row">
               <p class="create-account-form__subtitle">Телефоны</p>
               <div class="create-account-form__row-wrapper">
                 <div class="create-account-form__input-wrapper">
-                  <input class="create-account-form__input phone-mask" type="text" name="account-org-phone-1"
-                         placeholder="+7 ( __ __ __ ) __ __ __  -  __ __  -  __ __*" required>
+                  <input class="create-account-form__input phone-mask"
+                         type="text" name="account-org-phone-1"
+                         placeholder="+7 ( __ __ __ ) __ __ __  -  __ __  -  __ __*"
+                         required>
                 </div>
                 <div class="create-account-form__input-wrapper">
-                  <input class="create-account-form__input phone-mask" type="text" name="account-org-phone-2"
+                  <input class="create-account-form__input phone-mask"
+                         type="text" name="account-org-phone-2"
                          placeholder="+7 ( __ __ __ ) __ __ __  -  __ __  -  __ __">
                 </div>
                 <div class="create-account-form__input-wrapper">
-                  <input class="create-account-form__input phone-mask" type="text" name="account-org-phone-3"
+                  <input class="create-account-form__input phone-mask"
+                         type="text" name="account-org-phone-3"
                          placeholder="+7 ( __ __ __ ) __ __ __  -  __ __  -  __ __">
                 </div>
               </div>
@@ -183,15 +219,18 @@
               <p class="create-account-form__subtitle">Адреса e-mail</p>
               <div class="create-account-form__row-wrapper">
                 <div class="create-account-form__input-wrapper">
-                  <input class="create-account-form__input" type="email" name="account-org-email-1"
+                  <input class="create-account-form__input" type="email"
+                         name="account-org-email-1"
                          placeholder="emailaddress@website.com*" required>
                 </div>
                 <div class="create-account-form__input-wrapper">
-                  <input class="create-account-form__input" type="email" name="account-org-email-2"
+                  <input class="create-account-form__input" type="email"
+                         name="account-org-email-2"
                          placeholder="emailaddress@website.com*" required>
                 </div>
                 <div class="create-account-form__input-wrapper">
-                  <input class="create-account-form__input" type="email" name="account-org-email-3"
+                  <input class="create-account-form__input" type="email"
+                         name="account-org-email-3"
                          placeholder="emailaddress@website.com*" required>
                 </div>
               </div>
@@ -200,15 +239,18 @@
               <p class="create-account-form__subtitle">Адреса сайтов</p>
               <div class="create-account-form__row-wrapper">
                 <div class="create-account-form__input-wrapper">
-                  <input class="create-account-form__input" type="url" name="account-org-site-1"
+                  <input class="create-account-form__input" type="url"
+                         name="account-org-site-1"
                          placeholder="website.com">
                 </div>
                 <div class="create-account-form__input-wrapper">
-                  <input class="create-account-form__input" type="url" name="account-org-site-2"
+                  <input class="create-account-form__input" type="url"
+                         name="account-org-site-2"
                          placeholder="vk.com/1234567890">
                 </div>
                 <div class="create-account-form__input-wrapper">
-                  <input class="create-account-form__input" type="url" name="account-org-site-3"
+                  <input class="create-account-form__input" type="url"
+                         name="account-org-site-3"
                          placeholder="еще-какой-то-сайт.рф">
                 </div>
               </div>
@@ -218,9 +260,11 @@
               <p class="create-account-form__subtitle">Юридический адрес*</p>
               <div class="create-account-form__row-wrapper">
                 <div class="create-account-form__input-wrapper">
-                  <input class="create-account-form__input" type="text" name="account-org-city-legal"
+                  <input class="create-account-form__input" type="text"
+                         name="account-org-city-legal"
                          placeholder="Город, населенный пункт" required>
-                  <input class="create-account-form__input" type="text" name="account-org-index-legal"
+                  <input class="create-account-form__input" type="text"
+                         name="account-org-index-legal"
                          placeholder="Почтовый индекс" required>
                 </div>
                 <textarea name="account-org-full-address-legal"
@@ -232,9 +276,11 @@
               <p class="create-account-form__subtitle">Почтовый адрес*</p>
               <div class="create-account-form__row-wrapper">
                 <div class="create-account-form__input-wrapper">
-                  <input class="create-account-form__input" type="text" name="account-org-city-post"
+                  <input class="create-account-form__input" type="text"
+                         name="account-org-city-post"
                          placeholder="Город, населенный пункт" required>
-                  <input class="create-account-form__input" type="text" name="account-org-index-post"
+                  <input class="create-account-form__input" type="text"
+                         name="account-org-index-post"
                          placeholder="Почтовый индекс" required>
                 </div>
                 <textarea name="account-org-full-address-post"
@@ -246,9 +292,11 @@
               <p class="create-account-form__subtitle">Фактический адрес*</p>
               <div class="create-account-form__row-wrapper">
                 <div class="create-account-form__input-wrapper">
-                  <input class="create-account-form__input" type="text" name="account-org-city-real"
+                  <input class="create-account-form__input" type="text"
+                         name="account-org-city-real"
                          placeholder="Город, населенный пункт" required>
-                  <input class="create-account-form__input" type="text" name="account-org-index-real"
+                  <input class="create-account-form__input" type="text"
+                         name="account-org-index-real"
                          placeholder="Почтовый индекс" required>
                 </div>
                 <textarea name="account-org-full-address-real"
@@ -262,21 +310,24 @@
             <div class="create-account-form__row">
               <p class="create-account-form__subtitle">ИНН банка*</p>
               <div class="create-account-form__input-wrapper">
-                <input class="create-account-form__input" type="text" name="account-org-bank-inn"
+                <input class="create-account-form__input" type="text"
+                       name="account-org-bank-inn"
                        placeholder="Введите ИНН банка" required>
               </div>
             </div>
             <div class="create-account-form__row">
               <p class="create-account-form__subtitle">Расчетный счет*</p>
               <div class="create-account-form__input-wrapper">
-                <input class="create-account-form__input" type="text" name="account-org-bank-score"
+                <input class="create-account-form__input" type="text"
+                       name="account-org-bank-score"
                        placeholder="Введите номер счета" required>
               </div>
             </div>
             <div class="create-account-form__row">
               <p class="create-account-form__subtitle">Название банка*</p>
               <div class="create-account-form__input-wrapper">
-                <input class="create-account-form__input" type="text" name="account-org-bank-name"
+                <input class="create-account-form__input" type="text"
+                       name="account-org-bank-name"
                        placeholder="Введите название банка" required>
               </div>
             </div>
@@ -284,36 +335,46 @@
               <div class="create-account-form__row-wrapper">
                 <p class="create-account-form__subtitle">Введите МФО банка*</p>
                 <div class="create-account-form__input-wrapper">
-                  <input class="create-account-form__input" type="text" name="account-org-bank-mfo"
+                  <input class="create-account-form__input" type="text"
+                         name="account-org-bank-mfo"
                          placeholder="Введите МФО банка" required>
                 </div>
               </div>
               <div class="create-account-form__row-wrapper">
                 <p class="create-account-form__subtitle">Получатель*</p>
                 <div class="create-account-form__input-wrapper">
-                  <input class="create-account-form__input" type="text" name="account-org-bank-recipient"
+                  <input class="create-account-form__input" type="text"
+                         name="account-org-bank-recipient"
                          placeholder="Введите наименование получателя" required>
                 </div>
               </div>
             </div>
             <div class="create-account-form__row">
-              <p class="create-account-form__subtitle">Корреспондентский счет*</p>
+              <p class="create-account-form__subtitle">Корреспондентский
+                счет*</p>
               <div class="create-account-form__input-wrapper">
-                <input class="create-account-form__input" type="text" name="account-org-bank-cor-score"
+                <input class="create-account-form__input" type="text"
+                       name="account-org-bank-cor-score"
                        placeholder="Введите номер счета" required>
               </div>
             </div>
             <div class="create-account-form__row">
               <p class="create-account-form__subtitle">Лицевой счет*</p>
               <div class="create-account-form__input-wrapper">
-                <input class="create-account-form__input" type="text" name="account-org-bank-personal-score"
+                <input class="create-account-form__input" type="text"
+                       name="account-org-bank-personal-score"
                        placeholder="Введите номер счета" required>
               </div>
             </div>
           </div>
           <div class="create-account-form__buttons">
-            <button class="create-account-form__btn-save">сохранить организацию</button>
-            <button class="create-account-form__btn-add">присоединить застройщика</button>
+            <button class="create-account-form__btn-save">сохранить
+              организацию
+            </button>
+            <button class="create-account-form__btn-add"
+                    data-open-modal="add-developer-modal" type="button">
+              присоединить застройщика
+            </button>
           </div>
         </form>
       </div>
