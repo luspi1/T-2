@@ -1,0 +1,108 @@
+.cabinet-org-profile {
+
+  .title-desc {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #3D3D3D;
+  }
+
+  &__inner {
+    background: #FFFFFF;
+    border-radius: 24px;
+    padding: 20px 20px 80px 20px;
+    margin-bottom: 32px;
+    position: relative;
+
+  }
+
+  &__section {
+    padding-top: 20px;
+    padding-left: 22px;
+    display: flex;
+
+    h2 {
+      @include montserrat-semibold;
+      font-size: 25px;
+      line-height: 30px;
+      color: #131313;
+      margin-bottom: 52px;
+      padding-top: 20px;
+    }
+  }
+
+  &__section-logo {
+    margin-right: 43px;
+    height: 80px;
+    width: 80px;
+    min-width: 80px;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  &__basic-inner {
+    border-bottom: 1px solid rgba(#8FC3D8, 0.4);
+    padding-bottom: 68px;
+    width: 100%;
+  }
+
+  &__row {
+    display: flex;
+    max-width: 815px;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    a {
+      color: $link;
+    }
+
+    span {
+      font-weight: 700;
+    }
+
+    .title-desc {
+      min-width: 143px;
+      margin-right: 40px;
+    }
+  }
+
+  &__row-wrapper {
+    display: flex;
+  }
+
+  &__contacts-inner {
+    border-bottom: 1px solid rgba(#8FC3D8, 0.4);
+    padding-bottom: 68px;
+    width: 100%;
+  }
+
+  &__row-icon {
+    position: relative;
+    padding-left: 35px;
+
+    &:not(:last-child) {
+      margin-right: 66px;
+    }
+
+    svg {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__bank-wrapper {
+    display: flex;
+
+    .cabinet-org-profile__bank-list:first-child {
+      margin-right: 117px;
+    }
+  }
+
+
+}

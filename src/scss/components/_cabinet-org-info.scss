@@ -1,0 +1,129 @@
+.cabinet-org-info {
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(#8FC3D8, 0.4);
+
+  @media (max-width: 768px) {
+    padding-bottom: 20px;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 52px;
+    padding-right: 40px;
+
+    @media (max-width: 550px) {
+      flex-direction: column;
+      padding-right: 0;
+    }
+
+  }
+
+  &__logo {
+    width: 120px;
+    min-width: 120px;
+    height: 120px;
+    margin-right: 20px;
+
+    img {
+      height: 100%;
+    }
+
+    @media (max-width: 768px) {
+      width: 70px;
+      min-width: 70px;
+      height: 70px;
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+
+  }
+
+  &__data {
+    h2 {
+      @include montserrat-semibold;
+      font-size: 36px;
+      line-height: 44px;
+      color: $black;
+      margin-bottom: 8px;
+
+      @media (max-width: 768px) {
+        font-size: 30px;
+        line-height: 40px;
+      }
+
+    }
+
+    p {
+      @include montserrat-medium;
+      font-size: 20px;
+      line-height: 24px;
+      color: #3D3D3D;
+
+      @media (max-width: 768px) {
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+    }
+  }
+
+  &__menu {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      @media (max-width: 1024px) {
+        justify-content: space-around;
+      }
+      @media (max-width: 768px) {
+        flex-direction: column;
+      }
+
+
+    }
+  }
+
+  &__menu-item {
+
+    &:not(:last-child) {
+      margin-right: 10px;
+      margin-bottom: 10px;
+
+      @media (max-width: 768px) {
+        margin-right: 0;
+      }
+
+    }
+
+    a {
+      @include montserrat-semibold;
+      font-size: 14px;
+      line-height: 17px;
+      text-transform: uppercase;
+      color: #3D3D3D;
+      text-align: center;
+      padding: 7px 28px;
+      background-color: #F4F7FB;
+      border-radius: 20px;
+      display: block;
+      transition: all .3s;
+
+      &:hover {
+        background-color: #D2E7EF;
+        color: $black;
+      }
+    }
+
+    &._active {
+      a {
+        color: $white;
+        background-color: $green-blue;
+      }
+    }
+
+  }
+
+
+}

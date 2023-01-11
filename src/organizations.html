@@ -7,115 +7,135 @@
 
 <body class="page__body organizations-page">
 
-  <div class="site-container">
-    <div class="header">
-      @include('partials/main-menu.html', {
-      'active-organizations': '_active'
-      })
-    </div>
+<div class="site-container">
+  <div class="header">
+    @include('partials/main-menu.html', {
+    'active-organizations': '_active'
+    })
+  </div>
 
-    <main class="main">
-      @include('partials/page-title.html', {
-      'page-title': 'Мои организации'
-      })
-      <section class="section organizations">
-        <div class="container">
-          <div class="organizations__inner">
-            <ul class="organizations__list">
-              <li class="organizations__item">
-                <div class="organizations__information">
-                  <div class="organizations__row">
-                    <h3 class="organizations__title">ООО Третий Глаз</h3>
-                    <p class="organizations__inn">ИНН: <span>800 900 700</span></p>
-                  </div>
-                  <p class="organizations__type">Строительно-подрядная организация</p>
-                  <div class="organizations__row">
-                    <p class="organizations__you organizations__you_owner">Вы — владелец организации</p>
-                    <p class="organizations__registration">Зарегистрирована в системе <span>23 апреля 2022 года</span>
-                    </p>
-                  </div>
+  <main class="main">
+    @include('partials/page-title.html', {
+    'page-title': 'Мои организации'
+    })
+    <section class="section organizations">
+      <div class="container">
+        <div class="organizations__inner">
+          <ul class="organizations__list">
+            <li class="organizations__item">
+              <div class="organizations__information">
+                <div class="organizations__row">
+                  <h3 class="organizations__title">ООО Третий Глаз</h3>
+                  <p class="organizations__inn">ИНН: <span>800 900 700</span>
+                  </p>
                 </div>
-                <div class="organizations__statistics">
-                  <div class="organizations__statistics-name">
-                    <span>Аукционы</span>
-                    <ul>
-                      <li>1</li>
-                      <li>4</li>
-                      <li>1</li>
-                    </ul>
-                  </div>
-                  <div class="organizations__statistics-name">
-                    <span>Объекты</span>
-                    <ul>
-                      <li>1</li>
-                      <li>4</li>
-                      <li>1</li>
-                    </ul>
-                  </div>
-                  <button class="organizations__btn-control" type="button">Управлять</button>
+                <p class="organizations__type">Строительно-подрядная
+                  организация</p>
+                <div class="organizations__row">
+                  <p class="organizations__you organizations__you_owner">Вы —
+                    владелец организации</p>
+                  <p class="organizations__registration">Зарегистрирована в
+                    системе <span>23 апреля 2022 года</span>
+                  </p>
                 </div>
-              </li>
-              <li class="organizations__item">
-                <div class="organizations__information">
-                  <div class="organizations__row">
-                    <h3 class="organizations__title">ООО Пятый угол</h3>
-                    <p class="organizations__inn">ИНН: <span>800 900 700</span></p>
-                  </div>
-                  <p class="organizations__type">Оператор мусорного полигона</p>
-                  <div class="organizations__row">
-                    <p class="organizations__you organizations__you_worker">Вы — сотрудник организации</p>
-                    <p class="organizations__registration">Зарегистрирована в системе <span>23 апреля 2022 года</span>
-                    </p>
-                  </div>
+              </div>
+              <div class="organizations__statistics">
+                <div class="organizations__statistics-name">
+                  <span>Аукционы</span>
+                  <ul>
+                    <li>1</li>
+                    <li>4</li>
+                    <li>1</li>
+                  </ul>
                 </div>
-                <div class="organizations__statistics">
-                  <div class="organizations__statistics-name">
-                    <span>Аукционы</span>
-                    <ul>
-                      <li>1</li>
-                      <li>4</li>
-                      <li>1</li>
-                    </ul>
-                  </div>
-                  <div class="organizations__statistics-name">
-                    <span>Объекты</span>
-                    <ul>
-                      <li>1</li>
-                      <li>4</li>
-                      <li>1</li>
-                    </ul>
-                  </div>
-                  <button class="organizations__btn-control" type="button">Управлять</button>
+                <div class="organizations__statistics-name">
+                  <span>Объекты</span>
+                  <ul>
+                    <li>1</li>
+                    <li>4</li>
+                    <li>1</li>
+                  </ul>
                 </div>
-              </li>
-              <li>
-              </li>
-            </ul>
-            <button type="button" class="organizations__item-btn-add">
-              <svg width="35" height="36" viewBox="0 0 35 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path opacity="0.4"
-                  d="M17.5 35.8C27.165 35.8 35 27.965 35 18.3C35 8.63507 27.165 0.800049 17.5 0.800049C7.83502 0.800049 0 8.63507 0 18.3C0 27.965 7.83502 35.8 17.5 35.8Z"
-                  fill="#8FC3D8" />
-                <path d="M9.7002 18.3H25.3002" stroke="white" stroke-width="3" stroke-linecap="round" />
-                <path d="M17.5 10.6V26.1" stroke="white" stroke-width="3" stroke-linecap="round" />
-              </svg>
-              <span>Создать организацию</span>
-            </button>
-          </div>
-        </div>
-      </section>
-      <div class="modal-invite">
-        <h3 class="modal-invite__title">ВАС ПРИГЛАСИЛИ В ОРГАНИЗАЦИЮ!</h3>
-        <p class="modal-invite__subtitle">ООО Рыночные склады (ИНН 999 000 999)</p>
-        <p class="modal-invite__desc">приглашает Вас присоединиться в качестве сотрудника</p>
-        <div class="modal-invite__buttons">
-          <button class="modal-invite__btn modal-invite__btn-refusal" type="button">Отказать</button>
-          <button class="modal-invite__btn modal-invite__btn-accept" type="button">Принять приглашение</button>
+                <button class="organizations__btn-control" type="button">
+                  Управлять
+                </button>
+              </div>
+            </li>
+            <li class="organizations__item">
+              <div class="organizations__information">
+                <div class="organizations__row">
+                  <h3 class="organizations__title">ООО Пятый угол</h3>
+                  <p class="organizations__inn">ИНН: <span>800 900 700</span>
+                  </p>
+                </div>
+                <p class="organizations__type">Оператор мусорного полигона</p>
+                <div class="organizations__row">
+                  <p class="organizations__you organizations__you_worker">Вы —
+                    сотрудник организации</p>
+                  <p class="organizations__registration">Зарегистрирована в
+                    системе <span>23 апреля 2022 года</span>
+                  </p>
+                </div>
+              </div>
+              <div class="organizations__statistics">
+                <div class="organizations__statistics-name">
+                  <span>Аукционы</span>
+                  <ul>
+                    <li>1</li>
+                    <li>4</li>
+                    <li>1</li>
+                  </ul>
+                </div>
+                <div class="organizations__statistics-name">
+                  <span>Объекты</span>
+                  <ul>
+                    <li>1</li>
+                    <li>4</li>
+                    <li>1</li>
+                  </ul>
+                </div>
+                <button class="organizations__btn-control" type="button">
+                  Управлять
+                </button>
+              </div>
+            </li>
+            <li>
+            </li>
+          </ul>
+          <button type="button" class="organizations__item-btn-add">
+            <svg width="35" height="36" viewBox="0 0 35 36" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+              <path opacity="0.4"
+                    d="M17.5 35.8C27.165 35.8 35 27.965 35 18.3C35 8.63507 27.165 0.800049 17.5 0.800049C7.83502 0.800049 0 8.63507 0 18.3C0 27.965 7.83502 35.8 17.5 35.8Z"
+                    fill="#8FC3D8"/>
+              <path d="M9.7002 18.3H25.3002" stroke="white" stroke-width="3"
+                    stroke-linecap="round"/>
+              <path d="M17.5 10.6V26.1" stroke="white" stroke-width="3"
+                    stroke-linecap="round"/>
+            </svg>
+            <span>Создать организацию</span>
+          </button>
         </div>
       </div>
-    </main>
-    @include('partials/footer.html')
-  </div>
+    </section>
+    <div class="modal-invite">
+      <h3 class="modal-invite__title">ВАС ПРИГЛАСИЛИ В ОРГАНИЗАЦИЮ!</h3>
+      <p class="modal-invite__subtitle">ООО Рыночные склады (ИНН 999 000
+        999)</p>
+      <p class="modal-invite__desc">приглашает Вас присоединиться в качестве
+        сотрудника</p>
+      <div class="modal-invite__buttons">
+        <button class="modal-invite__btn modal-invite__btn-refusal"
+                type="button">Отказать
+        </button>
+        <button class="modal-invite__btn modal-invite__btn-accept"
+                type="button">Принять приглашение
+        </button>
+      </div>
+    </div>
+  </main>
+  @include('partials/footer.html')
+</div>
 </body>
 
 </html>
