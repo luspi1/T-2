@@ -19,8 +19,8 @@
     })
     <section class="section create-account">
       <div class="container">
+        @include('partials/modals/add-developer-modal.html')
         <form class="create-account-form" action="#" method="post">
-          @include('partials/modals/add-developer-modal.html')
           <div class="create-account-form__item">
             <div class="create-account-form__row">
               <p class="create-account-form__subtitle">
@@ -368,7 +368,7 @@
             </div>
           </div>
           <div class="create-account-form__buttons">
-            <button class="create-account-form__btn-save">сохранить
+            <button class="create-account-form__btn-save" type="button">сохранить
               организацию
             </button>
             <button class="create-account-form__btn-add"

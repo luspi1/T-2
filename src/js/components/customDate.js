@@ -11,7 +11,7 @@ if (textDateInputs) {
           year: 'numeric',
           day: '2-digit',
           month: 'long'
-        });
+        })
       }
     })
   })
@@ -23,9 +23,15 @@ if (textTimeInputs) {
 
   textTimeInputs.forEach(el => {
     new AirDatepicker(el, {
-      onlyTimepicker : true,
-      timepicker : true,
+      onlyTimepicker: true,
+      timepicker: true,
     })
 
   })
+}
+
+const numbDateInputs = document.querySelectorAll('input[data-date-type="numb"]')
+
+if (numbDateInputs) {
+  numbDateInputs.forEach(el => new AirDatepicker(el))
 }

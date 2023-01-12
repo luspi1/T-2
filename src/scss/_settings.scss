@@ -95,6 +95,12 @@ textarea {
   display: none;
 }
 
+.air-datepicker-global-container {
+  z-index: 9999;
+}
+
+
+
 .swiper-horizontal {
   overflow: hidden;
   position: relative;
@@ -113,6 +119,11 @@ textarea {
 .input_disabled {
   opacity: 0.5;
   pointer-events: none;
+}
+
+.btn_disabled {
+  pointer-events: none;
+  opacity: 0.5;
 }
 
 .site-container {

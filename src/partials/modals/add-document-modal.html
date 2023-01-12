@@ -1,0 +1,123 @@
+<div class="modal add-document-modal" id="add-document-modal"
+     data-doc-type="outer">
+  <button class="close-modal-btn" type="button" data-close-modal="true">
+    <svg width="26" height="26" viewBox="0 0 26 26" fill="none"
+         xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M13 26C5.8 26 0 20.2 0 13C0 5.8 5.8 0 13 0C20.2 0 26 5.8 26 13C26 20.2 20.2 26 13 26ZM13 1C6.4 1 1 6.4 1 13C1 19.6 6.4 25 13 25C19.6 25 25 19.6 25 13C25 6.4 19.6 1 13 1Z"
+        fill="#93B5C5"/>
+      <path
+        d="M17.9996 19.3C17.6996 19.3 17.3996 19.2 17.0996 18.9L7.09961 8.90002C6.59961 8.40002 6.59961 7.6001 7.09961 7.1001C7.59961 6.6001 8.39966 6.6001 8.89966 7.1001L18.8997 17.1001C19.3997 17.6001 19.3997 18.4 18.8997 18.9C18.6997 19.2 18.2996 19.3 17.9996 19.3Z"
+        fill="#93B5C5"/>
+      <path
+        d="M7.99963 19.3C7.69963 19.3 7.39961 19.2 7.09961 18.9C6.59961 18.4 6.59961 17.6001 7.09961 17.1001L17.0996 7.1001C17.5996 6.6001 18.3997 6.6001 18.8997 7.1001C19.3997 7.6001 19.3997 8.40002 18.8997 8.90002L8.89966 18.9C8.69966 19.2 8.29963 19.3 7.99963 19.3Z"
+        fill="#93B5C5"/>
+    </svg>
+  </button>
+  <h1>
+    Добавление документа — <span
+    class="add-document-modal__outer-type">внешний</span><span
+    class="add-document-modal__local-type">локальный</span> документ
+  </h1>
+
+  <form class="add-document-modal__form" action="#">
+    <div class="add-document-modal__choice">
+      <div class="add-document-modal__choice-selectors">
+        <div
+          class="add-document-modal__checkbox-wrapper">
+          <input type="radio" class="add-document-modal__checkbox"
+                 id="checkDoc"
+                 name="addDocChoice"
+                 value="outer" checked>
+          <label for="checkDoc">Внешний документ</label>
+        </div>
+        <div
+          class="add-document-modal__checkbox-wrapper">
+          <input type="radio" class="add-document-modal__checkbox"
+                 id="checkDoc1"
+                 name="addDocChoice"
+                 value="local">
+          <label for="checkDoc1">Локальный документ</label>
+        </div>
+      </div>
+
+      <p
+        class="add-document-modal__choice-prompt add-document-modal__outer-type">
+        Вы выбрали «Внешний документ». Это означает, что этот документ выпущен
+        государственной организацией, и сюда Вы можете загрузить только его
+        данные
+        и фотографию или скан документа, без исходного файла. Скачать исходный
+        файл тоже будет нельзя.
+      </p>
+
+      <p
+        class="add-document-modal__choice-prompt add-document-modal__local-type">
+        Вы выбрали «Локальный документ». Это означает, что этот документ...
+      </p>
+    </div>
+    <div class="add-document-modal__inputs">
+      <div class="add-document-modal__inputs-wrapper">
+        <div class="add-document-modal__input">
+          <p>Номер документа</p>
+          <input class="add-document-modal__text-input" type="text"
+                 name="addDocNumber" required>
+        </div>
+        <div class="add-document-modal__input">
+          <p>Дата издания</p>
+          <input class="add-document-modal__text-input" type="text"
+                 name="addDocDate" data-date-type="numb" required>
+        </div>
+        <div class="add-document-modal__input">
+          <p>Тип документа</p>
+          <input class="add-document-modal__text-input" type="text"
+                 name="addDocType" required>
+        </div>
+
+
+      </div>
+      <div class="add-document-modal__input">
+        <p>Орган, издавший документ</p>
+        <input class="add-document-modal__text-input" type="text"
+               name="addDocPublisher" required>
+      </div>
+      <div class="add-document-modal__input">
+        <p>Наименование документа (при наличии)</p>
+        <input class="add-document-modal__text-input" type="text"
+               name="addDocName" required>
+      </div>
+    </div>
+    <div class="add-document-modal__downloads">
+      <div id="add-document-photo-dropzone" class="dropzone"
+           data-info='{"url": "./data/photo-data.txt", "removeUrl":"./data/photo-data.txt", "type":"create-template-doc", "additional": "доп. параметры"}'>
+        <div class="dz-message">
+          <button class="add-document-modal__downloads-btn add-document-modal__photo-btn" type="button"
+                  id="add-document-photo-btn" data-id="12d13ff">
+            Загрузить фото
+          </button>
+          <p class="add-document-modal__dropzone-status">Не загружено</p>
+        </div>
+      </div>
+
+      <div class="add-document-modal__downloads-bottom">
+        <div id="add-document-doc-dropzone" class="dropzone"
+             data-info='{"url": "./data/photo-data.txt", "removeUrl":"./data/photo-data.txt", "type":"create-template-doc", "additional": "доп. параметры"}'>
+          <div class="dz-message">
+            <button class="add-document-modal__downloads-btn add-document-modal__photo-btn" type="button"
+                    id="add-document-doc-btn" data-id="12d13ff">
+              Загрузить PDF
+            </button>
+            <p class="add-document-modal__dropzone-status">Не загружено</p>
+          </div>
+        </div>
+        <button class="add-document-modal__save-btn" type="button">
+          Сохранить документ
+        </button>
+      </div>
+
+
+    </div>
+
+  </form>
+
+
+</div>
