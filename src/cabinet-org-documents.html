@@ -8,6 +8,7 @@
 <body class="page__body cabinet-org-documents">
 
 <div class="site-container">
+  <div class="modal-overlay"></div>
   <div class="header">
     @include('partials/main-menu.html')
   </div>
@@ -19,6 +20,7 @@
 
 
     <div class="container">
+      @include('partials/modals/add-document-modal.html')
       <div class="cabinet-org-profile__inner">
         <button class="edit-btn" title="Редактировать раздел" type="button">
           <svg width="37" height="37" viewBox="0 0 37 37" fill="none"
@@ -37,7 +39,8 @@
         <section class="cabinet-org-documents__section">
           <div class="cabinet-org-documents__top">
             <div class="cabinet-org-documents__type">
-              <select class="cabinet-org-documents__type-select" name="cabinet-org-documents-type"
+              <select class="cabinet-org-documents__type-select"
+                      name="cabinet-org-documents-type"
                       data-select="main-select">
                 <option selected value="type_all">Тип документа</option>
                 <option value="type_1">Внешние документы</option>
@@ -58,17 +61,24 @@
             </div>
 
             <div class="cabinet-org-documents__public">
-              <select class="cabinet-org-documents__public-select" name="cabinet-org-documents-public"
+              <select class="cabinet-org-documents__public-select"
+                      name="cabinet-org-documents-public"
                       data-select="main-select">
-                <option selected value="public_all">Публичность документа</option>
+                <option selected value="public_all">Публичность документа
+                </option>
                 <option value="public_1">Публичный документ, виден всем</option>
-                <option value="public_2">Служебный документ, виден сотрудникам</option>
-                <option value="public_3">Секретный документ, виден руководителю</option>
+                <option value="public_2">Служебный документ, виден сотрудникам
+                </option>
+                <option value="public_3">Секретный документ, виден
+                  руководителю
+                </option>
               </select>
             </div>
 
-            <button class="cabinet-org-documents__btn-filter-delete" type="button">
-              <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <button class="cabinet-org-documents__btn-filter-delete"
+                    type="button">
+              <svg width="21" height="21" viewBox="0 0 21 21" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M10.8999 20.1001C5.3999 20.1001 0.899902 15.6001 0.899902 10.1001C0.899902 4.6001 5.3999 0.100098 10.8999 0.100098C16.3999 0.100098 20.8999 4.6001 20.8999 10.1001C20.8999 15.6001 16.3999 20.1001 10.8999 20.1001ZM10.8999 0.900085C5.7999 0.900085 1.69989 5.0001 1.69989 10.1001C1.69989 15.2001 5.7999 19.3001 10.8999 19.3001C15.9999 19.3001 20.0999 15.2001 20.0999 10.1001C20.0999 5.0001 15.9999 0.900085 10.8999 0.900085Z"
                   fill="#8FC3D8"/>
@@ -80,7 +90,9 @@
                   fill="#8FC3D8"/>
               </svg>
             </button>
-            <button class="cabinet-org-documents__btn-add">Добавить документ</button>
+            <button class="cabinet-org-documents__btn-add"
+                    data-open-modal="add-document-modal">Добавить документ
+            </button>
           </div>
           <ul>
             <li class="cabinet-org-documents__item">
@@ -94,19 +106,21 @@
                 </div>
               </div>
               <div class="cabinet-org-documents__col-2">
-                <h5 class="cabinet-org-documents__item-name" data-shear="150">№ 27-223 от 20.06.2021 «На право
+                <h5 class="cabinet-org-documents__item-name" data-shear="150">№
+                  27-223 от 20.06.2021 «На право
                   представления Государства на Аукционе или еще
                   что-то такое, надо подумать, но мо...»</h5>
                 <div class="cabinet-org-documents__item-wrapper">
                   <div class="cabinet-org-documents__info">
-                    <p>Документ выпущен: <b>администрация г. Ташкента</b>, 21.06.2021 </p>
+                    <p>Документ выпущен: <b>администрация г. Ташкента</b>,
+                      21.06.2021 </p>
                     <p>Документ загрузил сотрудник
                       <a href="#">Константинов К.К.</a>
                       26.06.2021
                     </p>
                   </div>
                   <button class="cabinet-org-documents__btn-hide" type="button">
-                     СКРЫТЬ ДОКУМЕНТ
+                    СКРЫТЬ ДОКУМЕНТ
                   </button>
                 </div>
               </div>
@@ -131,12 +145,14 @@
                 </div>
               </div>
               <div class="cabinet-org-documents__col-2">
-                <h5 class="cabinet-org-documents__item-name" data-shear="150">№ 27-223 от 20.06.2021 «На право
+                <h5 class="cabinet-org-documents__item-name" data-shear="150">№
+                  27-223 от 20.06.2021 «На право
                   представления Государства на Аукционе или еще
                   что-то такое, надо подумать, но мо..jnl»</h5>
                 <div class="cabinet-org-documents__item-wrapper">
                   <div class="cabinet-org-documents__info">
-                    <p>Документ выпущен: <b>администрация г. Ташкента</b>, 21.06.2021 </p>
+                    <p>Документ выпущен: <b>администрация г. Ташкента</b>,
+                      21.06.2021 </p>
                     <p>Документ загрузил сотрудник
                       <a href="#">Константинов К.К.</a>
                       26.06.2021
@@ -160,7 +176,8 @@
             <li class="cabinet-org-documents__item">
               <div class="cabinet-org-documents__col-1">
                 <h4 class="cabinet-org-documents__item-title">ПРИКАЗ</h4>
-                <p class="cabinet-org-documents__item-type">локальный документ</p>
+                <p class="cabinet-org-documents__item-type">локальный
+                  документ</p>
                 <div class="cabinet-org-documents__images">
                   <img src="img/type-doc_img.png" alt="">
                   <img src="img/type-doc_pdf.png" alt="">
@@ -168,18 +185,20 @@
                 </div>
               </div>
               <div class="cabinet-org-documents__col-2">
-                <h5 class="cabinet-org-documents__item-name" data-shear="150">№ 65 от 22.09.2022 «О приеме на работу
+                <h5 class="cabinet-org-documents__item-name" data-shear="150">№
+                  65 от 22.09.2022 «О приеме на работу
                   Иванова Г. К.»</h5>
                 <div class="cabinet-org-documents__item-wrapper">
                   <div class="cabinet-org-documents__info">
-                    <p>Документ выпущен: <b>ООО А-Валид Эстейт</b>, 22.09.2022</p>
+                    <p>Документ выпущен: <b>ООО А-Валид Эстейт</b>, 22.09.2022
+                    </p>
                     <p>Документ загрузил сотрудник
                       <a href="#">Константинов К.К.</a>
                       22.09.2022
                     </p>
                   </div>
                   <button class="cabinet-org-documents__btn-hide" type="button">
-                   СКРЫТЬ ДОКУМЕНТ
+                    СКРЫТЬ ДОКУМЕНТ
                   </button>
                 </div>
               </div>
