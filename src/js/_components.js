@@ -7,4 +7,6 @@ import './components/manageChangeableLists'
 import './components/slider'
 import './components/customDate'
 import './components/manageModal'
+import './components/hideItemOrgDoc'
 import './components/addDocModal'
+
