@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {
+'title': 'Кабинет организации - Документы'
+})
+
+<body class="page__body cabinet-org-documents">
+
+<div class="site-container">
+  <div class="header">
+    @include('partials/main-menu.html')
+  </div>
+
+  <main class="main ">
+    @include('partials/page-title.html', {
+    'page-title': 'Документы'
+    })
+
+
+    <div class="container">
+      <div class="cabinet-org-profile__inner">
+        <button class="edit-btn" title="Редактировать раздел" type="button">
+          <svg width="37" height="37" viewBox="0 0 37 37" fill="none"
+               xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M18.5 36C8.8 36 1 28.2 1 18.5C1 8.8 8.8 1 18.5 1C28.2 1 36 8.8 36 18.5C36 28.2 28.2 36 18.5 36Z"
+              stroke="#8FC3D8" stroke-miterlimit="10"/>
+            <path
+              d="M25.8001 12.3L24.9001 11.4C23.8001 10.3 22.0001 10.3 20.9001 11.4L13.1 19.2C12.8 19.5 12.5001 19.8 12.3001 20.1L10.7 25C10.5 25.6 10.8001 26.2 11.4001 26.4C11.5001 26.4 11.6001 26.5 11.8001 26.5C11.9001 26.5 12 26.5 12.2 26.4L17.1 24.8C17.5 24.6 17.8001 24.4 18.0001 24L25.3001 16.7L25.8001 16.2C25.9001 16.1 26 16 26.1 15.9L21.3001 11.1L26.1 15.9C26.9 14.9 26.8001 13.3 25.8001 12.3ZM12.4001 20.2L17.1 24.9L12.4001 20.2Z"
+              stroke="#8FC3D8" stroke-miterlimit="10"/>
+          </svg>
+        </button>
+        @include('partials/cabinet-org-info.html', {
+        'active-profile': '_active'
+        })
+        <section class="cabinet-org-documents__section">
+          <div class="cabinet-org-documents__top">
+            <div class="cabinet-org-documents__type">
+              <select class="cabinet-org-documents__type-select" name="cabinet-org-documents-type"
+                      data-select="main-select">
+                <option selected value="type_all">Тип документа</option>
+                <option value="type_1">Внешние документы</option>
+                <option value="type_2">Локальные документы</option>
+                <option value="type_3">Еще какой-то тип</option>
+              </select>
+            </div>
+            <div class="cabinet-org-documents__search-wrapper">
+              <input class="cabinet-org-documents__input" type="text"
+                     placeholder="начните вводить номер, дату принятия или название">
+              <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M5.8 11C3 10.9 0.900009 8.60001 1.00001 5.80001C1.10001 3.00001 3.40002 0.900009 6.20002 1.00001C9.00002 1.10001 11.1 3.40001 11 6.20001C11 7.50001 10.4 8.70001 9.50001 9.60001C8.50001 10.5 7.2 11 5.8 11Z"
+                  stroke="#A3A3A3"/>
+                <path d="M10 10L12 12" stroke="#A3A3A3" stroke-linecap="round"/>
+              </svg>
+            </div>
+
+            <div class="cabinet-org-documents__public">
+              <select class="cabinet-org-documents__public-select" name="cabinet-org-documents-public"
+                      data-select="main-select">
+                <option selected value="public_all">Публичность документа</option>
+                <option value="public_1">Публичный документ, виден всем</option>
+                <option value="public_2">Служебный документ, виден сотрудникам</option>
+                <option value="public_3">Секретный документ, виден руководителю</option>
+              </select>
+            </div>
+
+            <button class="cabinet-org-documents__btn-filter-delete" type="button">
+              <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M10.8999 20.1001C5.3999 20.1001 0.899902 15.6001 0.899902 10.1001C0.899902 4.6001 5.3999 0.100098 10.8999 0.100098C16.3999 0.100098 20.8999 4.6001 20.8999 10.1001C20.8999 15.6001 16.3999 20.1001 10.8999 20.1001ZM10.8999 0.900085C5.7999 0.900085 1.69989 5.0001 1.69989 10.1001C1.69989 15.2001 5.7999 19.3001 10.8999 19.3001C15.9999 19.3001 20.0999 15.2001 20.0999 10.1001C20.0999 5.0001 15.9999 0.900085 10.8999 0.900085Z"
+                  fill="#8FC3D8"/>
+                <path
+                  d="M14.8001 14.9002C14.6001 14.9002 14.3 14.8002 14.1 14.6002L6.4001 6.90019C6.0001 6.50019 6.0001 5.9002 6.4001 5.5002C6.8001 5.1002 7.40006 5.1002 7.80006 5.5002L15.5001 13.2002C15.9001 13.6002 15.9001 14.2002 15.5001 14.6002C15.3001 14.8002 15.0001 14.9002 14.8001 14.9002Z"
+                  fill="#8FC3D8"/>
+                <path
+                  d="M7.10005 14.9002C6.90005 14.9002 6.6001 14.8002 6.4001 14.6002C6.0001 14.2002 6.0001 13.6002 6.4001 13.2002L14.1 5.5002C14.5 5.1002 15.1001 5.1002 15.5001 5.5002C15.9001 5.9002 15.9001 6.50019 15.5001 6.90019L7.80006 14.6002C7.60006 14.8002 7.30005 14.9002 7.10005 14.9002Z"
+                  fill="#8FC3D8"/>
+              </svg>
+            </button>
+            <button class="cabinet-org-documents__btn-add">Добавить документ</button>
+          </div>
+          <ul>
+            <li class="cabinet-org-documents__item">
+              <div class="cabinet-org-documents__col-1">
+                <h4 class="cabinet-org-documents__item-title">СЕРТИФИКАТ</h4>
+                <p class="cabinet-org-documents__item-type">внешний документ</p>
+                <div class="cabinet-org-documents__images">
+                  <img src="img/type-doc_img.png" alt="">
+                  <img src="img/type-doc_pdf.png" alt="">
+                  <img src="img/type-doc_doc.png" alt="">
+                </div>
+              </div>
+              <div class="cabinet-org-documents__col-2">
+                <h5 class="cabinet-org-documents__item-name" data-shear="150">№ 27-223 от 20.06.2021 «На право
+                  представления Государства на Аукционе или еще
+                  что-то такое, надо подумать, но мо...»</h5>
+                <div class="cabinet-org-documents__item-wrapper">
+                  <div class="cabinet-org-documents__info">
+                    <p>Документ выпущен: <b>администрация г. Ташкента</b>, 21.06.2021 </p>
+                    <p>Документ загрузил сотрудник
+                      <a href="#">Константинов К.К.</a>
+                      26.06.2021
+                    </p>
+                  </div>
+                  <button class="cabinet-org-documents__btn-hide" type="button">
+                     СКРЫТЬ ДОКУМЕНТ
+                  </button>
+                </div>
+              </div>
+              <div class="cabinet-org-documents__col-3">
+                <div class="cabinet-org-documents__col-3-wrapper">
+                  <p>публичный документ</p>
+                  <p>доступен всем</p>
+                </div>
+                <button class="cabinet-org-documents__btn-edit">
+                  ПРАВИТЬ ДОКУМЕНТ
+                </button>
+              </div>
+            </li>
+            <li class="cabinet-org-documents__item">
+              <div class="cabinet-org-documents__col-1">
+                <h4 class="cabinet-org-documents__item-title">ЛИЦЕНЗИЯ</h4>
+                <p class="cabinet-org-documents__item-type">внешний документ</p>
+                <div class="cabinet-org-documents__images">
+                  <img src="img/type-doc_img.png" alt="">
+                  <img src="img/type-doc_pdf.png" alt="">
+                  <img src="img/type-doc_doc.png" alt="">
+                </div>
+              </div>
+              <div class="cabinet-org-documents__col-2">
+                <h5 class="cabinet-org-documents__item-name" data-shear="150">№ 27-223 от 20.06.2021 «На право
+                  представления Государства на Аукционе или еще
+                  что-то такое, надо подумать, но мо..jnl»</h5>
+                <div class="cabinet-org-documents__item-wrapper">
+                  <div class="cabinet-org-documents__info">
+                    <p>Документ выпущен: <b>администрация г. Ташкента</b>, 21.06.2021 </p>
+                    <p>Документ загрузил сотрудник
+                      <a href="#">Константинов К.К.</a>
+                      26.06.2021
+                    </p>
+                  </div>
+                  <button class="cabinet-org-documents__btn-hide" type="button">
+                    СКРЫТЬ ДОКУМЕНТ
+                  </button>
+                </div>
+              </div>
+              <div class="cabinet-org-documents__col-3">
+                <div class="cabinet-org-documents__col-3-wrapper">
+                  <p>публичный документ</p>
+                  <p>доступен всем</p>
+                </div>
+                <button class="cabinet-org-documents__btn-edit">
+                  ПРАВИТЬ ДОКУМЕНТ
+                </button>
+              </div>
+            </li>
+            <li class="cabinet-org-documents__item">
+              <div class="cabinet-org-documents__col-1">
+                <h4 class="cabinet-org-documents__item-title">ПРИКАЗ</h4>
+                <p class="cabinet-org-documents__item-type">локальный документ</p>
+                <div class="cabinet-org-documents__images">
+                  <img src="img/type-doc_img.png" alt="">
+                  <img src="img/type-doc_pdf.png" alt="">
+                  <img src="img/type-doc_doc.png" alt="">
+                </div>
+              </div>
+              <div class="cabinet-org-documents__col-2">
+                <h5 class="cabinet-org-documents__item-name" data-shear="150">№ 65 от 22.09.2022 «О приеме на работу
+                  Иванова Г. К.»</h5>
+                <div class="cabinet-org-documents__item-wrapper">
+                  <div class="cabinet-org-documents__info">
+                    <p>Документ выпущен: <b>ООО А-Валид Эстейт</b>, 22.09.2022</p>
+                    <p>Документ загрузил сотрудник
+                      <a href="#">Константинов К.К.</a>
+                      22.09.2022
+                    </p>
+                  </div>
+                  <button class="cabinet-org-documents__btn-hide" type="button">
+                   СКРЫТЬ ДОКУМЕНТ
+                  </button>
+                </div>
+              </div>
+              <div class="cabinet-org-documents__col-3">
+                <div class="cabinet-org-documents__col-3-wrapper">
+                  <p>служебный документ</p>
+                  <p>виден сотрудникам</p>
+                </div>
+                <button class="cabinet-org-documents__btn-edit _active">
+                  ПРАВИТЬ ДОКУМЕНТ
+                </button>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+      </div>
+    </div>
+  </main>
+  @include('partials/footer.html')
+</div>
+</body>
+
+</html>

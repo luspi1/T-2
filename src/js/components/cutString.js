@@ -19,3 +19,9 @@ cutString(trimAuctionStrings);
 
 const trimNewAuctionStrings = document.querySelectorAll('.new-auction-page [data-shear]');
 cutString(trimNewAuctionStrings);
+
+
+//обрезка длинных строк на странице заявка на проведение аукциона
+
+const trimCabinetOrgDocStrings = document.querySelectorAll('.cabinet-org-documents [data-shear]');
+cutString(trimCabinetOrgDocStrings);
