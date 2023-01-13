@@ -1,1 +1,2 @@
-{"status": "ok", "errortext": "Произошла ошибка!"}
+{"status": "ok", "errortext": "Произошла ошибка!", "id_person_doc": "testid123"}
+

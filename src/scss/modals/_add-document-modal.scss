@@ -102,7 +102,7 @@
   }
 
   &__inputs {
-    margin-bottom: 30px;
+    margin-bottom: 26px;
   }
 
   &__text-input {
@@ -111,7 +111,7 @@
     font-size: 14px;
     line-height: 17px;
     color: $dark-light;
-    padding: 6px 14px;
+    padding: 0 14px;
     height: 30px;
     border-radius: 3px;
     border: 1px solid #337390;
@@ -190,6 +190,24 @@
     }
   }
 
+
+
+  #add-document-photo-dropzone {
+    .dz-image {
+      background: url("../img/dropzone-photo-bg.svg") no-repeat;
+      width: 20px;
+      height: 25px;
+    }
+  }
+
+  #add-document-doc-dropzone {
+    .dz-image {
+      background: url("../img/dropzone-pdf-bg.svg") no-repeat;
+      width: 21px;
+      height: 27px;
+    }
+  }
+
   .dropzone {
 
     .add-document-modal__dropzone-status {
@@ -198,6 +216,7 @@
       line-height: 15px;
       color: $green-blue;
       margin-right: 10px;
+      min-width: 90px;
     }
 
     display: flex;
@@ -209,9 +228,6 @@
     }
 
     .dz-image {
-      background: url("../img/dropzone-photo-bg.svg") no-repeat;
-      width: 20px;
-      height: 25px;
       margin-right: 5px;
     }
 

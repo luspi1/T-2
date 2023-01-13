@@ -126,83 +126,31 @@ if (createAccountLogo) {
 }
 
 
-//Dropzone загрузки фото в модалке "Добавление документа"
+//Dropzone загрузки фото и pdf в модалке "Добавление документа"
 
-const addDocPhoto = document.querySelector('#add-document-photo-dropzone')
+const addDocDropzones = document.querySelectorAll('#add-document-modal .dropzone')
 
-if (addDocPhoto) {
+if (addDocDropzones) {
 
-  const dataObj = JSON.parse(addDocPhoto.dataset.info)
-  const {url, type, removeUrl, additional} = dataObj
+  addDocDropzones.forEach(dropzone => {
 
-  const createTemplateBtn = document.querySelector('#add-document-photo-btn')
+    const dataObj = JSON.parse(dropzone.dataset.info)
+    const {url, type, removeUrl, additional, acceptedFiles} = dataObj
 
-  let addDocPhotoDropzone = new Dropzone(addDocPhoto, {
-    maxFilesize: 5,
-    url: url,
-    maxFiles: 1,
-    acceptedFiles: '.png, .jpeg, .jpg',
-    addRemoveLinks: true,
-    clickable: '#add-document-photo-btn',
-    createImageThumbnails: false,
-    removedfile: async function (file) {
-      const data = {
-        filetype: type,
-        id_person_doc: file._removeLink.dataset.id,
-      }
+    const addDocBtn = dropzone.querySelector('.add-document-modal__downloads-btn')
+    const addDocStatus = dropzone.querySelector('.add-document-modal__dropzone-status')
 
-      const jsonData = JSON.stringify(data)
-      const response = await sendData(jsonData, removeUrl)
-      const finishedResponse = await response.json()
-
-      const {status, errortext} = finishedResponse
-
-      if (status === 'ok') {
-        if (file.previewElement != null && file.previewElement.parentNode != null) {
-
-          createTemplateBtn.classList.remove('btn_disabled')
-          file.previewElement.parentNode.removeChild(file.previewElement)
-        }
-      } else {
-        showInfoModal(errortext)
-      }
-    }
-  })
-
-  addDocPhotoDropzone.on("sending", function (file, xhr, formData) {
-    formData.append("filetype", type)
-    formData.append("id_item", createTemplateBtn.dataset.id)
-    formData.append("additional", additional)
-  })
-
-  addDocPhotoDropzone.on("error", function (file) {
-    showInfoModal('Ошибка 404')
-    file.previewElement.parentNode.removeChild(file.previewElement)
-  })
-
-  addDocPhotoDropzone.on("success", function (file, response) {
-
-    const resObj = JSON.parse(response)
-    const {status, errortext, id_person_doc} = resObj
-
-    if (status !== 'ok') {
-      showInfoModal(errortext)
-      file.previewElement.parentNode.removeChild(file.previewElement)
-    } else {
-      createTemplateBtn.classList.add('btn_disabled')
-      file._removeLink.setAttribute('data-id', id_person_doc)
-    }
-  })
-
-
-  const existingDocs = addDocPhoto.querySelectorAll('.dz-preview')
-  if (existingDocs) {
-    existingDocs.forEach(el => {
-      const deleteBtn = el.querySelector('.dz-remove')
-      deleteBtn.addEventListener('click', async (e) => {
+    let docDropzone = new Dropzone(dropzone, {
+      maxFilesize: 5,
+      url: url,
+      maxFiles: 1,
+      acceptedFiles: acceptedFiles,
+      addRemoveLinks: true,
+      createImageThumbnails: false,
+      removedfile: async function (file) {
         const data = {
           filetype: type,
-          id_person_doc: e.target.dataset.id
+          id_person_doc: file._removeLink.dataset.id,
         }
 
         const jsonData = JSON.stringify(data)
@@ -212,119 +160,71 @@ if (addDocPhoto) {
         const {status, errortext} = finishedResponse
 
         if (status === 'ok') {
-          if (el.previewElement != null && el.previewElement.parentNode != null) {
-            createTemplateBtn.classList.remove('btn_disabled')
-            el.parentNode.removeChild(el)
+          if (file.previewElement != null && file.previewElement.parentNode != null) {
+            addDocBtn.classList.remove('btn_disabled')
+            addDocStatus.textContent = 'Не загружено'
+            file.previewElement.parentNode.removeChild(file.previewElement)
           }
         } else {
           showInfoModal(errortext)
         }
-      })
+      }
     })
-  }
+
+    docDropzone.on("sending", function (file, xhr, formData) {
+      formData.append("filetype", type)
+      formData.append("id_item", addDocBtn.dataset.id)
+      formData.append("additional", additional)
+    })
+
+    docDropzone.on("error", function (file) {
+      showInfoModal('Ошибка 404')
+      file.previewElement.parentNode.removeChild(file.previewElement)
+    })
+
+    docDropzone.on("success", function (file, response) {
+
+      const resObj = JSON.parse(response)
+      const {status, errortext, id_person_doc} = resObj
+
+      if (status !== 'ok') {
+        showInfoModal(errortext)
+        file.previewElement.parentNode.removeChild(file.previewElement)
+      } else {
+        addDocBtn.classList.add('btn_disabled')
+        addDocStatus.textContent = 'Загружено'
+        file._removeLink.setAttribute('data-id', id_person_doc)
+      }
+    })
 
 
+    const existingDocs = dropzone.querySelectorAll('.dz-preview')
+    if (existingDocs) {
+      existingDocs.forEach(el => {
+        const deleteBtn = el.querySelector('.dz-remove')
+        deleteBtn.addEventListener('click', async (e) => {
+          const data = {
+            filetype: type,
+            id_person_doc: e.target.dataset.id
+          }
+
+          const jsonData = JSON.stringify(data)
+          const response = await sendData(jsonData, removeUrl)
+          const finishedResponse = await response.json()
+
+          const {status, errortext} = finishedResponse
+
+          if (status === 'ok') {
+            if (el.previewElement != null && el.previewElement.parentNode != null) {
+              addDocBtn.classList.remove('btn_disabled')
+              addDocStatus.textContent = 'Не загружено'
+              el.parentNode.removeChild(el)
+            }
+          } else {
+            showInfoModal(errortext)
+          }
+        })
+      })
+    }
+  })
 }
-
-
-
-
-// const createTemplateDoc = document.querySelector('#add-document-photo-dropzone')
-//
-// if (createTemplateDoc) {
-//
-//   const dataObj = JSON.parse(createTemplateDoc.dataset.info)
-//   const {url, type, removeUrl, additional} = dataObj
-//
-//   const createTemplateBtn = document.querySelector('#add-document-photo-dropzone')
-//
-//   let createTemplateDocDropzone = new Dropzone(createTemplateDoc, {
-//     maxFilesize: 5,
-//     url: url,
-//     maxFiles: 1,
-//     acceptedFiles: '.txt, .doc, docx, .rtf, .pdf',
-//     addRemoveLinks: true,
-//     clickable: '#create-template-doc-add',
-//     createImageThumbnails: false,
-//     removedfile: async function (file) {
-//       const data = {
-//         filetype: type,
-//         id_person_doc: file._removeLink.dataset.id,
-//       }
-//
-//       const jsonData = JSON.stringify(data)
-//       const response = await sendData(jsonData, removeUrl)
-//       const finishedResponse = await response.json()
-//
-//       const {status, errortext} = finishedResponse
-//
-//       if (status === 'ok') {
-//         if (file.previewElement != null && file.previewElement.parentNode != null) {
-//
-//           createTemplateBtn.classList.remove('btn_disabled')
-//           file.previewElement.parentNode.removeChild(file.previewElement)
-//         }
-//       } else {
-//         showInfoModal(errortext)
-//       }
-//     }
-//   })
-//
-//   createTemplateDocDropzone.on("sending", function (file, xhr, formData) {
-//     formData.append("filetype", type)
-//     formData.append("id_item", createTemplateBtn.dataset.id)
-//     formData.append("additional", additional)
-//   })
-//
-//   createTemplateDocDropzone.on("error", function (file) {
-//     showInfoModal('Ошибка 404')
-//     file.previewElement.parentNode.removeChild(file.previewElement)
-//   })
-//
-//   createTemplateDocDropzone.on("success", function (file, response) {
-//
-//     const resObj = JSON.parse(response)
-//     const {status, errortext, id_person_doc} = resObj
-//
-//     if (status !== 'ok') {
-//       showInfoModal(errortext)
-//       file.previewElement.parentNode.removeChild(file.previewElement)
-//     } else {
-//       createTemplateBtn.classList.add('btn_disabled')
-//       const photoTitles = createTemplateDoc.querySelectorAll('span[data-dz-name]')
-//       cutString(photoTitles, 12)
-//       file._removeLink.setAttribute('data-id', id_person_doc)
-//     }
-//   })
-//
-//
-//   const existingDocs = createTemplateDoc.querySelectorAll('.dz-preview')
-//   if (existingDocs) {
-//     existingDocs.forEach(el => {
-//       const deleteBtn = el.querySelector('.dz-remove')
-//       deleteBtn.addEventListener('click', async (e) => {
-//         const data = {
-//           filetype: type,
-//           id_person_doc: e.target.dataset.id
-//         }
-//
-//         const jsonData = JSON.stringify(data)
-//         const response = await sendData(jsonData, removeUrl)
-//         const finishedResponse = await response.json()
-//
-//         const {status, errortext} = finishedResponse
-//
-//         if (status === 'ok') {
-//           if (el.previewElement != null && el.previewElement.parentNode != null) {
-//             createTemplateBtn.classList.remove('btn_disabled')
-//             el.parentNode.removeChild(el)
-//           }
-//         } else {
-//           showInfoModal(errortext)
-//         }
-//       })
-//     })
-//   }
-//
-//
-// }
