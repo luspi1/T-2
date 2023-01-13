@@ -1,0 +1,23 @@
+@media (max-width: 1200px) {
+  .cabinet-org-employees__item {
+    flex-wrap: wrap;
+  }
+  .cabinet-org-employees__registration {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .cabinet-org-employees__info,
+  .cabinet-org-employees__accesses {
+    margin-right: 0;
+  }
+  .cabinet-org-employees__item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cabinet-org-employees__info {
+    width: 100%;
+  }
+}

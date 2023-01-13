@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {
+'title': 'Кабинет организации - Сотрудники'
+})
+
+<body class="page__body cabinet-org-employees">
+
+<div class="site-container">
+  <div class="modal-overlay"></div>
+  <div class="header">
+    @include('partials/main-menu.html')
+  </div>
+
+  <main class="main ">
+    @include('partials/page-title.html', {
+    'page-title': 'Сотрудники'
+    })
+
+    <div class="container">
+      @include('partials/modals/add-document-modal.html')
+      <div class="cabinet-org-profile__inner">
+        <button class="edit-btn" title="Редактировать раздел" type="button">
+          <svg width="37" height="37" viewBox="0 0 37 37" fill="none"
+               xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M18.5 36C8.8 36 1 28.2 1 18.5C1 8.8 8.8 1 18.5 1C28.2 1 36 8.8 36 18.5C36 28.2 28.2 36 18.5 36Z"
+              stroke="#8FC3D8" stroke-miterlimit="10"/>
+            <path
+              d="M25.8001 12.3L24.9001 11.4C23.8001 10.3 22.0001 10.3 20.9001 11.4L13.1 19.2C12.8 19.5 12.5001 19.8 12.3001 20.1L10.7 25C10.5 25.6 10.8001 26.2 11.4001 26.4C11.5001 26.4 11.6001 26.5 11.8001 26.5C11.9001 26.5 12 26.5 12.2 26.4L17.1 24.8C17.5 24.6 17.8001 24.4 18.0001 24L25.3001 16.7L25.8001 16.2C25.9001 16.1 26 16 26.1 15.9L21.3001 11.1L26.1 15.9C26.9 14.9 26.8001 13.3 25.8001 12.3ZM12.4001 20.2L17.1 24.9L12.4001 20.2Z"
+              stroke="#8FC3D8" stroke-miterlimit="10"/>
+          </svg>
+        </button>
+        @include('partials/cabinet-org-info.html', {
+        'active-employees': '_active'
+        })
+        <section class="cabinet-org-employees__section">
+          <ul class="cabinet-org-employees__list">
+            <li class="cabinet-org-employees__item">
+              <div class="cabinet-org-employees__avatar">
+                <img src="img/avatar-org-employees.png" alt="">
+              </div>
+              <div class="cabinet-org-employees__info">
+                <h4 class="cabinet-org-employees__title">Верхушечниковецкая Прасковья Константиновна (Вы)</h4>
+                <p class="cabinet-org-employees__subtitle">Руководитель организации</p>
+              </div>
+              <div class="cabinet-org-employees__accesses">
+                <p class="cabinet-org-employees__accesses-item _green">Полный доступ</p>
+              </div>
+              <div class="cabinet-org-employees__registration">
+                <p class="cabinet-org-employees__date">Регистрация: 28.09.2022</p>
+                <button class="cabinet-org-employees__btn-control" type="button">УПРАВЛЯТЬ</button>
+              </div>
+            </li>
+            <li class="cabinet-org-employees__item">
+              <div class="cabinet-org-employees__avatar">
+                <img src="img/avatar-org-employees.png" alt="">
+              </div>
+              <div class="cabinet-org-employees__info">
+                <h4 class="cabinet-org-employees__title">Сергиещенко Васисуалий Бенедиктович</h4>
+                <p class="cabinet-org-employees__subtitle">Сотрудник организации</p>
+              </div>
+              <div class="cabinet-org-employees__accesses">
+                <p class="cabinet-org-employees__accesses-item">Участник торгов</p>
+                <p class="cabinet-org-employees__accesses-item">Заявитель торгов</p>
+              </div>
+              <div class="cabinet-org-employees__registration">
+                <p class="cabinet-org-employees__date">Регистрация: 28.09.2022</p>
+                <button class="cabinet-org-employees__btn-control" type="button">УПРАВЛЯТЬ</button>
+              </div>
+            </li>
+            <li class="cabinet-org-employees__item">
+              <div class="cabinet-org-employees__avatar">
+                <img src="img/avatar-org-employees.png" alt="">
+              </div>
+              <div class="cabinet-org-employees__info">
+                <h4 class="cabinet-org-employees__title">Ибрагимбеков Турсунбек Халабергенович</h4>
+                <p class="cabinet-org-employees__subtitle">Сотрудник организации</p>
+              </div>
+              <div class="cabinet-org-employees__accesses">
+                <p class="cabinet-org-employees__accesses-item _orange">Нет доступов</p>
+              </div>
+              <div class="cabinet-org-employees__registration">
+                <p class="cabinet-org-employees__date">Регистрация: 28.09.2022</p>
+                <button class="cabinet-org-employees__btn-control" type="button">УПРАВЛЯТЬ</button>
+              </div>
+            </li>
+          </ul>
+          <button type="button" class="cabinet-org-employees__btn-add">
+            <svg width="35" height="36" viewBox="0 0 35 36" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+              <path opacity="0.4"
+                    d="M17.5 35.8C27.165 35.8 35 27.965 35 18.3C35 8.63507 27.165 0.800049 17.5 0.800049C7.83502 0.800049 0 8.63507 0 18.3C0 27.965 7.83502 35.8 17.5 35.8Z"
+                    fill="#8FC3D8"/>
+              <path d="M9.7002 18.3H25.3002" stroke="white" stroke-width="3"
+                    stroke-linecap="round"/>
+              <path d="M17.5 10.6V26.1" stroke="white" stroke-width="3"
+                    stroke-linecap="round"/>
+            </svg>
+            <span>Добавить нового сотрудника</span>
+          </button>
+        </section>
+      </div>
+    </div>
+  </main>
+  @include('partials/footer.html')
+</div>
+</body>
+
+</html>
