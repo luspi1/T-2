@@ -145,6 +145,7 @@ if (addDocDropzones) {
       url: url,
       maxFiles: 1,
       acceptedFiles: acceptedFiles,
+      clickable: addDocBtn,
       addRemoveLinks: true,
       createImageThumbnails: false,
       removedfile: async function (file) {
@@ -199,7 +200,9 @@ if (addDocDropzones) {
 
 
     const existingDocs = dropzone.querySelectorAll('.dz-preview')
-    if (existingDocs) {
+    if (existingDocs.length > 0) {
+      addDocBtn.classList.add('btn_disabled')
+      addDocStatus.textContent = 'Загружено'
       existingDocs.forEach(el => {
         const deleteBtn = el.querySelector('.dz-remove')
         deleteBtn.addEventListener('click', async (e) => {
@@ -215,7 +218,7 @@ if (addDocDropzones) {
           const {status, errortext} = finishedResponse
 
           if (status === 'ok') {
-            if (el.previewElement != null && el.previewElement.parentNode != null) {
+            if (el.previewElement !== null) {
               addDocBtn.classList.remove('btn_disabled')
               addDocStatus.textContent = 'Не загружено'
               el.parentNode.removeChild(el)

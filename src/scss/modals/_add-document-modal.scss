@@ -5,6 +5,7 @@
 
   @media (max-width: 768px) {
     width: 98%;
+    height: 580px;
   }
 
   .close-modal-btn {
@@ -18,17 +19,30 @@
     line-height: 24px;
     margin-bottom: 20px;
     color: $dark-light;
+    @media (max-width: 500px) {
+      max-width: 280px;
+    }
   }
 
   &__choice {
     display: flex;
     align-items: center;
     margin-bottom: 18px;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   &__choice-selectors {
     min-width: 187px;
     margin-right: 33px;
+
+    @media (max-width: 768px) {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
   }
 
 
@@ -144,6 +158,15 @@
         margin-right: 25px;
       }
     }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      .add-document-modal__input {
+        width: 100%;
+      }
+    }
+
+
   }
 
   .dz-message &__downloads-btn {
@@ -170,6 +193,10 @@
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
   }
 
   &__save-btn {
@@ -188,8 +215,11 @@
       color: $white;
       background: $green-blue;
     }
-  }
 
+    @media (max-width: 768px) {
+      margin-top: 20px;
+    }
+  }
 
 
   #add-document-photo-dropzone {
@@ -217,6 +247,10 @@
       color: $green-blue;
       margin-right: 10px;
       min-width: 90px;
+
+      @media (max-width: 400px) {
+        display: none;
+      }
     }
 
     display: flex;
@@ -251,8 +285,6 @@
       .dz-filename {
         display: none;
       }
-
-
     }
 
     .dz-remove {
@@ -264,11 +296,6 @@
       &:hover {
         background: url("../img/dropzone-remove-mark-hover.svg") no-repeat;
       }
-
     }
-
-
   }
-
-
 }
