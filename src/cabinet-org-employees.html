@@ -19,7 +19,8 @@
     })
 
     <div class="container">
-      @include('partials/modals/add-document-modal.html')
+      @include('partials/modals/add-employees-modal.html')
+      @include('partials/modals/control-employees-modal.html')
       <div class="cabinet-org-profile__inner">
         <button class="edit-btn" title="Редактировать раздел" type="button">
           <svg width="37" height="37" viewBox="0 0 37 37" fill="none"
@@ -33,7 +34,8 @@
           </svg>
         </button>
         @include('partials/cabinet-org-info.html', {
-        'active-employees': '_active'
+        'active-employees': '_active',
+        'cabinet-state': 'cabinet-org-info_sm'
         })
         <section class="cabinet-org-employees__section">
           <ul class="cabinet-org-employees__list">
@@ -87,7 +89,7 @@
               </div>
             </li>
           </ul>
-          <button type="button" class="cabinet-org-employees__btn-add">
+          <button type="button" class="cabinet-org-employees__btn-add" data-open-modal="add-employees-modal">
             <svg width="35" height="36" viewBox="0 0 35 36" fill="none"
                  xmlns="http://www.w3.org/2000/svg">
               <path opacity="0.4"

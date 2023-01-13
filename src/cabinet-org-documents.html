@@ -42,8 +42,8 @@
             <div class="cabinet-org-documents__type">
               <select class="cabinet-org-documents__type-select"
                       name="cabinet-org-documents-type"
-                      data-select="main-select">
-                <option selected value="type_all">Тип документа</option>
+                      data-select="main-select" data-filter="doc-type">
+                <option selected value="all">Тип документа</option>
                 <option value="type_1">Внешние документы</option>
                 <option value="type_2">Локальные документы</option>
                 <option value="type_3">Еще какой-то тип</option>
@@ -51,7 +51,7 @@
             </div>
             <div class="cabinet-org-documents__search-wrapper">
               <input class="cabinet-org-documents__input" type="text"
-                     placeholder="начните вводить номер, дату принятия или название">
+                     placeholder="начните вводить номер, дату принятия или название" data-filter="doc-type">
               <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
                    xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -64,8 +64,8 @@
             <div class="cabinet-org-documents__public">
               <select class="cabinet-org-documents__public-select"
                       name="cabinet-org-documents-public"
-                      data-select="main-select">
-                <option selected value="public_all">Публичность документа
+                      data-select="main-select" data-filter="doc-type">
+                <option selected value="all">Публичность документа
                 </option>
                 <option value="public_1">Публичный документ, виден всем</option>
                 <option value="public_2">Служебный документ, виден сотрудникам
@@ -77,7 +77,7 @@
             </div>
 
             <button class="cabinet-org-documents__btn-filter-delete"
-                    type="button">
+                    type="button" data-filter-reset="doc-type">
               <svg width="21" height="21" viewBox="0 0 21 21" fill="none"
                    xmlns="http://www.w3.org/2000/svg">
                 <path
