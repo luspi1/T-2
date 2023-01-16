@@ -1,0 +1,47 @@
+@media (max-width: 1024px) {
+  .cabinet-org-objects__search-wrapper {
+    width: 200px;
+    min-width: 200px;
+    margin-bottom: 15px;
+  }
+
+  .cabinet-org-objects__top {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .cabinet-org-objects__top {
+    flex-direction: column;
+  }
+
+
+  .cabinet-org-objects__type,
+  .cabinet-org-objects__search-wrapper,
+  .cabinet-org-objects__status,
+  .cabinet-org-objects__auction {
+    margin-bottom: 10px;
+  }
+
+  .cabinet-org-objects__search-wrapper,
+  .cabinet-org-objects__btn-add {
+    width: 100%;
+  }
+
+  .cabinet-org-objects__item {
+    flex-direction: column;
+  }
+
+  .cabinet-org-objects__col {
+    width: 100%;
+  }
+
+  .cabinet-org-objects__col:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+
+
+}
