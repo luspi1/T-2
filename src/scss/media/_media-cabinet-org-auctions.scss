@@ -1,0 +1,50 @@
+@media(max-width: 1400px) {
+  .cabinet-org-auctions__top {
+    flex-wrap: wrap;
+    justify-content: start;
+  }
+}
+
+@media(max-width: 1200px) {
+  .cabinet-org-auctions__item {
+    flex-wrap: wrap;
+  }
+  .cabinet-org-auctions__col-4 {
+    margin: 0;
+    justify-content: flex-start;
+  }
+  .cabinet-org-auctions__top {
+    margin-bottom: 15px;
+  }
+}
+
+@media(max-width: 768px) {
+  .cabinet-org-auctions__top,
+  .cabinet-org-auctions__item {
+    flex-direction: column;
+  }
+
+  .cabinet-org-auctions__item {
+    padding-left: 14px;
+  }
+  .cabinet-org-auctions__item > div {
+    margin-bottom: 20px;
+  }
+  .cabinet-org-auctions__col-1 {
+    justify-content: flex-start;
+  }
+  .cabinet-org-auctions__search-wrapper {
+    width: 100%;
+  }
+  .cabinet-org-auctions__top > div {
+    margin-right: 0;
+  }
+
+  .cabinet-org-auctions__col-3 {
+    width: 100%;
+  }
+  .cabinet-org-auctions__col-4 {
+    margin-left: 0;
+  }
+
+}

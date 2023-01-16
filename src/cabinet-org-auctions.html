@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {
+'title': 'Кабинет организации - Аукционы'
+})
+
+<body class="page__body cabinet-org-auctions">
+
+<div class="site-container">
+  <div class="modal-overlay"></div>
+  <div class="header">
+    @include('partials/main-menu.html')
+  </div>
+
+  <main class="main ">
+    @include('partials/page-title.html', {
+    'page-title': 'Аукционы'
+    })
+
+    <div class="container">
+      <div class="cabinet-org-profile__inner">
+        <button class="edit-btn" title="Редактировать раздел" type="button">
+          <svg width="37" height="37" viewBox="0 0 37 37" fill="none"
+               xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M18.5 36C8.8 36 1 28.2 1 18.5C1 8.8 8.8 1 18.5 1C28.2 1 36 8.8 36 18.5C36 28.2 28.2 36 18.5 36Z"
+              stroke="#8FC3D8" stroke-miterlimit="10"/>
+            <path
+              d="M25.8001 12.3L24.9001 11.4C23.8001 10.3 22.0001 10.3 20.9001 11.4L13.1 19.2C12.8 19.5 12.5001 19.8 12.3001 20.1L10.7 25C10.5 25.6 10.8001 26.2 11.4001 26.4C11.5001 26.4 11.6001 26.5 11.8001 26.5C11.9001 26.5 12 26.5 12.2 26.4L17.1 24.8C17.5 24.6 17.8001 24.4 18.0001 24L25.3001 16.7L25.8001 16.2C25.9001 16.1 26 16 26.1 15.9L21.3001 11.1L26.1 15.9C26.9 14.9 26.8001 13.3 25.8001 12.3ZM12.4001 20.2L17.1 24.9L12.4001 20.2Z"
+              stroke="#8FC3D8" stroke-miterlimit="10"/>
+          </svg>
+        </button>
+        @include('partials/cabinet-org-info.html', {
+        'active-auctions': '_active',
+        'cabinet-state': 'cabinet-org-info_sm'
+        })
+        <section class="cabinet-org-auctions__section">
+          <div class="cabinet-org-auctions__inner">
+            <div class="cabinet-org-auctions__top">
+              <div class="cabinet-org-auctions__search-wrapper">
+                <input class="cabinet-org-auctions__search" type="text"
+                       placeholder="найти аукцион по коду, названию, площади или стоимости">
+                <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M5.8 11C3 10.9 0.900009 8.60001 1.00001 5.80001C1.10001 3.00001 3.40002 0.900009 6.20002 1.00001C9.00002 1.10001 11.1 3.40001 11 6.20001C11 7.50001 10.4 8.70001 9.50001 9.60001C8.50001 10.5 7.2 11 5.8 11Z"
+                    stroke="#A3A3A3"/>
+                  <path d="M10 10L12 12" stroke="#A3A3A3" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="cabinet-org-auctions__currency">
+                <select class="cabinet-org-auctions__currency-select"
+                        name="cabinet-org-auctions-all-currency " data-select="main-select">
+                  <option value="currency_1">Валюта</option>
+                  <option value="currency_2">Узбекские сомы</option>
+                  <option value="currency_3">Рубли РФ</option>
+                  <option value="currency_4">Доллары США</option>
+                  <option value="currency_5">Юани КНР</option>
+                </select>
+              </div>
+              <div class="cabinet-org-auctions__status">
+                <select class="cabinet-org-auctions__auction-select"
+                        name="cabinet-org-auctions-all-status" data-select="main-select">
+                  <option value="status_1">Статус аукциона</option>
+                  <option value="status_2">Предстоит</option>
+                  <option value="status_3">Идет</option>
+                  <option value="status_4">Завершен</option>
+                  <option value="status_5">Отменен</option>
+                </select>
+              </div>
+              <a href="#" class="cabinet-org-auctions__link-add-request">Создать аукцион</a>
+            </div>
+            <ul class="cabinet-org-auctions__list">
+              <li class="cabinet-org-auctions__item">
+                <div class="cabinet-org-auctions__col-1">
+                  <h4 class="cabinet-org-auctions__title">Аукцион</h4>
+                  <a href="#">Управлять</a>
+                </div>
+                <div class="cabinet-org-auctions__col-2">
+                  <p class="cabinet-org-auctions__code">604-408</p>
+                </div>
+                <div class="cabinet-org-auctions__col-3">
+                  <p class="cabinet-org-auctions__date">
+                    <span>22.04.2023</span> | <span>12:30</span> TASH
+                  </p>
+                  <p class="cabinet-org-auctions__desc">3-комнатная квартира в ЖК Азамат, 270
+                    кв. м</p>
+                  <p class="cabinet-org-auctions__owner" data-shear="49">Давиташвили С.Е., Тимурахметзяншин А.А., ООО «Кус45452</p>
+                </div>
+                <div class="cabinet-org-auctions__col-4">
+                  <p class="cabinet-org-auctions__price">800 000 000 сом</p>
+                </div>
+              </li>
+              <li class="cabinet-org-auctions__item">
+                <div class="cabinet-org-auctions__col-1">
+                  <h4 class="cabinet-org-auctions__title">Аукцион</h4>
+                  <a href="#">Управлять</a>
+                </div>
+                <div class="cabinet-org-auctions__col-2">
+                  <p class="cabinet-org-auctions__code">604-407</p>
+                </div>
+                <div class="cabinet-org-auctions__col-3">
+                  <p class="cabinet-org-auctions__date">
+                    <span>17.04.2023</span> | <span>09:30</span> TASH
+                  </p>
+                  <p class="cabinet-org-auctions__desc">2-этажный жилой дом на озере</p>
+                  <p class="cabinet-org-auctions__owner" data-shear="49">Давиташвили С.Е., Тимурахметзяншин А.А., ООО «Кус45452</p>
+                </div>
+                <div class="cabinet-org-auctions__col-4">
+                  <p class="cabinet-org-auctions__price">800 000 000 сом</p>
+                </div>
+              </li>
+              <li class="cabinet-org-auctions__item">
+                <div class="cabinet-org-auctions__col-1">
+                  <h4 class="cabinet-org-auctions__title">Аукцион</h4>
+                  <a href="#">Управлять</a>
+                </div>
+                <div class="cabinet-org-auctions__col-2">
+                  <p class="cabinet-org-auctions__code">604-406</p>
+                </div>
+                <div class="cabinet-org-auctions__col-3">
+                  <p class="cabinet-org-auctions__date">
+                    <span>15.04.2023</span> | <span>11:30</span> TASH
+                  </p>
+                  <p class="cabinet-org-auctions__desc">Склад-рефрижератор на Центральном
+                    рынке</p>
+                  <p class="cabinet-org-auctions__owner" data-shear="49">Давиташвили С.Е., Тимурахметзяншин А.А., ООО «Кус45452</p>
+                </div>
+                <div class="cabinet-org-auctions__col-4">
+                  <p class="cabinet-org-auctions__price">800 000 000 сом</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+      </div>
+
+    </div>
+
+  </main>
+  @include('partials/footer.html')
+</div>
+</body>
+
+</html>
