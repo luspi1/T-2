@@ -22,6 +22,16 @@
   .cabinet-org-objects__status,
   .cabinet-org-objects__auction {
     margin-bottom: 10px;
+    width: 100%;
+
+    .choices__inner .choices__item {
+      width: 100%;
+    }
+
+    .choices__list.choices__list--dropdown.is-active {
+      width: 100%;
+    }
+
   }
 
   .cabinet-org-objects__search-wrapper,
