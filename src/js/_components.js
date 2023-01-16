@@ -10,4 +10,6 @@ import './components/manageModal'
 import './components/hideItemOrgDoc'
 import './components/addDocModal'
 import './components/resetFilters'
+import './components/outUserEmployeesModal'
+
 

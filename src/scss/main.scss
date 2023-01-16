@@ -21,7 +21,10 @@
 @import "./pages/cabinet-org-profile";
 @import "./pages/cabinet-org-documents";
 @import "./pages/cabinet-org-employees";
+@import "./pages/cabinet-org-services";
+@import "./pages/cabinet-org-auctions";
 @import "./pages/cabinet-org-objects";
+
 
 
 
@@ -34,7 +37,9 @@
 @import "./modals/add-developer-modal";
 @import "./modals/add-document-modal";
 @import "./modals/add-employees-modal";
+@import "./modals/out-user-employees-modal";
 @import "./modals/control-employees-modal";
+
 
 
 
@@ -73,7 +78,10 @@
 @import "./media/media-create-account-organization";
 @import "./media/media-cabinet-org-documents";
 @import "./media/media-cabinet-org-employees";
+@import "./media/media-cabinet-org-services";
+@import "./media/media-cabinet-org-auctions";
 @import "./media/media-cabinet-org-objects";
+
 
 
 
