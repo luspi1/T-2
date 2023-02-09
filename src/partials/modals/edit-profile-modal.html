@@ -1,0 +1,95 @@
+<div class="modal edit-profile-modal" id="edit-profile-modal"
+     data-doc-type="outer">
+  <button class="close-modal-btn" type="button" data-close-modal="true">
+    <svg width="26" height="26" viewBox="0 0 26 26" fill="none"
+         xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M13 26C5.8 26 0 20.2 0 13C0 5.8 5.8 0 13 0C20.2 0 26 5.8 26 13C26 20.2 20.2 26 13 26ZM13 1C6.4 1 1 6.4 1 13C1 19.6 6.4 25 13 25C19.6 25 25 19.6 25 13C25 6.4 19.6 1 13 1Z"
+        fill="#93B5C5"/>
+      <path
+        d="M17.9996 19.3C17.6996 19.3 17.3996 19.2 17.0996 18.9L7.09961 8.90002C6.59961 8.40002 6.59961 7.6001 7.09961 7.1001C7.59961 6.6001 8.39966 6.6001 8.89966 7.1001L18.8997 17.1001C19.3997 17.6001 19.3997 18.4 18.8997 18.9C18.6997 19.2 18.2996 19.3 17.9996 19.3Z"
+        fill="#93B5C5"/>
+      <path
+        d="M7.99963 19.3C7.69963 19.3 7.39961 19.2 7.09961 18.9C6.59961 18.4 6.59961 17.6001 7.09961 17.1001L17.0996 7.1001C17.5996 6.6001 18.3997 6.6001 18.8997 7.1001C19.3997 7.6001 19.3997 8.40002 18.8997 8.90002L8.89966 18.9C8.69966 19.2 8.29963 19.3 7.99963 19.3Z"
+        fill="#93B5C5"/>
+    </svg>
+  </button>
+  <h1>Редактировать ФИО, паспортные данные и ИНН</h1>
+
+  <form class="edit-profile-modal__form" action="#">
+
+    <div class="edit-profile-modal__inputs">
+      <div class="edit-profile-modal__inputs-wrapper">
+        <div class="edit-profile-modal__input">
+          <p>Фамилия</p>
+          <input class="edit-profile-modal__text-input" type="text"
+                 name="profileSurname" required>
+        </div>
+        <div class="edit-profile-modal__input">
+          <p>Имя</p>
+          <input class="edit-profile-modal__text-input" type="text"
+                 name="profileName" required>
+        </div>
+        <div class="edit-profile-modal__input">
+          <p>Отчество</p>
+          <input class="edit-profile-modal__text-input" type="text"
+                 name="profilePatronymic" required>
+        </div>
+      </div>
+
+      <div class="edit-profile-modal__inputs-wrapper">
+        <div class="edit-profile-modal__input">
+          <p>Телефон</p>
+          <input class="edit-profile-modal__text-input" type="text"
+                 name="profilePhone" required>
+        </div>
+        <div class="edit-profile-modal__input">
+          <p>Почта</p>
+          <input class="edit-profile-modal__text-input" type="text"
+                 name="profileEmail" required>
+        </div>
+        <div class="edit-profile-modal__input">
+          <p>Город</p>
+          <input class="edit-profile-modal__text-input" type="text"
+                 name="profileCity" required>
+        </div>
+      </div>
+
+      <h4 class="edit-profile-modal__subtitle">Паспортные данные и ИНН</h4>
+      <div class="edit-profile-modal__inputs-wrapper">
+        <div class="edit-profile-modal__input _passport-num">
+          <p>Серия</p>
+          <input class="edit-profile-modal__text-input" type="text"
+                 name="profilePassSeries" required>
+        </div>
+        <div class="edit-profile-modal__input _passport-num">
+          <p>Номер</p>
+          <input class="edit-profile-modal__text-input" type="text"
+                 name="profilePassNumber" required>
+        </div>
+        <div class="edit-profile-modal__input">
+          <p>Дата выдачи паспорта</p>
+          <input class="edit-profile-modal__text-input" type="text"
+                 name="profileFirstDate" data-date-type="numb" required>
+        </div>
+        <div class="edit-profile-modal__input">
+          <p>Окончание срока действия</p>
+          <input class="edit-profile-modal__text-input" type="text"
+                 name="profileLastDate" data-date-type="numb" required>
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+    <button class="add-document-modal__save-btn" type="button">
+      Сохранить документ
+    </button>
+
+
+  </form>
+
+
+</div>
