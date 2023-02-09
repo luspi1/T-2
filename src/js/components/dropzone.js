@@ -1,10 +1,10 @@
-import { Dropzone }                           from "dropzone";
-import { cutString, sendData, showInfoModal } from "../_functions";
+import { Dropzone }                           from "dropzone"
+import { cutString, sendData, showInfoModal } from "../_functions"
 
 
 //Dropzone для фото документов в личном кабинете
 
-const passportPhoto = document.querySelector('#passport-dropzone');
+const passportPhoto = document.querySelector('#passport-dropzone')
 
 if (passportPhoto) {
   let passportDropzone = new Dropzone(passportPhoto, {
@@ -16,12 +16,12 @@ if (passportPhoto) {
     acceptedFiles: '.png, .jpeg, .jpg',
     addRemoveLinks: true,
     clickable: '#passport-add',
-  });
+  })
 }
 
 //Dropzone для документов объектов недвижимости в личном кабинете
 
-const newObjectDoc = document.querySelector('#new-object-doc-dropzone');
+const newObjectDoc = document.querySelector('#new-object-doc-dropzone')
 
 if (newObjectDoc) {
   let newObjectDocDropzone = new Dropzone(newObjectDoc, {
@@ -32,18 +32,18 @@ if (newObjectDoc) {
     addRemoveLinks: true,
     clickable: '#new-object-doc-add',
     createImageThumbnails: false
-  });
+  })
 
   newObjectDocDropzone.on("success", function () {
     const photoTitles = newObjectDoc.querySelectorAll('span[data-dz-name]')
     cutString(photoTitles, 12)
-  });
+  })
 
 }
 
 //Dropzone для скана документа объектов недвижимости на странице Создать объект
 
-const newObjectScanDoc = document.querySelector('#new-object-scan-doc-dropzone');
+const newObjectScanDoc = document.querySelector('#new-object-scan-doc-dropzone')
 
 if (newObjectScanDoc) {
 
@@ -73,22 +73,22 @@ if (newObjectScanDoc) {
         if (file.previewElement != null && file.previewElement.parentNode != null) {
 
           newObjectScanBtn.classList.remove('hidden')
-          file.previewElement.parentNode.removeChild(file.previewElement);
+          file.previewElement.parentNode.removeChild(file.previewElement)
         }
       } else {
         showInfoModal(errortext)
       }
     }
-  });
+  })
 
   newObjectScanDocDropzone.on("sending", function (file, xhr, formData) {
-    formData.append("filetype", "new-obj-doc");
+    formData.append("filetype", "new-obj-doc")
     formData.append("id_item", newObjectScanBtn.dataset.id)
-  });
+  })
 
   newObjectScanDocDropzone.on("error", function (file) {
     showInfoModal('Ошибка 404')
-    file.previewElement.parentNode.removeChild(file.previewElement);
+    file.previewElement.parentNode.removeChild(file.previewElement)
   })
 
   newObjectScanDocDropzone.on("success", function (file, response) {
@@ -98,19 +98,19 @@ if (newObjectScanDoc) {
 
     if (status !== 'ok') {
       showInfoModal(errortext)
-      file.previewElement.parentNode.removeChild(file.previewElement);
+      file.previewElement.parentNode.removeChild(file.previewElement)
     } else {
       newObjectScanBtn.classList.add('hidden')
       const photoTitles = newObjectScanDoc.querySelectorAll('span[data-dz-name]')
       cutString(photoTitles, 15)
       file._removeLink.setAttribute('data-id', id_person_doc)
     }
-  });
+  })
 }
 
 //Dropzone для логотипа в создании учетной записи юридического лица
 
-const createAccountLogo = document.querySelector('#create-account-dropzone');
+const createAccountLogo = document.querySelector('#create-account-dropzone')
 
 if (createAccountLogo) {
   let logoDropzone = new Dropzone(createAccountLogo, {
@@ -122,7 +122,7 @@ if (createAccountLogo) {
     acceptedFiles: '.png, .jpeg, .jpg',
     addRemoveLinks: true,
     clickable: '#account-logo-add',
-  });
+  })
 }
 
 
