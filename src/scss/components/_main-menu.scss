@@ -32,7 +32,7 @@
 
     li {
       transition: all .3s;
-      padding: 6px 10px;
+
       border-radius: 20px;
 
       &._active {
@@ -53,6 +53,8 @@
     }
 
     a {
+      display: block;
+      padding: 6px 10px;
       color: $white;
     }
   }

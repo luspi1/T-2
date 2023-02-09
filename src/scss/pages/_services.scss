@@ -98,8 +98,8 @@
     }
 
     &__card_active {
-      border-color: #7F7F7F;
-
+      outline: 2px solid #51828E;
+      border: none;
       .subtitle-sm {
         color: #1DAB7F;
       }
@@ -165,7 +165,8 @@
 
       &.connected {
         .additional__card {
-          border-color: #7F7F7F;
+          outline: 2px solid #51828E;
+          border: none;
         }
 
         .subtitle-sm {

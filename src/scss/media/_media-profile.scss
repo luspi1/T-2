@@ -29,7 +29,10 @@
   .profile-page .info__data {
     flex-direction: column;
   }
-
+  .profile-page .info__passport-data {
+    width: 100%;
+    margin-right: 0;
+  }
   .profile-page .info__name {
     font-size: 30px;
   }
@@ -38,7 +41,7 @@
     margin-top: 20px;
   }
 
-  .profile-page .additional__inner>.additional__row,
+  .profile-page .additional__inner > .additional__row,
   .profile-page .bank__list {
     margin-left: 0;
   }
@@ -62,7 +65,10 @@
     padding-left: 0;
     padding-right: 0;
   }
-
+  .profile-page .passport-list__content {
+    width: 100%;
+    word-wrap: break-word;
+  }
   .profile-page .additional__top,
   .profile-page .bank__top {
     flex-direction: column;
@@ -78,7 +84,11 @@
     flex-direction: column;
   }
 
-  .profile-page .additional__text>.subtitle-sm {
+  .profile-page .additional__text > .subtitle-sm {
     margin-bottom: 10px;
+  }
+  .profile-page .bank__list {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
