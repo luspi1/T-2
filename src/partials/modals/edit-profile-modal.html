@@ -39,8 +39,8 @@
       <div class="edit-profile-modal__inputs-wrapper">
         <div class="edit-profile-modal__input">
           <p>Телефон</p>
-          <input class="edit-profile-modal__text-input phone-mask" type="text"
-                 name="profilePhone" required>
+          <input class="edit-profile-modal__text-input main-mask" type="text"
+                 name="profilePhone" data-mask-template="+{7} 000 000-00-00" required>
         </div>
         <div class="edit-profile-modal__input">
           <p>Почта</p>
@@ -59,12 +59,12 @@
       <div class="edit-profile-modal__inputs-wrapper">
         <div class="edit-profile-modal__input _passport-num">
           <p>Серия</p>
-          <input class="edit-profile-modal__text-input" type="text"
+          <input class="edit-profile-modal__text-input main-mask" data-mask-template="0000" type="text"
                  name="profilePassSeries" required>
         </div>
         <div class="edit-profile-modal__input _passport-num">
           <p>Номер</p>
-          <input class="edit-profile-modal__text-input" type="text"
+          <input class="edit-profile-modal__text-input main-mask" data-mask-template="000000" type="text"
                  name="profilePassNumber" required>
         </div>
         <div class="edit-profile-modal__input date-time-input__date">
@@ -103,7 +103,7 @@
       <div class="edit-profile-modal__inputs-wrapper">
         <div class="edit-profile-modal__input">
           <p>ИНН</p>
-          <input class="edit-profile-modal__text-input" type="text"
+          <input class="edit-profile-modal__text-input main-mask" data-mask-template="0000000000" type="text"
                  name="profileInn" required>
         </div>
       </div>

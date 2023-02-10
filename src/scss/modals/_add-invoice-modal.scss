@@ -1,0 +1,119 @@
+.add-invoice-modal {
+  padding: 12px 20px 27px;
+  width: 657px;
+
+  @media (max-width: 768px) {
+    width: 80%;
+    max-height: 560px;
+  }
+
+  .close-modal-btn {
+    right: 8px;
+    top: 8px;
+  }
+
+  h1 {
+    @include montserrat-semibold;
+    font-size: 20px;
+    line-height: 24px;
+    color: #3D3D3D;
+    margin-bottom: 25px;
+
+    @media (max-width: 400px) {
+      max-width: 250px;
+      text-align: center;
+    }
+  }
+
+
+  &__invoice-item {
+    margin-bottom: 17px;
+
+    h3 {
+      @include montserrat-bold;
+      font-size: 14px;
+      line-height: 17px;
+      color: #337390;
+      margin-bottom: 13px;
+    }
+  }
+
+  .main-checkbox {
+    margin-bottom: 10px;
+  }
+
+  .main-checkbox label {
+    color: #3D3D3D;
+  }
+
+  .main-checkbox input:checked + label::before {
+    background-image: url(../img/check-radio.svg);
+  }
+
+  &__inputs {
+    display: flex;
+
+    .add-invoice-modal__input:first-child {
+      margin-right: 12px;
+      @media (max-width: 768px) {
+        margin-right: 0;
+      }
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+
+  }
+
+  &__input {
+    margin-bottom: 15px;
+
+    p {
+      @include montserrat-medium;
+      font-size: 14px;
+      line-height: 17px;
+      color: $green-blue;
+      margin-bottom: 3px;
+    }
+  }
+
+  &__text-input {
+    width: 100%;
+    @include montserrat-medium;
+    font-size: 14px;
+    line-height: 17px;
+    color: $dark-light;
+    padding: 0 14px;
+    height: 30px;
+    border-radius: 3px;
+    border: 1px solid #337390;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__save-btn {
+    @include montserrat-bold;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    border-radius: 20px;
+    padding: 6px 25px;
+    text-align: center;
+    color: $green-blue;
+    background: $blue-bg;
+    transition: all .3s;
+
+    &:hover {
+      color: $white;
+      background: $green-blue;
+    }
+
+    @media (max-width: 768px) {
+      margin-top: 20px;
+    }
+  }
+
+}
