@@ -36,11 +36,10 @@
                  name="profilePatronymic" required>
         </div>
       </div>
-
       <div class="edit-profile-modal__inputs-wrapper">
         <div class="edit-profile-modal__input">
           <p>Телефон</p>
-          <input class="edit-profile-modal__text-input" type="text"
+          <input class="edit-profile-modal__text-input phone-mask" type="text"
                  name="profilePhone" required>
         </div>
         <div class="edit-profile-modal__input">
@@ -54,8 +53,9 @@
                  name="profileCity" required>
         </div>
       </div>
-
-      <h4 class="edit-profile-modal__subtitle">Паспортные данные и ИНН</h4>
+    </div>
+    <h4 class="edit-profile-modal__subtitle">Паспортные данные и ИНН</h4>
+    <div class="edit-profile-modal__inputs">
       <div class="edit-profile-modal__inputs-wrapper">
         <div class="edit-profile-modal__input _passport-num">
           <p>Серия</p>
@@ -67,28 +67,57 @@
           <input class="edit-profile-modal__text-input" type="text"
                  name="profilePassNumber" required>
         </div>
-        <div class="edit-profile-modal__input">
+        <div class="edit-profile-modal__input date-time-input__date">
           <p>Дата выдачи паспорта</p>
           <input class="edit-profile-modal__text-input" type="text"
-                 name="profileFirstDate" data-date-type="numb" required>
+                 name="profilePassFirstDate" required>
         </div>
-        <div class="edit-profile-modal__input">
+        <div class="edit-profile-modal__input date-time-input__date">
           <p>Окончание срока действия</p>
           <input class="edit-profile-modal__text-input" type="text"
-                 name="profileLastDate" data-date-type="numb" required>
+                 name="profilePassLastDate" required>
         </div>
 
       </div>
+      <div class="edit-profile-modal__inputs-wrapper">
+        <div class="edit-profile-modal__input _w100">
+          <p>Орган, выдавший паспорт</p>
+          <input class="edit-profile-modal__text-input" type="text"
+                 name="profilePassNameOrg" required>
+        </div>
 
+      </div>
+      <div class="edit-profile-modal__inputs-wrapper">
+        <div class="edit-profile-modal__input">
+          <p>Место рождения</p>
+          <input class="edit-profile-modal__text-input" type="text"
+                 name="profileBornCity" required>
+        </div>
+        <div class="edit-profile-modal__input date-time-input__date">
+          <p>Дата рождения</p>
+          <input class="edit-profile-modal__text-input" type="text"
+                 name="profileBornDate" required>
+        </div>
 
+      </div>
+      <div class="edit-profile-modal__inputs-wrapper">
+        <div class="edit-profile-modal__input">
+          <p>ИНН</p>
+          <input class="edit-profile-modal__text-input" type="text"
+                 name="profileInn" required>
+        </div>
+      </div>
+      <div class="edit-profile-modal__inputs-wrapper">
+        <div class="edit-profile-modal__input _w100">
+          <p>Адрес постоянной регистрации</p>
+          <input class="edit-profile-modal__text-input" type="text"
+                 name="profileAddress" required>
+        </div>
+      </div>
     </div>
-
-
-    <button class="add-document-modal__save-btn" type="button">
-      Сохранить документ
+    <button class="edit-profile-modal__save-btn" type="button">
+      Сохранить
     </button>
-
-
   </form>
 
 

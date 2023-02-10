@@ -1,0 +1,130 @@
+.edit-more-info-modal {
+
+
+  width: 657px;
+  min-height: 450px;
+  padding: 10px 20px 20px 20px;
+
+  @media (max-width: 768px) {
+    width: 98%;
+    height: 580px;
+  }
+
+  .close-modal-btn {
+    right: 8px;
+    top: 8px;
+  }
+
+  h1 {
+    @include montserrat-semibold;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 28px;
+    color: $dark-light;
+    @media (max-width: 500px) {
+      max-width: 280px;
+    }
+
+  }
+
+  &__textarea-wrapper {
+    margin-bottom: 20px;
+  }
+
+  &__inputs-wrapper {
+    margin-bottom: 25px;
+  }
+
+  &__text-input,
+  &__textarea {
+    width: 100%;
+    @include montserrat-medium;
+    font-size: 14px;
+    line-height: 17px;
+    color: $dark-light;
+    padding: 0 10px;
+    height: 30px;
+    border-radius: 3px;
+    border: 1px solid #337390;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__textarea {
+    height: 90px;
+    padding: 10px;
+  }
+
+  &__input {
+    position: relative;
+    margin-bottom: 13px;
+    padding-right: 36px;
+  }
+
+  p {
+    @include montserrat-bold;
+    font-size: 14px;
+    line-height: 17px;
+    color: $green-blue;
+    margin-bottom: 12px;
+  }
+
+  &__delete-socials {
+    width: 15.5px;
+    height: 18px;
+    position: absolute;
+    right: 10px;
+    bottom: 7px;
+
+    svg {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  &__add-socials-btn {
+    width: 30px;
+    height: 30px;
+
+    svg {
+      path {
+        transition: all .3s;
+      }
+    }
+
+    &:hover {
+      svg {
+        path {
+          fill: $green-blue;
+          transition: all .3s;
+        }
+      }
+
+    }
+  }
+
+  &__save-btn {
+    @include montserrat-bold;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    border-radius: 20px;
+    padding: 6px 25px;
+    text-align: center;
+    color: $green-blue;
+    background: $blue-bg;
+    transition: all .3s;
+
+    &:hover {
+      color: $white;
+      background: $green-blue;
+    }
+
+    @media (max-width: 768px) {
+      margin-top: 20px;
+    }
+  }
+
+}
