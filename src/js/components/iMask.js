@@ -1,45 +1,39 @@
-import IMask from 'imask';
+import IMask from 'imask'
 
-const initMasks = () => {
-  const inputsNumMask = document.querySelectorAll('.number-mask');
+const initAllMasks = () => {
 
-  inputsNumMask.forEach(element => {
-    const currencyMask = IMask(
-      element,
-      {
-        mask: 'num',
-        blocks: {
-          num: {
-            mask: Number,
-            thousandsSeparator: ' '
+  // Маски для номеров
+  const inputsNumMask = document.querySelectorAll('.number-mask')
+  if (inputsNumMask) {
+    inputsNumMask.forEach(element => {
+      const currencyMask = IMask(
+        element,
+        {
+          mask: 'num',
+          blocks: {
+            num: {
+              mask: Number,
+              thousandsSeparator: ' '
+            }
           }
-        }
-      })
-  })
+        })
+    })
+  }
+
+  // Основные маски с передачей шаблона в data-атрибут mask-template
+  const inputsMainMask = document.querySelectorAll('.main-mask')
+  if (inputsMainMask) {
+    inputsMainMask.forEach(element => {
+      const maskTemplate = element.dataset.maskTemplate
+      const currencyMask = IMask(
+        element,
+        {
+          mask: maskTemplate
+        })
+    })
+  }
 }
 
-initMasks()
+initAllMasks()
 
-
-const initPhoneMasks = () => {
-  const inputsPhoneMask = document.querySelectorAll('.phone-mask');
-
-  inputsPhoneMask.forEach(element => {
-    const currencyMask = IMask(
-      element,
-     {
-            mask: '+{7}(000)000-00-00'
-      })
-  })
-}
-
-initMasks()
-initPhoneMasks()
-
-
-
-export {
-  initMasks,
-  initPhoneMasks
-}
-
+export { initAllMasks }

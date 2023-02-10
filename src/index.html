@@ -38,6 +38,7 @@
                 stroke="#8FC3D8" stroke-miterlimit="10"/>
             </svg>
           </button>
+
           <div class="info__data">
             <div class="info__data-avatar">
               <img src="img/avatar-lg.png" alt="аватар пользователя">
@@ -353,12 +354,14 @@
 
 
 <template id="edit-req-invoice">
-  <li class="edit-bank-req-modal__invoice-list-item">
+  <li class="edit-bank-req-modal__invoice-list-item" data-changeable-id="true">
+
     <h3>Счет №<span class="changeable-amount">1</span></h3>
-    <div class="main-checkbox">
+
+    <div class="main-checkbox changeable-input">
       <input type="radio" name="main_invoice"
-             id="main-invoice">
-      <label for="main-invoice">Сделать основным</label>
+             id="2" value="2">
+      <label for="2">Сделать основным</label>
     </div>
 
     <div class="edit-bank-req-modal__input">
@@ -370,12 +373,12 @@
     <div class="edit-bank-req-modal__inputs">
       <div class="edit-bank-req-modal__input">
         <p>МФО</p>
-        <input class="edit-bank-req-modal__text-input" type="number"
+        <input class="edit-bank-req-modal__text-input main-mask" data-mask-template="0000-0000-0000-0000-0000" type="text"
                name="bank_mfo">
       </div>
       <div class="edit-bank-req-modal__input">
         <p>Р/с</p>
-        <input class="edit-bank-req-modal__text-input" type="number"
+        <input class="edit-bank-req-modal__text-input main-mask" data-mask-template="0000-0000-0000-0000-0000" type="text"
                name="bank_invoice">
       </div>
     </div>

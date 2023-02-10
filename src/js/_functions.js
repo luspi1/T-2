@@ -12,6 +12,52 @@ const cutString = (stringArray, stringLength) => {
   })
 }
 
+// Обновление id в изменяемых списках
+const updateChangeableListId = (changeableList) => {
+  if (changeableList && changeableList.dataset.changeableId) {
+    const changeableElements = Array.from(changeableList.children)
+    changeableElements.forEach((el, i) => {
+      const changeableId = i + 1
+
+      const changeableAmount = el.querySelector('.changeable-amount')
+      const changeableInput = el.querySelector('.changeable-input')
+
+      if (changeableAmount) {
+        changeableAmount.textContent = changeableId
+      }
+
+      if (changeableInput) {
+        const input = changeableInput.querySelector('input')
+        const inputLabel = changeableInput.querySelector('label')
+
+        input.value = changeableId
+        input.id = changeableId
+        inputLabel.setAttribute("for", changeableId)
+      }
+
+    })
+  }
+}
+
+
+// Блокировка/разблокировка добавления/удаления элементов в изменяемых списках при ограничении максимального количества
+
+const limitationChangeableElements = (changeableList, addBtn) => {
+  if (changeableList && addBtn && changeableList.dataset.maxElements) {
+    const countMaxElements = +changeableList.dataset.maxElements
+
+    if (changeableList.children.length >= countMaxElements) {
+      addBtn.classList.add('hidden')
+    } else {
+      addBtn.classList.remove('hidden')
+    }
+  }
+}
+
+
+
+
+
 // Фунцкия отправки fetch запросов
 async function sendData (data, url) {
   return await fetch(url, {
@@ -39,5 +85,7 @@ const showInfoModal = (responseText) => {
 export {
   cutString,
   sendData,
-  showInfoModal
+  showInfoModal,
+  updateChangeableListId,
+  limitationChangeableElements
 }

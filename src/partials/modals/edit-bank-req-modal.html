@@ -18,12 +18,14 @@
   </h1>
 
   <form class="edit-bank-req-modal__form" action="#">
-    <ul class="edit-bank-req-modal__invoice-list" data-list="changeable">
-      <li class="edit-bank-req-modal__invoice-list-item">
+
+    <ul class="edit-bank-req-modal__invoice-list" data-list="changeable" data-changeable-id="true" data-max-elements="3">
+      <li class="edit-bank-req-modal__invoice-list-item" >
+
         <h3>Счет №<span class="changeable-amount">1</span></h3>
-        <div class="main-checkbox">
+        <div class="main-checkbox changeable-input">
           <input type="radio" name="main_invoice"
-                 id="main-invoice" checked>
+                 id="main-invoice" value="1">
           <label for="main-invoice">Сделать основным</label>
         </div>
 
@@ -36,12 +38,12 @@
         <div class="edit-bank-req-modal__inputs">
           <div class="edit-bank-req-modal__input">
             <p>МФО</p>
-            <input class="edit-bank-req-modal__text-input" type="number"
+            <input class="edit-bank-req-modal__text-input main-mask" data-mask-template="0000-0000-0000-0000-0000" type="text"
                    name="bank_mfo">
           </div>
           <div class="edit-bank-req-modal__input">
             <p>Р/с</p>
-            <input class="edit-bank-req-modal__text-input" type="number"
+            <input class="edit-bank-req-modal__text-input main-mask" data-mask-template="0000-0000-0000-0000-0000" type="text"
                    name="bank_invoice">
           </div>
         </div>

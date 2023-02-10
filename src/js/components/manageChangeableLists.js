@@ -1,5 +1,6 @@
-import { initSelects } from "./customSelect";
-import { initMasks } from "./iMask";
+import { limitationChangeableElements, updateChangeableListId } from '../_functions'
+import { initSelects }             from "./customSelect"
+import { initAllMasks } from "./iMask"
 
 const changeableLists = document.querySelectorAll('ul[data-list="changeable"]')
 
@@ -8,9 +9,11 @@ if (changeableLists) {
   // Удаление элементов в изменяемых списках
   changeableLists.forEach(list => {
     list.addEventListener('click', (e) => {
-      e.preventDefault()
       if (e.target.dataset.btn === "delete") {
         e.target.closest('li').remove()
+        const addBtn = list.parentElement.querySelector('button[data-btn="add"]')
+        updateChangeableListId(list)
+        limitationChangeableElements(list, addBtn)
       }
     })
   })
@@ -30,8 +33,10 @@ if (addToListBtns) {
       let templateElement = templateFragment.firstElementChild.cloneNode(true)
       const targetChangeableList = e.currentTarget.parentElement.querySelector('ul[data-list="changeable"]')
       targetChangeableList.appendChild(templateElement)
+      limitationChangeableElements(targetChangeableList, addBtn)
+      updateChangeableListId(targetChangeableList)
       initSelects()
-      initMasks()
+      initAllMasks()
     })
   })
 }
