@@ -1,0 +1,406 @@
+.auction-conducting-page {
+  .auction {
+    &._completed {
+      .auction-conducting-modal {
+        display: block;
+      }
+
+      .auction__inner {
+        pointer-events: none;
+        user-select: none;
+        opacity: .1;
+      }
+    }
+
+    .container {
+      position: relative;
+    }
+
+    margin-bottom: 30px;
+
+    &__inner {
+      padding: 32px 32px 45px 30px;
+      background-color: $white;
+      border-radius: 24px;
+    }
+
+    .auction-top {
+      margin-bottom: 23px;
+      padding-bottom: 18px;
+      border-bottom: 2px solid #D2E7EF;
+
+      &__title {
+        margin-bottom: 30px;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        color: $black;
+
+        span {
+          font-weight: 700;
+        }
+      }
+
+      &__information {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $green-blue;
+      }
+
+      &__object {
+        display: flex;
+        align-items: center;
+        margin-right: 30px;
+        width: 440px;
+
+        svg {
+          min-width: 46px;
+          width: 46px;
+          margin-right: 20px;
+
+        }
+      }
+
+      &__name {
+        max-width: 270px;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 30px;
+      }
+
+      &__prices {
+        padding-left: 27px;
+        padding-right: 40px;
+        border-left: 2px solid #D2E7EF;
+      }
+
+      &__subtitle {
+        font-weight: 500;
+        line-height: 17px;
+      }
+
+      &__price {
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 37px;
+
+        span {
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 24px;
+        }
+      }
+    }
+
+    .auction-actions {
+      &__members {
+        display: flex;
+        margin-bottom: 22px;
+
+        p {
+          margin-right: 19px;
+          font-weight: 700;
+          line-height: 17px;
+        }
+
+        ul {
+          display: flex;
+        }
+      }
+
+      &__member {
+        font-weight: 500;
+        line-height: 17px;
+        color: $green-blue;
+
+        &:not(:last-child) {
+          margin-right: 24px;
+        }
+
+        &._active {
+          font-weight: 700;
+        }
+      }
+
+      &__item {
+        display: flex;
+        padding: 20px;
+        background: $blue-bg;
+        line-height: 17px;
+        border-radius: 10px;
+
+        .auction-actions__member {
+          margin-right: 13px;
+          font-weight: 700;
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 9px;
+        }
+
+        &._active {
+          padding-top: 24px;
+          padding-bottom: 12px;
+          background: #E2EFF5;
+          flex-direction: column;
+
+          .auction-actions__row {
+            display: flex;
+
+            &:nth-of-type(1) {
+              margin-bottom: 31px;
+            }
+
+            &:nth-of-type(2) {
+              margin: 0 109px 18px 80px;
+              justify-content: space-between;
+
+            }
+
+            &:nth-of-type(3) {
+              margin: 0 85px 30px 80px;
+              justify-content: space-between;
+
+              > p {
+                max-width: 201px;
+                font-weight: 500;
+                line-height: 17px;
+              }
+            }
+          }
+
+          .auction-actions__step {
+            color: $black;
+          }
+
+          .auction-actions__date {
+            width: 235px;
+            min-width: 235px;
+            margin-right: 33px;
+
+            span {
+              font-weight: 700;
+            }
+          }
+
+          .auction-actions__rate-default {
+            width: 244px;
+
+            p {
+              &:first-child {
+                margin-bottom: 3px;
+              }
+
+              &:last-child {
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 24px;
+
+                span {
+                  font-weight: 700;
+                  font-size: 30px;
+                  line-height: 37px;
+                  color: $black;
+                }
+              }
+            }
+          }
+
+          .auction-actions__rate:last-of-type {
+            margin-left: 0;
+          }
+
+          .auction-actions__desc {
+            align-self: center;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 24px;
+          }
+
+          .auction-actions__timer {
+            font-weight: 700;
+            font-size: 60px;
+            line-height: 50px;
+            color: $green-blue;
+          }
+
+          .auction-actions__form {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          }
+
+          .auction-actions__input-wrapper {
+            width: 260px;
+            margin-right: 78px;
+
+            label {
+              font-weight: 500;
+              line-height: 17px;
+            }
+          }
+
+          .auction-actions__input {
+            width: 100%;
+            margin: 6px 0;
+            display: flex;
+            align-items: center;
+
+            input {
+              width: 100%;
+              height: 30px;
+              margin-right: 10px;
+              padding-left: 13px;
+              font-weight: 500;
+              line-height: 17px;
+              color: $dark-light;
+              border: 0.5px solid #337390;
+              border-radius: 3px;
+            }
+
+            span {
+              font-weight: 500;
+              line-height: 17px;
+            }
+          }
+
+          .auction-actions__btn {
+            height: max-content;
+            padding: 20px 38px;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+            text-align: center;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: $white;
+            background-color: $green-blue;
+            border-radius: 3px;
+          }
+
+          .auction-actions__warning {
+            margin: 0 -8px;
+            padding: 7px 11px;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 17px;
+            background-color: $white;
+            border-radius: 5px;
+          }
+        }
+      }
+
+      &__step {
+        width: 55px;
+        min-width: 55px;
+        margin-right: 25px;
+        color: $green-blue;
+        font-weight: 700;
+
+      }
+
+      &__date {
+        width: 145px;
+        min-width: 145px;
+        margin-right: 5px;
+        font-weight: 500;
+
+      }
+
+      &__rate {
+        display: flex;
+
+        p {
+          &:first-child {
+            margin-right: 9px;
+          }
+
+          &:last-child {
+            font-weight: 700;
+          }
+        }
+
+        &:last-of-type {
+          margin: 0 0 0 auto;
+        }
+      }
+
+    }
+
+  }
+
+  .auction-conducting-modal {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 594px;
+    padding: 25px 10px 14px;
+    background-color: $white;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #93B5C5;
+    filter: drop-shadow(0px 8px 15px rgba(51, 115, 144, 0.3));
+
+    &__title {
+      margin-bottom: 12px;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+      color: #000000;
+    }
+
+    &__price {
+      margin-bottom: 14px;
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 44px;
+      color: $black;
+    }
+
+    &__row {
+      display: flex;
+      justify-content: center;
+
+      &:nth-of-type(1) {
+        margin-bottom: 8px;
+      }
+
+      &:nth-of-type(2) {
+        margin-bottom: 15px;
+      }
+
+      &:nth-of-type(3) {
+        padding-top: 10px;
+        border-top: 2px solid #D2E7EF;
+      }
+
+      p {
+        font-weight: 500;
+        line-height: 17px;
+
+        &:first-child {
+          margin-right: 8px;
+        }
+
+        &:last-child {
+          font-weight: 700;
+          color: $green-blue;
+        }
+      }
+
+      a {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: $green-blue;
+
+        &:first-child {
+          margin-right: 32px;
+        }
+      }
+    }
+  }
+}
