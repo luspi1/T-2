@@ -119,6 +119,9 @@
 
     }
 
+
+
+
     &__inputs {
       display: flex;
       align-items: flex-end;
@@ -339,6 +342,7 @@
         display: flex;
         align-items: flex-start;
       }
+
     }
 
     &__input-wrapper {
@@ -368,7 +372,7 @@
     }
 
     &__checkbox-minprice {
-      padding-top: 5px;
+      margin-right: 25px;
     }
 
     &__prompt-length {

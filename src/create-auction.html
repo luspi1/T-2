@@ -593,7 +593,7 @@
                 Min повышение<br>
                 цены торгов:
               </p>
-              <div class="auction-form__item-wrapper-wrap">
+              <div class="auction-form__item-wrapper-wrap auction-form__item-wrapper-wrap_checkbox">
                 <div class="auction-form__input-wrapper">
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                        xmlns="http://www.w3.org/2000/svg">
@@ -612,8 +612,12 @@
                 <div class="main-checkbox auction-form__checkbox-minprice">
                   <input type="checkbox" name="minpriceFree"
                          id="checkbox-minprice-free">
-                  <label for="checkbox-minprice-free">Разрешить повышать цену на
-                    произвольную сумму</label>
+                  <label for="checkbox-minprice-free">Разрешить ставку на произвольную сумму</label>
+                </div>
+                <div class="main-checkbox auction-form__checkbox-notless">
+                  <input type="checkbox" name="notLess"
+                         id="checkbox-not-less">
+                  <label for="checkbox-not-less">Не менее минимальной ставки</label>
                 </div>
               </div>
             </div>

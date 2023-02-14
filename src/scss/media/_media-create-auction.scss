@@ -4,12 +4,21 @@
     flex-wrap: wrap;
     justify-content: start;
   }
+
+
   .create-auction-page .auction-form__object,
   .create-auction-page .auction-form__inputs,
   .create-auction-page .auction-form__item-wrapper-wrap,
   .create-auction-page .auction-form__item-wrapper-wrap_start  {
     flex-wrap: wrap;
   }
+
+
+  .create-auction-page  .auction-form__item-wrapper-wrap_checkbox {
+    flex-wrap: nowrap;
+  }
+
+
   .create-auction-page .auction-form__inputs > p,
   .create-auction-page .auction-form__inputs > div,
   .create-auction-page .auction-form__object > p,
@@ -29,6 +38,9 @@
   .create-auction-page .auction-form__guarantee-description {
     max-width: 100%;
   }
+
+
+
 }
 
 @media(max-width: 992px) {
@@ -41,6 +53,13 @@
   .create-auction-page .auction-form__item-wrapper-wrap_start {
     flex-direction: column;
   }
+
+
+  .create-auction-page  .auction-form__item-wrapper-wrap_checkbox {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .create-auction-page .auction-form__textarea-wrapper,
   .create-auction-page .auction-form__item-wrapper-comment .auction-form__textarea-wrapper  {
     width: 100%;
