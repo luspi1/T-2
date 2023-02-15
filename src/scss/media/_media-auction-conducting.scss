@@ -1,0 +1,99 @@
+@media (max-width: 1200px) {
+  .auction-conducting-page .auction .auction-top__information {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .auction-conducting-page .auction .auction-actions__item,
+  .auction-conducting-page .auction .auction-actions__item._active .auction-actions__row {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 1024px) {
+  .auction-conducting-page .auction .auction-actions__item._active .auction-actions__row:nth-of-type(2) {
+    flex-direction: column;
+    margin-right: 0;
+  }
+
+  .auction-conducting-page .auction .auction-actions__item._active .auction-actions__row:nth-of-type(3) {
+    margin-right: 0;
+  }
+  .auction-conducting-page .auction .auction-actions__item._active .auction-actions__desc {
+    align-self: flex-start;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .auction-conducting-page .auction .auction-actions__item._active .auction-actions__btn {
+    padding: 10px 20px;
+    font-size: 18px;
+  }
+  .auction-conducting-page .auction .auction-actions__item._active .auction-actions__input-wrapper {
+    margin-right: 30px;
+  }
+  .auction-conducting-page .auction .auction-actions__rate:last-of-type {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .auction-conducting-page .auction__inner,
+  .auction-conducting-page .auction .auction-actions__item {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .auction-conducting-page .auction .auction-actions__members,
+  .auction-conducting-page .auction .auction-actions__members p,
+  .auction-conducting-page .auction .auction-actions__member {
+    margin-bottom: 10px;
+  }
+  .auction-conducting-page .auction .auction-actions__item._active .auction-actions__row:nth-of-type(n) {
+    margin-left: 0;
+  }
+  .auction-conducting-page .auction .auction-actions__members,
+  .auction-conducting-page .auction .auction-actions__item._active .auction-actions__row:nth-of-type(3) {
+    flex-direction: column;
+  }
+  .auction-conducting-page .auction .auction-actions__item._active .auction-actions__form {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  .auction-conducting-page .auction .auction-actions__item._active .auction-actions__input-wrapper {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  .auction-conducting-page .auction .auction-actions__rate {
+    margin-right: 0;
+    flex-direction: column;
+  }
+  .auction-conducting-page .auction .auction-actions__item._active .auction-actions__warning {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .auction-conducting-page .auction-conducting-modal {
+    width: 97%;
+    max-width: 594px;
+
+  }
+}
+
+@media (max-width: 576px) {
+  .auction-conducting-page .auction .auction-actions__item._active .auction-actions__row:nth-of-type(1),
+  .auction-conducting-page .auction .auction-actions__item,
+  .auction-conducting-page .auction-conducting-modal__row {
+    flex-direction: column;
+  }
+  .auction-conducting-page .auction-conducting-modal__price {
+    font-size: 28px;
+  }
+  .auction-conducting-page .auction-conducting-modal__row p:first-child {
+    margin-right: 0;
+  }
+  .auction-conducting-page .auction-conducting-modal__row a:first-child {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}

@@ -12,10 +12,6 @@
       }
     }
 
-    .container {
-      position: relative;
-    }
-
     margin-bottom: 30px;
 
     &__inner {
@@ -26,7 +22,7 @@
 
     .auction-top {
       margin-bottom: 23px;
-      padding-bottom: 18px;
+      padding-bottom: 3px;
       border-bottom: 2px solid #D2E7EF;
 
       &__title {
@@ -46,6 +42,10 @@
         justify-content: space-between;
         align-items: center;
         color: $green-blue;
+
+        > div {
+          margin-bottom: 15px;
+        }
       }
 
       &__object {
@@ -99,13 +99,16 @@
         margin-bottom: 22px;
 
         p {
-          margin-right: 19px;
+          width: 170px;
+          min-width: 170px;
+          margin-right: 13px;
           font-weight: 700;
           line-height: 17px;
         }
 
         ul {
           display: flex;
+          flex-wrap: wrap;
         }
       }
 
@@ -125,10 +128,14 @@
 
       &__item {
         display: flex;
-        padding: 20px;
+        padding: 20px 20px 10px;
         background: $blue-bg;
         line-height: 17px;
         border-radius: 10px;
+
+        > div, > p {
+          margin-bottom: 10px;
+        }
 
         .auction-actions__member {
           margin-right: 13px;
@@ -149,13 +156,20 @@
             display: flex;
 
             &:nth-of-type(1) {
-              margin-bottom: 31px;
+              margin-bottom: 21px;
+
+              > div, > p {
+                margin-bottom: 10px;
+              }
             }
 
             &:nth-of-type(2) {
-              margin: 0 109px 18px 80px;
+              margin: 0 109px 8px 80px;
               justify-content: space-between;
 
+              > div, > p {
+                margin-bottom: 10px;
+              }
             }
 
             &:nth-of-type(3) {
@@ -212,6 +226,7 @@
           }
 
           .auction-actions__desc {
+            margin-right: 20px;
             align-self: center;
             font-weight: 500;
             font-size: 20px;
@@ -229,6 +244,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin-right: 20px;
           }
 
           .auction-actions__input-wrapper {
@@ -266,6 +282,7 @@
           }
 
           .auction-actions__btn {
+            min-width: max-content;
             height: max-content;
             padding: 20px 38px;
             font-weight: 700;
@@ -310,6 +327,7 @@
 
       &__rate {
         display: flex;
+        margin-right: 10px;
 
         p {
           &:first-child {
@@ -332,7 +350,7 @@
 
   .auction-conducting-modal {
     display: none;
-    position: absolute;
+    position: fixed;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
