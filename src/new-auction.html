@@ -8,6 +8,7 @@
 <body class="page__body new-auction-page">
 
 <div class="site-container">
+  <div class="modal-overlay"></div>
   <div class="header">
     @include('partials/main-menu.html', {
     'active-new-auction': '_active'
@@ -20,6 +21,7 @@
     })
     <section class="section new-auction">
       <div class="container">
+        @include('partials/modals/refund-request-modal.html')
         <form class="new-auction__form">
           <div class="new-auction__row">
             <h4 class="new-auction__title">Продавец:</h4>
@@ -76,7 +78,7 @@
                   начальной стоимости
                   объекта торгов</p>
               </div>
-              <a href="#" class="new-auction__link">запросить возврат</a>
+              <button href="#" class="new-auction__link" type="button" data-open-modal="refund-request">запросить возврат</button>
             </div>
           </div>
           <div class="new-auction__generated-text">
