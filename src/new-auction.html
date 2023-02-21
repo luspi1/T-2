@@ -19,6 +19,7 @@
     'page-title': 'Заявка на проведение аукциона'
     })
     <section class="section new-auction">
+      @include('partials/modals/guarantee-payment-modal.html')
       <div class="container">
         <form class="new-auction__form">
           <div class="new-auction__row">
@@ -68,8 +69,10 @@
             <h4 class="new-auction__title">Гарантийный платеж:</h4>
             <div class="new-auction__row-wrapper">
               <div class="new-auction__guarantee">
-                <a href="#" class="new-auction__link">внести гарантийный
-                  платеж</a>
+                <button class="new-auction__link" type="button" data-open-modal="guarantee-payment">внести
+                  гарантийный
+                  платеж
+                </button>
                 <p>Внесен гарантийный платеж в размере <span>9 100 954</span>
                   (девять миллионов сто тысяч
                   девятьсот пятьдесят четыре) сом, что составляет 1 % от
@@ -83,10 +86,17 @@
             <h5>Сгенерированный текст заявки на проведение Аукциона:</h5>
             <p>Я, Константинов Константин Константинович, представляющий себя
               как физическое лицо, объявляю аукцион
-              <a href="#" target="_blank">604-408-К</a>. Настоящим подтверждаю
-              то, что ознакомлен с <a href="#"
-                                      target="_blank">Правилами Системы</a> и <a
-                href="#" target="_blank">Правилами Аукционов</a> и
+              <a href="#" target="_blank">604-408-К</a>
+              . Настоящим подтверждаю
+              то, что ознакомлен с
+              <a href="#"
+                 target="_blank">Правилами Системы
+              </a>
+              и
+              <a
+                href="#" target="_blank">Правилами Аукционов
+              </a>
+              и
               обязуюсь их соблюдать.
             </p>
             <p>Прошу проверить мое право на продажу объекта торгов,
