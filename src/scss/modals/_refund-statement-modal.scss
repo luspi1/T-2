@@ -1,0 +1,111 @@
+.refund-statement-modal {
+  padding: 12px 20px 41px;
+  width: 747px;
+
+  @media (max-width: 768px) {
+    width: 98%;
+    max-height: 560px;
+  }
+
+  .close-modal-btn {
+    right: 8px;
+    top: 8px;
+  }
+
+  h1 {
+    @include montserrat-semibold;
+    font-size: 20px;
+    line-height: 24px;
+    color: #3D3D3D;
+    margin-bottom: 30px;
+
+    @media (max-width: 650px) {
+      max-width: 300px;
+    }
+  }
+
+  h2 {
+    @include montserrat-medium;
+    font-size: 20px;
+    line-height: 24px;
+    color: #3D3D3D;
+    margin-bottom: 20px;
+
+    span {
+      font-weight: 700;
+    }
+
+    @media (max-width: 500px) {
+      font-size: 18px;
+    }
+  }
+
+
+  &__desc {
+
+    background: #F4F7FB;
+    border-radius: 5px;
+    padding: 5px 15px 20px;
+    margin-bottom: 20px;
+
+    p {
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 16px;
+
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+
+    h4 {
+      @include montserrat-bold;
+      font-size: 13px;
+      line-height: 16px;
+    }
+  }
+
+  .choices {
+    max-width: 430px;
+    margin-bottom: 30px;
+  }
+
+  .choices__placeholder {
+    font-weight: 500;
+  }
+
+  .choices__inner {
+    height: 30px;
+  }
+
+  .choices[data-type*=select-one]::after {
+    top: 5px;
+  }
+
+  .choices__list--single {
+    padding: 2px 16px 4px 4px;
+  }
+
+  &__save-btn {
+    @include montserrat-bold;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 12px 45px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: #16B6C0;
+    border: 1px solid #16B6C0;
+    transition: all .3s;
+
+    &:hover {
+      color: $white;
+      background: #16B6C0;
+    }
+
+    @media (max-width: 500px) {
+      padding: 12px 17px;
+    }
+  }
+}
