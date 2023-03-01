@@ -22,6 +22,8 @@
     <section class="section auction-statement">
 
       <div class="container">
+        @include('partials/modals/refund-statement-modal.html')
+        @include('partials/modals/deposit-modal.html')
         <div class="auction-statement__inner">
           <div class="auction-statement__top">
             <svg width="47" height="35" viewBox="0 0 47 35" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -117,7 +119,7 @@
             <div class="auction-statement__wrapper-btns">
               <h3 class="auction-statement__title"><span>3 000 000 сом</span> (задаток не внесен)</h3>
               <p class="auction-statement__subtitle">Сумма задатка для участника Аукциона</p>
-              <button class="auction-statement__btn auction-statement__btn-enter" type="button">
+              <button class="auction-statement__btn auction-statement__btn-enter" data-open-modal="deposit-modal" type="button">
                 <svg class="auction-statement__wallet" width="18" height="14" viewBox="0 0 18 14" fill="none"
                      xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -176,7 +178,7 @@
                 внести задаток в сумме 1% от стартовой стоимости Объекта Торгов. В случае обстоятельств, указанных в п.
                 9.12, задаток может быть возвращен Участнику.
               </p>
-              <button class="auction-statement__btn auction-statement__btn-add _disabled" type="button">
+              <button class="auction-statement__btn auction-statement__btn-add _disabled" data-open-modal="refund-statement" type="button">
                 запросить возврат задатка
                 <svg class="auction-statement__lock" width="11" height="15" viewBox="0 0 11 15" fill="none"
                      xmlns="http://www.w3.org/2000/svg">
