@@ -1,4 +1,5 @@
 import { Swiper } from "swiper/bundle";
+import {auto} from "@popperjs/core";
 
 
 // Инициализация слайдеров
@@ -60,3 +61,31 @@ const swiperObjectPic = new Swiper('.object-pic-swiper', {
   }
 });
 
+
+//На главной странице
+
+const swiperMainTop = new Swiper('.swiper-main-page-top', {
+  spaceBetween: 30,
+  grabCursor: true,
+  slidesPerView: "auto",
+  centeredSlides: true,
+loop: true,
+  autoplay: {
+    delay: 5000,
+  },
+
+});
+
+const swiperMainAuction = new Swiper('.swiper-main-page-auction', {
+  spaceBetween: 30,
+  grabCursor: true,
+  slidesPerView: 4,
+  loop: true,
+  /*autoplay: {
+    delay: 5000,
+  },*/
+  navigation: {
+    nextEl: ".swiper-main-page-auction-button-next",
+    prevEl: ".swiper-main-page-auction-button-prev",
+  },
+});
