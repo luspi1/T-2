@@ -1,4 +1,4 @@
-import { Swiper } from "swiper/bundle";
+import {Swiper} from "swiper/bundle";
 import {auto} from "@popperjs/core";
 
 
@@ -65,27 +65,49 @@ const swiperObjectPic = new Swiper('.object-pic-swiper', {
 //На главной странице
 
 const swiperMainTop = new Swiper('.swiper-main-page-top', {
-  spaceBetween: 30,
+  spaceBetween: 10,
+  slidesPerView: 1,
   grabCursor: true,
-  slidesPerView: "auto",
   centeredSlides: true,
-loop: true,
+  loop: true,
   autoplay: {
     delay: 5000,
   },
+  breakpoints: {
+    768: {
+      spaceBetween: 30,
+      slidesPerView: "auto",
 
+    }
+  }
 });
 
 const swiperMainAuction = new Swiper('.swiper-main-page-auction', {
-  spaceBetween: 30,
   grabCursor: true,
-  slidesPerView: 4,
   loop: true,
-  /*autoplay: {
+  autoplay: {
     delay: 5000,
-  },*/
+  },
   navigation: {
     nextEl: ".swiper-main-page-auction-button-next",
     prevEl: ".swiper-main-page-auction-button-prev",
   },
+  spaceBetween: 10,
+  slidesPerView: 1,
+  breakpoints: {
+
+    768: {
+      spaceBetween: 20,
+      slidesPerView: 2,
+    },
+
+    992: {
+      spaceBetween: 30,
+      slidesPerView: 3,
+    },
+    1200: {
+      spaceBetween: 30,
+      slidesPerView: 4,
+    }
+  }
 });

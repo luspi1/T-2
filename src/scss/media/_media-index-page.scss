@@ -1,0 +1,97 @@
+@media (max-width: 1200px) {
+  .index-page .auctions__status,
+  .index-page .auctions__object,
+  .index-page .auctions__code,
+  .index-page .auctions__info {
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
+  .index-page .auctions__price {
+    margin-bottom: auto;
+  }
+}
+
+
+@media (max-width: 992px) {
+  .index-page .system .container {
+    flex-direction: column;
+  }
+  .index-page .system__item {
+    width: 100%;
+  }
+  .index-page .system__item:first-child {
+    margin-bottom: 15px;
+  }
+  .index-page .form__wrapper {
+    flex-direction: column;
+  }
+  .index-page .form__inputs {
+    width: 65%;
+    margin-bottom: 20px;
+  }
+
+  .index-page .form textarea {
+    height: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .index-page .swiper-main-page-top .swiper-slide {
+    width: 100% !important;
+  }
+
+  .index-page .attention__item {
+    padding-right: 10px;
+  }
+  .index-page .attention__wrapper {
+    width: 90%;
+  }
+  .index-page .attention__btn-delete {
+    align-self: flex-start;
+  }
+  .index-page .attention__wrapper h4 {
+    display: block;
+    margin-bottom: 5px;
+  }
+  .index-page .auctions__inner {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .index-page .system__item {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  .index-page .form__inputs,
+  .index-page .form textarea {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .index-page .swiper-main-page-auction .swiper-slide {
+    padding: 0 15px;
+  }
+  .index-page .swiper-main-page-auction .swiper-slide a p {
+    font-size: 16px;
+  }
+  .index-page .auctions__item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .index-page .auctions__status,
+  .index-page .auctions__object,
+  .index-page .auctions__code,
+  .index-page .auctions__info,
+  .index-page .auctions__price {
+    width: 100%;
+    margin-right: 0;
+  }
+  .index-page .system__item {
+    padding-right: 10px;
+  }
+  .index-page .system__download svg {
+    width: 90px;
+    min-width: 90px;
+    height: 100px;
+  }
+}
