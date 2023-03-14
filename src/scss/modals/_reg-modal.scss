@@ -1,10 +1,72 @@
 .reg-modal {
   padding: 71px 80px 97px;
   width: 650px;
+  max-height: 95vh;
   border-radius: 24px;
   background-color: $green-blue;
   border: none;
   box-shadow: none;
+  overflow-y: auto;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+
+  &__block {
+    display: none;
+  }
+
+  // настройка видимости состояний на разных этапах
+
+  &[data-state="step-1"] {
+    ._step-1 {
+      display: block;
+    }
+  }
+
+  &[data-state="step-2"] {
+    ._step-2 {
+      display: block;
+    }
+  }
+
+  &[data-state="step-3"] {
+    ._step-3 {
+      display: block;
+    }
+  }
+
+  &[data-state="step-4"] {
+    ._step-4 {
+      display: block;
+    }
+  }
+
+  &[data-state="step-5"] {
+    ._step-5 {
+      display: block;
+    }
+
+
+    .reg-modal__form {
+      max-width: 430px;
+    }
+
+    .reg-modal__input {
+      padding-left: 32px;
+    }
+
+  }
+
+  &[data-state="step-6"] {
+    ._step-6 {
+      display: block;
+    }
+  }
+
 
   h1 {
     @include montserrat-semibold;
@@ -15,6 +77,14 @@
     color: #FFFFFF;
     text-transform: uppercase;
     margin-bottom: 10px;
+  }
+
+  h3 {
+    @include montserrat-bold;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    margin-bottom: 13px;
   }
 
   &__title-desc {
@@ -34,4 +104,195 @@
     color: #FF4E4E;
     margin-bottom: 30px;
   }
+
+  &__form {
+    margin: 0 auto;
+    max-width: 350px;
+  }
+
+  &__input-wrapper {
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    input,
+    textarea {
+      @include montserrat-medium;
+      font-size: 14px;
+      line-height: 20px;
+      color: #3D3D3D;
+      padding: 10px 20px;
+      background: #FFFFFF;
+      border-radius: 3px;
+      width: 100%;
+      border: none;
+      outline: none;
+    }
+  }
+
+  &__input-title {
+    @include montserrat-medium;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    margin-bottom: 3px;
+  }
+
+  &__inputs-group {
+    margin-top: 30px;
+    margin-bottom: 25px;
+    position: relative;
+    padding: 30px 0;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 1px;
+      width: 120%;
+      background-color: #D2E7EF;
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      bottom: 0;
+    }
+
+  }
+
+  &__btns-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+  }
+
+  &__main-btn {
+    @include montserrat-bold;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding: 12px 29px;
+    background: #66ACCC;
+    border-radius: 3px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    &._disabled {
+      pointer-events: none;
+    }
+  }
+
+  &__submit-btn {
+    margin-top: 60px;
+    width: 100%;
+  }
+
+  &__inputs-phone {
+    margin-top: 0;
+    padding-top: 0;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      width: 100%;
+    }
+  }
+
+  &__icon-wrapper {
+    position: relative;
+    width: 100%;
+
+    svg {
+      position: absolute;
+      top: 50%;
+      height: 100%;
+      left: 10px;
+      transform: translateY(-50%);
+    }
+  }
+
+  #reg-scans-dropzone {
+    background-color: #fff;
+    padding: 10px 20px 19px;
+    border-radius: 3px;
+    height: 126px;
+
+    .reg-modal__dropzone-desc {
+      @include montserrat-medium;
+      font-size: 14px;
+      line-height: 20px;
+      color: #BFBDC7;
+      margin-bottom: 3px;
+    }
+
+    #reg-scans-add {
+      @include montserrat-medium;
+      font-size: 14px;
+      line-height: 20px;
+      color: #337390;
+      margin-bottom: 12px;
+    }
+
+    .dz-preview {
+      margin: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 5px;
+      position: relative;
+
+      &:hover {
+        outline: 1px solid #51828E;
+      }
+
+      img {
+        border-radius: 5px;
+      }
+
+
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+
+    .dropzone-previews {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .dz-remove {
+      width: 15px;
+      height: 15px;
+      color: transparent;
+      position: absolute;
+      top: -6px;
+      right: -6px;
+      border-radius: 50%;
+      background: url('../img/del-scan-reg.png') no-repeat center;
+      z-index: 100;
+    }
+  }
+
+  &__or {
+    @include montserrat-medium;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+  }
+
 }
