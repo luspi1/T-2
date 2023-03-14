@@ -11,6 +11,8 @@ import './components/hideItemOrgDoc'
 import './components/addDocModal'
 import './components/resetFilters'
 import './components/outUserEmployeesModal'
+import './components/authorizationModal'
 import './components/regModal'
+
 
 

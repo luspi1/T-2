@@ -1,0 +1,33 @@
+.esia-complete {
+  p {
+    max-width: 360px;
+    margin: 0 auto 30px;
+    @include montserrat-medium;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+    text-align: center;
+  }
+
+  button {
+    display: block;
+    height: 40px;
+    margin: 0 auto;
+    padding: 0 33px;
+    @include montserrat-bold;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background: #66ACCC;
+    border-radius: 3px;
+    transition: all .3s;
+
+    &:hover {
+      background-color: #FFFFFF;
+      color: $green-blue;
+    }
+  }
+}
