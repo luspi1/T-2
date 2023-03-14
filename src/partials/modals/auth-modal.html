@@ -8,10 +8,81 @@
       <img src="img/ru-lang.png" alt="Переключить на русский">
     </button>
   </div>
-  <h1>
-    Вход на сайт
-  </h1>
+
+  <div class="sign-in" data-auth-style="auth-main">
+    <div class="auth-main">
+      <h1>
+        Вход на сайт
+      </h1>
+      <p class="auth-main__subtitle">Авторизация/регистрация нового пользователя</p>
+      <div class="auth-main__esia">
+        <button type="button" data-auth="auth-esia">авторизация через есиа</button>
+        <p>При регистрации пользователя через ЕСИА, АИС свяжется с системой государственных услуг и опознает Вас
+          автоматически в случае, если Вы зарегистрированы и верифицированы на портале государственных услуг.</p>
+        <p>Вам не будет нужно вводить никакие данные пользователя. Изменить на нашем сайте Вы их тоже не сможете: все
+          данные сайт получает из государственной базы данных.</p>
+      </div>
+
+      <div class="auth-main__manual">
+        <p>Если Вы не прошли регистрацию и верификацию на Госуслугах, воспользуйтесь методом регистрации вручную (это
+          сложнее и требует специального подтверждения).</p>
+        <button type="button" data-auth="auth-manual">регистрация вручную</button>
+      </div>
+
+      <div class="auth-main__login">
+        <p>Если Вы не прошли регистрацию и верификацию на Госуслугах, воспользуйтесь методом регистрации вручную (это
+          сложнее и требует специального подтверждения).</p>
+        <button type="button" data-auth="auth-authorization">войти на сайт</button>
+      </div>
+    </div>
+    <div class="auth-authorization">
+      <h1>
+        АВТОРИЗАЦИЯ
+      </h1>
+      <form class="auth-authorization__form form">
+        <div class="form__input-wrapper">
+          <p>Номер мобильного телефона*</p>
+          <input class="main-mask" data-mask-template="+{7} 000 000-00-00" type="text" name="userPhone">
+        </div>
+        <p>или</p>
+        <div class="form__input-wrapper">
+          <p>Адрес электронной почты*</p>
+          <input type="email" name="userMail" placeholder="konstantin@konstantin.com">
+        </div>
+        <div class="form__input-wrapper">
+          <p>Номер мобильного телефона*</p>
+          <input type="password" name="userPass" required>
+        </div>
+        <button type="submit">войти</button>
+      </form>
+      <div class="auth-authorization__esia">
+        <p>Если Вы прошли регистрацию через портал ЕСИА, Вам нужно войти через другую форму.</p>
+        <button type="button" data-auth="auth-esia">войти через ЕСИА</button>
+      </div>
+
+      <div class="auth-authorization__manual">
+        <p>Если у Вас нет учетной записи, пройдите, пожалуйста, регистрацию.</p>
+        <button type="button" data-auth="auth-manual">зарегистрироваться</button>
+      </div>
 
 
-
+    </div>
+    <div class="auth-esia">
+      <h1>
+        АВТОРИЗАЦИЯ ЧЕРЕЗ ЕСИА
+      </h1>
+      <form class="auth-authorization__form form">
+        <div class="form__input-wrapper">
+          <p>Учетная запись</p>
+          <input type="email" name="userLogin" placeholder="konstantin@konstantin.com">
+        </div>
+        <p>При регистрации пользователя через ЕСИА, АИС свяжется с системой государственных услуг и опознает Вас
+          автомотически в случае, если Вы зарегистрированы и верифицированы на портале государственных услуг.</p>
+        <p>
+          Вам не будет нужно вводить никакие данные пользователя. Изменить на нашем сайте Вы их тоже не сможете: все
+          данные сайт получает из государственной базы данных.</p>
+        <button type="submit">авторизоваться</button>
+      </form>
+    </div>
+  </div>
 </div>
