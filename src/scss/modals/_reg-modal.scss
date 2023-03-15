@@ -22,31 +22,31 @@
   // настройка видимости состояний на разных этапах
 
   &[data-state="step-1"] {
-    ._step-1 {
+    .step-1 {
       display: block;
     }
   }
 
   &[data-state="step-2"] {
-    ._step-2 {
+    .step-2 {
       display: block;
     }
   }
 
   &[data-state="step-3"] {
-    ._step-3 {
+    .step-3 {
       display: block;
     }
   }
 
   &[data-state="step-4"] {
-    ._step-4 {
+    .step-4 {
       display: block;
     }
   }
 
   &[data-state="step-5"] {
-    ._step-5 {
+    .step-5 {
       display: block;
     }
 
@@ -62,7 +62,7 @@
   }
 
   &[data-state="step-6"] {
-    ._step-6 {
+    .step-6 {
       display: block;
     }
   }
@@ -96,7 +96,8 @@
     margin-bottom: 35px;
   }
 
-  &__alert {
+  &__alert,
+  &__alert-change {
     @include montserrat-semibold;
     font-size: 16px;
     line-height: 20px;

@@ -3,10 +3,10 @@
     Самостоятельная регистрация
   </h1>
   <p class="reg-modal__title-desc">нового пользователя</p>
-  <p class="reg-modal__alert">Пожалуйста, заполните все поля</p>
+  <p class="reg-modal__alert-change">Пожалуйста, заполните все поля</p>
 
   <form class="reg-modal__form" action="#">
-    <div class="reg-modal__block _step-1">
+    <div class="reg-modal__block step-1">
       <div class="reg-modal__input-wrapper">
         <p class="reg-modal__input-title">Фамилия*</p>
         <input class="reg-modal__input" type="text" name="lastname" required>
@@ -43,8 +43,10 @@
                required>
       </div>
 
+      <p class="reg-modal__alert-change hidden">Заполните все поля формы!</p>
+
       <div class="reg-modal__btns-group">
-        <button class="reg-modal__main-btn" type="button"
+        <button class="reg-modal__main-btn reg-modal__next-btn" type="button"
                 data-btn-state="step-2">Далее
         </button>
         <button class="reg-modal__main-btn _disabled" type="button">&#183;
@@ -56,39 +58,37 @@
       </div>
 
     </div>
-    <div class="reg-modal__block _step-2">
+    <div class="reg-modal__block step-2">
       <div class="reg-modal__input-wrapper">
         <p class="reg-modal__input-title">Серия и номер паспорта*</p>
         <input class="reg-modal__input main-mask" type="text"
-               data-mask-template="0000 000000" name="passportNumber" required>
+               data-mask-template="0000 000000" name="passportNumber" >
       </div>
       <div class="reg-modal__input-wrapper">
         <p class="reg-modal__input-title">Орган, выдавший паспорт*</p>
-        <textarea class="reg-modal__input" rows="2" name="dispenser"
-                  required></textarea>
+        <textarea class="reg-modal__input" rows="2" name="dispenser"></textarea>
       </div>
 
       <div class="reg-modal__input-wrapper">
         <p class="reg-modal__input-title">Дата выдачи*</p>
         <input class="reg-modal__input main-mask" type="text"
                data-mask-template="00.00.0000" name="dateIssue"
-               data-date-start="01-01-2023"
-               required>
+               data-date-start="01-01-2023">
       </div>
 
       <div class="reg-modal__input-wrapper">
         <p class="reg-modal__input-title">Дата окончания срока действия*</p>
         <input class="reg-modal__input main-mask" type="text"
                data-mask-template="00.00.0000" name="passportDateEnd"
-               data-date-start="01-01-2023"
-               required>
+               data-date-start="01-01-2023">
       </div>
 
       <div class="reg-modal__input-wrapper">
         <p class="reg-modal__input-title">Адрес регистрации*</p>
-        <textarea class="reg-modal__input" rows="2" name="regAddress"
-                  required></textarea>
+        <textarea class="reg-modal__input" rows="2" name="regAddress"></textarea>
       </div>
+
+      <p class="reg-modal__alert-change hidden">Заполните все поля формы!</p>
 
       <div class="reg-modal__btns-group">
         <button class="reg-modal__main-btn" type="button"
@@ -100,7 +100,7 @@
               fill="white"/>
           </svg>
         </button>
-        <button class="reg-modal__main-btn" type="button"
+        <button class="reg-modal__main-btn reg-modal__next-btn" type="button"
                 data-btn-state="step-3">
           Далее
         </button>
@@ -111,49 +111,44 @@
       </div>
 
     </div>
-    <div class="reg-modal__block _step-3">
+    <div class="reg-modal__block step-3">
       <h3>
         Банковские реквизиты
       </h3>
       <div class="reg-modal__input-wrapper">
         <p class="reg-modal__input-title">Номер счета*</p>
         <input class="reg-modal__input main-mask" type="text"
-               data-mask-template="000 000 000 000 000" name="invoiceNumber"
-               required>
+               data-mask-template="000 000 000 000 000" name="invoiceNumber">
       </div>
       <div class="reg-modal__input-wrapper">
         <p class="reg-modal__input-title">МФО*</p>
         <input class="reg-modal__input main-mask" type="text"
-               data-mask-template="000 000 000 000 000" name="mfoNumber"
-               required>
+               data-mask-template="000 000 000 000 000" name="mfoNumber">
       </div>
 
       <div class="reg-modal__input-wrapper">
         <p class="reg-modal__input-title">Наименование банка*</p>
-        <textarea class="reg-modal__input" rows="2" name="bankName"
-                  required></textarea>
+        <textarea class="reg-modal__input" rows="2" name="bankName"></textarea>
       </div>
       <div class="reg-modal__input-wrapper">
         <p class="reg-modal__input-title">Получатель*</p>
-        <textarea class="reg-modal__input" rows="2" name="recipient"
-                  required></textarea>
+        <textarea class="reg-modal__input" rows="2" name="recipient"></textarea>
       </div>
 
       <div class="reg-modal__input-wrapper">
         <p class="reg-modal__input-title">Дата окончания срока действия*</p>
         <input class="reg-modal__input main-mask" type="text"
                data-mask-template="00.00.0000" name="dateBankEnd"
-               data-date-start="01-01-2023"
-               required>
+               data-date-start="01-01-2023">
       </div>
       <div class="reg-modal__input-wrapper">
         <p class="reg-modal__input-title">Дата добавления счета*</p>
         <input class="reg-modal__input main-mask " type="text"
                data-mask-template="00.00.0000" name="dateAddInvoice"
-               data-date-start="01-01-2023"
-               required>
+               data-date-start="01-01-2023">
       </div>
 
+      <p class="reg-modal__alert-change hidden">Заполните все поля формы!</p>
       <div class="reg-modal__btns-group">
         <button class="reg-modal__main-btn _disabled" type="button">
           &#183;
@@ -167,7 +162,7 @@
               fill="white"/>
           </svg>
         </button>
-        <button class="reg-modal__main-btn" type="button"
+        <button class="reg-modal__main-btn reg-modal__next-btn" type="button"
                 data-btn-state="step-4">
           Далее
         </button>
@@ -176,7 +171,7 @@
       </div>
 
     </div>
-    <div class="reg-modal__block _step-4">
+    <div class="reg-modal__block step-4">
       <div class="reg-modal__input-wrapper">
         <p class="reg-modal__input-title">Приложите сканы документа</p>
         <div class="reg-modal__scans-dropzone dropzone" id="reg-scans-dropzone">
@@ -197,14 +192,14 @@
       <p class="reg-modal__or">или</p>
       <div class="reg-modal__input-wrapper">
         <p class="reg-modal__input-title">Добавьте ссылку на изображение*</p>
-        <input class="reg-modal__input" type="url" name="imgUrl"
-               required>
+        <input class="reg-modal__input" type="url" name="imgUrl">
       </div>
       <div class="reg-modal__input-wrapper">
         <p class="reg-modal__input-title">Дополнительные сведения о себе*</p>
-        <textarea class="reg-modal__input" name="aboutMe" rows="10"
-                  required></textarea>
+        <textarea class="reg-modal__input" name="aboutMe" rows="10"></textarea>
       </div>
+
+      <p class="reg-modal__alert-change hidden">Заполните все поля формы!</p>
       <div class="reg-modal__btns-group">
         <button class="reg-modal__main-btn _disabled" type="button">
           &#183;
@@ -221,14 +216,14 @@
               fill="white"/>
           </svg>
         </button>
-        <button class="reg-modal__main-btn" type="button"
+        <button class="reg-modal__main-btn reg-modal__next-btn" type="button"
                 data-btn-state="step-5">
           Далее
         </button>
       </div>
 
     </div>
-    <div class="reg-modal__block _step-5">
+    <div class="reg-modal__block step-5">
       <div class="reg-modal__inputs-group reg-modal__inputs-phone">
         <div class="reg-modal__input-wrapper">
           <p class="reg-modal__input-title">Введите номер мобильного
@@ -244,8 +239,7 @@
                 fill="#BFBDC7"/>
             </svg>
             <input class="reg-modal__input main-mask" type="text"
-                   data-mask-template="+{7} 000 000-00-00" name="phone"
-                   required>
+                   data-mask-template="+{7} 000 000-00-00" name="phone">
           </div>
         </div>
       </div>
@@ -258,8 +252,7 @@
               d="M7.50003 0.479908C9.50707 0.479908 11.4085 0.479908 13.4155 0.479908C14.4718 0.479908 15 1.21934 15 2.06441C15 4.49399 15 7.0292 15 9.45877C15 10.1982 14.5775 10.7264 13.8381 10.9376C13.7324 10.9376 13.5211 10.9376 13.4155 10.9376C9.50705 10.9376 5.49295 10.9376 1.58451 10.9376C0.633802 10.9376 0 10.3038 0 9.35313C0 6.92356 0 4.38835 0 1.95877C0 1.00807 0.633802 0.374268 1.58451 0.374268C3.59155 0.479901 5.49299 0.479908 7.50003 0.479908ZM13.7324 2.27568C13.6267 2.38131 13.5211 2.48694 13.4155 2.48694C11.6197 3.96581 9.7183 5.44469 7.92253 6.81793C7.60563 7.13483 7.28876 7.13483 6.97186 6.81793C5.49299 5.65596 4.01413 4.38836 2.42963 3.22639C2.00709 2.90949 1.58451 2.59259 1.05634 2.17005C1.05634 2.27569 1.05634 2.38131 1.05634 2.48694C1.05634 4.70525 1.05634 7.0292 1.05634 9.24751C1.05634 9.67004 1.05636 9.67004 1.4789 9.67004C5.38735 9.67004 9.19016 9.67004 13.0986 9.67004C13.5211 9.67004 13.5212 9.67004 13.5212 9.24751C13.5212 7.0292 13.5212 4.70525 13.5212 2.48694C13.7324 2.48694 13.7324 2.48695 13.7324 2.27568ZM2.32395 1.64189C2.42959 1.74752 2.42963 1.74751 2.42963 1.74751C4.01413 3.01511 5.70425 4.28272 7.28875 5.55033C7.39439 5.65596 7.50001 5.65596 7.60564 5.55033C9.19015 4.28272 10.7747 3.01511 12.3592 1.74751L12.4648 1.64189C9.19018 1.64189 5.80987 1.64189 2.32395 1.64189Z"
               fill="#BFBDC7"/>
           </svg>
-          <input class="reg-modal__input" type="email" name="email"
-                 required>
+          <input class="reg-modal__input" type="email" name="email">
         </div>
       </div>
       <div class="reg-modal__input-wrapper">
@@ -275,8 +268,7 @@
               d="M12.9964 7.87953C12.9964 7.72358 12.9964 7.56275 12.9672 7.4068C12.7777 6.34436 11.9858 5.59384 10.9412 5.46225V4.79458C10.9412 2.3578 8.96384 0.374268 6.53462 0.374268H6.46174C4.03251 0.374268 2.05512 2.3578 2.05512 4.79458V5.45738C2.00168 5.46225 1.9531 5.472 1.90451 5.48175C0.767635 5.70106 0.0097169 6.64165 0.00485845 7.82592C0 9.88256 0 11.9441 0 14.0007C0 14.1469 0.00485845 14.2931 0.0291507 14.4393C0.242923 15.6139 1.18546 16.3936 2.38064 16.3936C5.10623 16.3936 7.83182 16.3936 10.5623 16.3936C11.9955 16.3936 12.9964 15.3994 12.9964 13.9617C13.0012 11.9343 13.0012 9.90693 12.9964 7.87953ZM3.26974 4.79458C3.26974 3.03035 4.70298 1.59265 6.46174 1.59265H6.53947C8.29823 1.59265 9.73148 3.03035 9.73148 4.79458V5.20883H3.26974V4.79458ZM11.8303 13.9812C11.8303 14.7415 11.3396 15.224 10.5866 15.2288C9.22134 15.2288 7.85126 15.2288 6.48603 15.2288C5.13052 15.2288 3.77502 15.2288 2.42437 15.2288C1.64701 15.2288 1.16603 14.7464 1.16603 13.9617C1.16603 11.9343 1.16603 9.90205 1.16603 7.87466C1.16603 7.09489 1.65187 6.60754 2.42923 6.60754C5.1451 6.60754 7.86097 6.60754 10.572 6.60754C11.3396 6.60754 11.8303 7.09002 11.8303 7.85516C11.8352 9.89718 11.8352 11.9392 11.8303 13.9812Z"
               fill="#BFBDC7"/>
           </svg>
-          <input class="reg-modal__input" type="password" name="password"
-                 required>
+          <input class="reg-modal__input" type="password" name="password">
         </div>
 
       </div>
@@ -292,10 +284,11 @@
               d="M12.9964 7.87953C12.9964 7.72358 12.9964 7.56275 12.9672 7.4068C12.7777 6.34436 11.9858 5.59384 10.9412 5.46225V4.79458C10.9412 2.3578 8.96384 0.374268 6.53462 0.374268H6.46174C4.03251 0.374268 2.05512 2.3578 2.05512 4.79458V5.45738C2.00168 5.46225 1.9531 5.472 1.90451 5.48175C0.767635 5.70106 0.0097169 6.64165 0.00485845 7.82592C0 9.88256 0 11.9441 0 14.0007C0 14.1469 0.00485845 14.2931 0.0291507 14.4393C0.242923 15.6139 1.18546 16.3936 2.38064 16.3936C5.10623 16.3936 7.83182 16.3936 10.5623 16.3936C11.9955 16.3936 12.9964 15.3994 12.9964 13.9617C13.0012 11.9343 13.0012 9.90693 12.9964 7.87953ZM3.26974 4.79458C3.26974 3.03035 4.70298 1.59265 6.46174 1.59265H6.53947C8.29823 1.59265 9.73148 3.03035 9.73148 4.79458V5.20883H3.26974V4.79458ZM11.8303 13.9812C11.8303 14.7415 11.3396 15.224 10.5866 15.2288C9.22134 15.2288 7.85126 15.2288 6.48603 15.2288C5.13052 15.2288 3.77502 15.2288 2.42437 15.2288C1.64701 15.2288 1.16603 14.7464 1.16603 13.9617C1.16603 11.9343 1.16603 9.90205 1.16603 7.87466C1.16603 7.09489 1.65187 6.60754 2.42923 6.60754C5.1451 6.60754 7.86097 6.60754 10.572 6.60754C11.3396 6.60754 11.8303 7.09002 11.8303 7.85516C11.8352 9.89718 11.8352 11.9392 11.8303 13.9812Z"
               fill="#BFBDC7"/>
           </svg>
-          <input class="reg-modal__input" type="password" name="repeatPassword"
-                 required>
+          <input class="reg-modal__input" type="password" name="repeatPassword">
         </div>
       </div>
+
+      <p class="reg-modal__alert-change hidden">Заполните все поля формы!</p>
 
       <button class="reg-modal__main-btn reg-modal__submit-btn" type="submit">
         подать заявку
