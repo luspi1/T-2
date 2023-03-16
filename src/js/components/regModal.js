@@ -24,7 +24,7 @@ if (regModal) {
 
           const validateMessage = currentBlock.querySelector('.reg-modal__alert-change')
 
-          const isValid = Array.from(validateInputs).some(el => el.checkValidity())
+          const isValid = Array.from(validateInputs).every(el => el.checkValidity())
           if (!isValid) {
             validateMessage.classList.remove('hidden')
             return
@@ -37,6 +37,21 @@ if (regModal) {
       })
     })
   }
+
+
+  // Валидация совпадения паролей
+
+  const regForm = regModal.querySelector('.reg-modal__form')
+  const passInput = regForm.querySelector('.reg-modal__password')
+  const repeatPassInput = regForm.querySelector('.reg-modal__repeat-password')
+  const passAlert = regForm.querySelector('.reg-modal__alert-password')
+
+  regForm.addEventListener('submit', (e) => {
+    if (passInput.value !== repeatPassInput.value) {
+      e.preventDefault()
+      passAlert.classList.remove('hidden')
+    }
+  })
 
 
 }
