@@ -111,3 +111,36 @@ const swiperMainAuction = new Swiper('.swiper-main-page-auction', {
     }
   }
 });
+
+//модалка Проданный объект - doc
+
+const swiperSoldDoc = new Swiper('.swiper-sold-doc', {
+  grabCursor: true,
+
+  navigation: {
+    nextEl: ".swiper-sold-doc-button-next",
+    prevEl: ".swiper-sold-doc-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    type: "fraction",
+  },
+  spaceBetween: 10,
+  slidesPerView: 1,
+  breakpoints: {
+
+    768: {
+      spaceBetween: 20,
+      slidesPerView: 2,
+    },
+
+    992: {
+      spaceBetween: 30,
+      slidesPerView: 3,
+    },
+    1200: {
+      spaceBetween: 10,
+      slidesPerView: 5,
+    }
+  }
+});
