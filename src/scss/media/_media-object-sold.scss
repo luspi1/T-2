@@ -1,0 +1,77 @@
+@media (max-width: 1280px) {
+  .object-sold-page .object-sold__inner {
+    padding: 40px 50px 40px 50px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .object-sold-page .object-sold__info-list li .object-sold__info-list-title {
+    min-width: 185px;
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+
+  .object-sold-page .object-sold__info-list li {
+    flex-direction: column;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .object-sold-page .object-sold__inner {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  .object-sold-page .object-sold__unique-number {
+    font-size: 16px;
+  }
+
+  .object-sold-page .object-sold__info-main {
+    flex-direction: column;
+  }
+
+  .object-sold-page .object-sold__info-main-left {
+    margin-right: 0;
+    margin-bottom: 50px;
+  }
+
+  .object-sold-page .object-sold__info-list li .object-sold__info-list-content {
+    padding-right: 50px;
+  }
+
+
+  .object-sold-page .object-sold__aside-type {
+    margin-bottom: 20px;
+  }
+
+  .object-sold-page .object-sold__btns {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .object-sold-page .object-sold__btns .object-sold__btns-link {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .object-sold-page .object-sold__btns .object-sold__edit-btn {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+ }
+
+@media (max-width: 576px) {
+  .object-sold-page .object-sold__aside,
+  .object-sold-page .object-sold__btns .object-sold__edit-btn,
+  .object-sold-page .object-sold__btns .object-sold__btns-prompt {
+    min-width: unset;
+    width: 100%;
+    max-width: unset;
+  }
+  .object-sold-page .object-sold__btns .object-sold__edit-btn {
+    padding-right: 25px;
+    padding-left: 5px;
+        text-align: center;
+  }
+
+}

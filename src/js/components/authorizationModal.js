@@ -2,9 +2,9 @@
 
 const signIn = document.querySelector('.sign-in')
 const authModal = document.querySelector('#auth-modal')
-const authBtns = signIn.querySelectorAll('button')
 
 if (signIn) {
+  const authBtns = signIn.querySelectorAll('button')
   authBtns.forEach(btn => {
     btn.addEventListener('click', ({currentTarget}) => {
       const dataBtn = btn.dataset.auth;

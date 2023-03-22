@@ -28,7 +28,8 @@
 @import "./pages/auction-statement";
 @import "./pages/index-page";
 @import "./pages/registration-page";
-
+@import "./pages/auctions-stats";
+@import "./pages/object-sold";
 
 
 
@@ -55,6 +56,7 @@
 @import "./modals/auth-modal";
 @import "./modals/auth-complete-modal";
 @import "./modals/esia-complete-modal";
+@import "./modals/object-sold-doc-modal";
 
 
 
@@ -102,8 +104,8 @@
 @import "./media/media-auction-conducting";
 @import "./media/media-auction-statement";
 @import "./media/media-index-page";
-
-
+@import "./media/media-auctions-stats";
+@import "./media/media-object-sold";
 
 
 
