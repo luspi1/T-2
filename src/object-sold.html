@@ -21,6 +21,7 @@
     })
     <div class="container">
       @include('partials/modals/object-sold-doc-modal.html')
+      @include('partials/modals/object-sold-images-modal.html')
       <div class="object-sold__inner">
         <section class="object-sold__info">
           <div class="object-sold__info-top">
@@ -133,7 +134,7 @@
                       Всего изображений объекта:
                       <span>12</span>
                     </p>
-                    <button class="object-sold__btn-img">посмотреть изображения объекта</button>
+                    <button class="object-sold__btn-img" data-open-modal="object-sold-images">посмотреть изображения объекта</button>
                   </div>
                 </li>
               </ul>

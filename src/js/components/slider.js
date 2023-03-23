@@ -128,19 +128,45 @@ const swiperSoldDoc = new Swiper('.swiper-sold-doc', {
   spaceBetween: 10,
   slidesPerView: 1,
   breakpoints: {
-
-    768: {
-      spaceBetween: 20,
+    400: {
+      spaceBetween: 10,
       slidesPerView: 2,
     },
-
-    992: {
-      spaceBetween: 30,
+    576: {
+      spaceBetween: 10,
       slidesPerView: 3,
     },
-    1200: {
+    768: {
       spaceBetween: 10,
       slidesPerView: 5,
+    }
+  }
+});
+
+//модалка Проданный объект - images
+
+const swiperSoldImg = new Swiper('.swiper-sold-images', {
+  grabCursor: true,
+
+  navigation: {
+    nextEl: ".swiper-sold-images-button-next",
+    prevEl: ".swiper-sold-images-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    type: "fraction",
+  },
+  spaceBetween: 10,
+  slidesPerView: 1,
+  breakpoints: {
+
+    576: {
+      spaceBetween: 10,
+      slidesPerView: 2,
+    },
+    768: {
+      spaceBetween: 10,
+      slidesPerView: 3,
     }
   }
 });

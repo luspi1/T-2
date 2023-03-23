@@ -1,4 +1,4 @@
-.object-sold-doc-modal {
+.object-sold-images-modal {
   width: 725px;
   padding: 32px 50px 35px;
 
@@ -33,8 +33,8 @@
     padding: 0 30px;
     position: relative;
 
-    .swiper-sold-doc-button-next,
-    .swiper-sold-doc-button-prev {
+    .swiper-sold-images-button-next,
+    .swiper-sold-images-button-prev {
       position: absolute;
       width: 10px;
       height: 20px;
@@ -48,16 +48,16 @@
       }
     }
 
-    .swiper-sold-doc-button-next {
+    .swiper-sold-images-button-next {
       right: 0;
     }
 
-    .swiper-sold-doc-button-prev {
+    .swiper-sold-images-button-prev {
       left: 0;
     }
   }
 
-  .swiper-sold-doc {
+  .swiper-sold-images {
     .swiper-slide {
       box-sizing: border-box;
       border-radius: 5px;
@@ -66,9 +66,12 @@
 
       img {
         margin: auto;
-        border: 2px solid #8FC3D8;
         border-radius: 5px;
+        border: 2px solid #8FC3D8;
       }
     }
+
   }
+
+
 }
